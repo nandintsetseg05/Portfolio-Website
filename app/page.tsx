@@ -71,7 +71,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-2xl md:text-3xl font-medium text-blue-200">WELCOME TO JOURNEY OF MY LIFE         </p>
+            <p className="text-2xl md:text-3xl font-medium text-blue-200">I&#39;M JUST A GIRL✨            </p>
           </div>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto text-pretty leading-relaxed">

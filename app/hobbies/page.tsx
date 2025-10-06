@@ -7,40 +7,52 @@ export default function Hobbies() {
   const hobbies = [
     {
       title: "Chess",
-      description: "Strategic thinking and competitive play. Currently rated 1800+ on Chess.com",
+      description: "Strategic thinking and competitive play. It is fun to play won 6 medals in my lifetime but secret is I am not that good learnt to play at young because my dad thought me.❤️",
       icon: "♟️",
       link: "#",
     },
     {
-      title: "Painting",
-      description: "Exploring abstract and contemporary art styles with acrylics and watercolors",
+      title: "Drawing",
+      description: "Developed interest when i was really young. I used to draw things and put price tag and seell it to my family TvT my parents bought my art and made collection book.❤️",
       icon: "🎨",
       link: "#",
     },
     {
-      title: "Podcasting",
-      description: "Hosting conversations about technology, creativity, and personal growth",
-      icon: "🎙️",
+      title: "Journaling",
+      description: "Started very young too :) mostly because my mom and grandmom was a teacher and forced to do when i was kid hated it then but love it now and super grateful, changed my life.❤️",
+      icon: "✍️",
       link: "#",
     },
     {
       title: "Photography",
-      description: "Capturing moments and landscapes with a focus on natural lighting",
+      description: "Since I gained sense I was personal photographer of my mom and I just like documenting the moment. Nature pictures when we travel fell in love. Later got useful for my marketing journey.❤️",
       icon: "📷",
       link: "#",
     },
     {
       title: "Reading",
-      description: "Diving into books on philosophy, technology, and science fiction",
+      description: "Hated reading when I was young and used to thought why read when I can listen while doing other stuff. Turned out fiction was just not my genre. Got obsessed after finding my genre time flies when I am hooked, love the smell too.❤️",
       icon: "📚",
       link: "#",
     },
     {
       title: "Hiking",
-      description: "Exploring nature trails and mountain peaks on weekends",
-      icon: "🥾",
+      description: "I was little goat that will climb on everything. Maybe because of my culture but love going outside or travel to countryside when weather is nice.❤️",
+      icon: "🏔️",
       link: "#",
     },
+    {
+      title: "Anime Manga Manhwa",
+      description: "Love it since I was kid now i think about it tought me many things and helped me develop myself. I learned new languages, cultures since i used to translate some of them to my native language and post on social media. Also kept my drawing in check and convinced me to believe I can do everything. ❤️",
+      icon: "❤️",
+      link: "#",
+    },  
+    {
+      title: "Learning",
+      description: "I was too curious kid that will ask why? then how? then why again and again from my parents. Then they decided to show me how to find the answer to my questions from google. Then I started trying what learned from google which led to youtube tons of DIY ❤️",
+      icon: "🔍",
+      link: "#",
+    },        
   ]
 
   return (

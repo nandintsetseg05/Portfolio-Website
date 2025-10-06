@@ -6,25 +6,31 @@ import { AnimatedBackground } from "@/components/animated-background"
 export default function About() {
   const timeline = [
     {
+      year: "2025",
+      title: "Currently Full-Time Student, Full-Time Freelance, Part Time Work",
+      description: "Full time CS student at QUT with scholarship, freelancing on web-based application,website development, mmarketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for eccomerce brand. Grazy Era✨",
+    },
+    {
       year: "2024",
-      title: "Current Position",
-      description: "Working on exciting projects in IT, marketing, and design",
+      title: "Getting Independent / Personal development/",
+      description: "Graduated high school with 98.8% average, got driver licensse and invited into 126 University worldwide, 78 of them offered scholarship. Seperated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. started club Mongolians in QUT student association. Independence Era✨",
     },
     {
       year: "2023",
-      title: "Achievement Title",
-      description: "Description of a significant achievement or milestone",
+      title: "National StartUp Hackaton top 10 from 400 companies",
+      description: "Developed AI on that calculate and predict Solar Panel movement to check if it can worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
     },
     {
-      year: "2022",
-      title: "Education Milestone",
-      description: "Completed degree or certification",
+      year: "2020-2023",
+      title: "Developing Technical and Soft skills",
+      description: "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school i was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
     },
     {
-      year: "2021",
-      title: "Career Start",
-      description: "Began professional journey",
-    },
+      year: "2020-2023",
+      title: "Academic Achievements",
+      description: "I chose Mathematic, Physics, Social study, English, IT as my elective classes took 16 general classes for 3 years. Achieved National Physics Olympiad second third places for 5 years. Kangaroo Math Olympiad second third place for 6 years. Social study second place. Graduated with high honor with new school high record. Academic Weapon Era✨",
+    },    
+
   ]
 
   return (
@@ -54,13 +60,15 @@ export default function About() {
             <h2 className="text-3xl font-bold text-blue-300">Background</h2>
             <div className="glass-card rounded-2xl p-8 space-y-4 text-lg leading-relaxed">
               <p>
-                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling.
-                My work spans across IT development, marketing strategy, and architectural design.
+                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling. My work spans across IT development, marketing strategy, and architectural design. 
               </p>
               <p>
                 With a unique blend of technical expertise and creative vision, I bring ideas to life through code,
                 design, and strategic thinking. I believe in the power of technology to create meaningful experiences
                 and solve real-world problems.
+              </p>
+              <p>
+              In short I tried and done too many things to write. I can learn anything with youtube and google and little bit of practice. My most valued skill is that I learned how to learn at young age.💞
               </p>
             </div>
           </section>
