@@ -42,12 +42,10 @@ export default function Vlog() {
             </div>
 
             {/* Notion Embed - Replace the src with your public Notion page URL */}
-            <div className="w-full h-[800px] rounded-lg overflow-hidden bg-black/20 border border-white/10">
-              <iframe src={notionPageUrl} className="w-full h-full" title="Notion Page" allow="fullscreen" />
-            </div>
+            
 
             <p className="text-sm text-gray-400 text-center">
-              Note: Make sure your Notion page is set to "Public" for the embed to work properly.
+              Note: I just made Vlog page but haven't got time to write yet... COME BACK LATER hhe
             </p>
           </div>
         </div>

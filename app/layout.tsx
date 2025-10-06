@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { Navbar } from "@/components/navbar"
+import { LanguageProvider } from "@/lib/language-context"
 
 export const metadata: Metadata = {
   title: "Portfolio | Your Name",
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
-        <Navbar />
-        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        <LanguageProvider>
+          <Navbar />
+          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

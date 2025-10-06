@@ -5,17 +5,20 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Sparkles } from "lucide-react"
 import { useState } from "react"
+import { LanguageSwitcher } from "@/components/language-switcher"
+import { useLanguage } from "@/lib/language-context"
 
 export function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useLanguage()
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/hobbies", label: "Hobbies" },
-    { href: "/vlog", label: "Vlog" },
+    { href: "/", label: t.nav.home },
+    { href: "/about", label: t.nav.about },
+    { href: "/projects", label: t.nav.projects },
+    { href: "/hobbies", label: t.nav.hobbies },
+    { href: "/vlog", label: t.nav.vlog },
   ]
 
   return (
@@ -25,7 +28,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <Sparkles className="w-5 h-5 text-blue-400 group-hover:text-purple-400 transition-colors" />
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-              Portfolio
+              {t.nav.portfolio}
             </span>
           </Link>
 
@@ -46,6 +49,7 @@ export function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,6 +80,9 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="px-4 py-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>
