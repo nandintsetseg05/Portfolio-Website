@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function Vlog() {
   // Replace this with your actual Notion page URL
-  const notionPageUrl = "https://www.notion.so/your-page-url"
+  const notionPageUrl = "https://luminous-laundry-81c.notion.site/Website-Vlogs-284615bca7f7807aa87dd0d7b656b0a4?source=copy_link"
 
   return (
     <div className="relative min-h-screen">

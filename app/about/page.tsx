@@ -8,29 +8,33 @@ export default function About() {
     {
       year: "2025",
       title: "Currently Full-Time Student, Full-Time Freelance, Part Time Work",
-      description: "Full time CS student at QUT with scholarship, freelancing on web-based application,website development, mmarketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for eccomerce brand. Grazy Era✨",
+      description:
+        "Full time CS student at QUT with scholarship, freelancing on web-based application,website development, mmarketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for eccomerce brand. Grazy Era✨",
     },
     {
       year: "2024",
       title: "Getting Independent / Personal development/",
-      description: "Graduated high school with 98.8% average, got driver licensse and invited into 126 University worldwide, 78 of them offered scholarship. Seperated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. started club Mongolians in QUT student association. Independence Era✨",
+      description:
+        "Graduated high school with 98.8% average, got driver licensse and invited into 126 University worldwide, 78 of them offered scholarship. Seperated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. started club Mongolians in QUT student association. Independence Era✨",
     },
     {
       year: "2023",
       title: "National StartUp Hackaton top 10 from 400 companies",
-      description: "Developed AI on that calculate and predict Solar Panel movement to check if it can worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
+      description:
+        "Developed AI on that calculate and predict Solar Panel movement to check if it can worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
     },
     {
       year: "2020-2023",
       title: "Developing Technical and Soft skills",
-      description: "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school i was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
+      description:
+        "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school i was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
     },
     {
       year: "2020-2023",
       title: "Academic Achievements",
-      description: "I chose Mathematic, Physics, Social study, English, IT as my elective classes took 16 general classes for 3 years. Achieved National Physics Olympiad second third places for 5 years. Kangaroo Math Olympiad second third place for 6 years. Social study second place. Graduated with high honor with new school high record. Academic Weapon Era✨",
-    },    
-
+      description:
+        "I chose Mathematic, Physics, Social study, English, IT as my elective classes took 16 general classes for 3 years. Achieved National Physics Olympiad second third places for 5 years. Kangaroo Math Olympiad second third place for 6 years. Social study second place. Graduated with high honor with new school high record. Academic Weapon Era✨",
+    },
   ]
 
   return (
@@ -59,17 +63,19 @@ export default function About() {
           <section className="space-y-6">
             <h2 className="text-3xl font-bold text-blue-300">Background</h2>
             <div className="glass-card rounded-2xl p-8 space-y-4 text-lg leading-relaxed">
-              <p>
-                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling. My work spans across IT development, marketing strategy, and architectural design. 
-              </p>
-              <p>
+              <div>
+                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling.
+                My work spans across IT development, marketing strategy, and architectural design.
+              </div>
+              <div>
                 With a unique blend of technical expertise and creative vision, I bring ideas to life through code,
                 design, and strategic thinking. I believe in the power of technology to create meaningful experiences
                 and solve real-world problems.
-              </p>
-              <p>
-              In short I tried and done too many things to write. I can learn anything with youtube and google and little bit of practice. My most valued skill is that I learned how to learn at young age.💞
-              </p>
+              </div>
+              <div>
+                In short I tried and done too many things to write. I can learn anything with youtube and google and
+                little bit of practice. My most valued skill is that I learned how to learn at young age.💞
+              </div>
             </div>
           </section>
 
@@ -77,14 +83,14 @@ export default function About() {
             <h2 className="text-3xl font-bold text-purple-300">Education</h2>
             <div className="space-y-4">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-blue-400">
-                <h3 className="text-xl font-semibold">Bachelor of Computer Science    </h3>
+                <h3 className="text-xl font-semibold">Bachelor of Computer Science </h3>
                 <p className="text-muted-foreground">Queensland University of Technology • 2025</p>
-                <p className="mt-2">Major in Computer Science / Minor in Finance  </p>
+                <p className="mt-2">Major in Computer Science / Minor in Finance </p>
               </div>
               <div className="glass-card rounded-2xl p-6 border-l-4 border-purple-400">
-                <h3 className="text-xl font-semibold">Diploma of Information Technology   </h3>
+                <h3 className="text-xl font-semibold">Diploma of Information Technology </h3>
                 <p className="text-muted-foreground">Queensland University of Technology • 2024</p>
-                <p className="mt-2">Specialized training in Software Engineering     </p>
+                <p className="mt-2">Specialized training in Software Engineering </p>
               </div>
             </div>
           </section>

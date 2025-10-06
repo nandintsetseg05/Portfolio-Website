@@ -29,20 +29,20 @@ export default function Home() {
   const featuredHobbies = [
     {
       title: "Chess",
-      description: "Strategic thinking and competitive play. Currently rated 1800+ on Chess.com",
+      description: "Sometimes it gives me stress and heart attack but i like it.",
       icon: "♟️",
       link: "#",
     },
     {
-      title: "Painting",
-      description: "Exploring abstract and contemporary art styles with acrylics and watercolors",
+      title: "Drawing",
+      description: "I won't draw you but I like it I will if I am in love with you but portraid drawing is not my thing almost every other thing is.",
       icon: "🎨",
       link: "#",
     },
     {
-      title: "Podcasting",
-      description: "Hosting conversations about technology, creativity, and personal growth",
-      icon: "🎙️",
+      title: "Learning",
+      description: "The DIY butterfly knife made by wood yea done it like it. How to cook? seen it done it. Very impusive and random",
+      icon: "✨",
       link: "#",
     },
   ]
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 text-blue-400" />
-              <span>Welcome to my galaxy</span>
+              <span>Hey Cutie✨✨✨</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-balance leading-tight">

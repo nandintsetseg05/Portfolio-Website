@@ -6,51 +6,91 @@ import Link from "next/link"
 export default function Projects() {
   const itProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack web application built with Next.js, TypeScript, and PostgreSQL",
+      title: "Plumber Website",
+      description:
+        "Improved website for the businesses by implementing new UI added booking also added google business profile. Also got them SSl and done everython on SEO additionally gave some marketing advice which helpeed the business to gain 825% growth on site visitors.",
       category: "IT",
-      tags: ["Next.js", "TypeScript", "PostgreSQL"],
+      tags: ["Web Development", "UI/UX", "Website"],
       link: "#",
     },
     {
-      title: "Mobile App",
-      description: "Cross-platform mobile application for task management",
+      title: "Portfolio Website",
+      description:
+        "Full-stack website but I don't want to pay for domain just yet. It was built because someone asked for my work I used to document it on my Notion lowkey little embarrassed... But now I can just show them, still thinking should I make one for me to document my journey. And one for recruiters or mentors?? Let me know what you think pls... ",
       category: "IT",
-      tags: ["React Native", "Firebase", "Redux"],
+      tags: ["Next.js", "TypeScript", "SupaBase"],
+      link: "#",
+    },
+    {
+      title: "Web-based Mobile Application",
+      description:
+        "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
+      category: "IT",
+      tags: ["Data Query", "UI/UX design", "OOP"],
       link: "#",
     },
   ]
 
   const marketingProjects = [
     {
-      title: "Brand Campaign",
-      description: "Comprehensive digital marketing campaign for tech startup",
+      title: "Social media Marketing",
+      description:
+        "Cross platform monetize for new frozen ypgurt shop. I was in charge of Social media to build audience and waiting list before the store open using AI conent creation. 2497% growth on engagement 924% growth on audience.",
       category: "Marketing",
       tags: ["Strategy", "Social Media", "Analytics"],
       link: "#",
     },
     {
-      title: "Content Strategy",
-      description: "Content marketing strategy that increased engagement by 200%",
+      title: "Prooduct management Ecommerce",
+      description:
+        "I manage research on products and manage sourcing and shipping for brand as a co-founder. Low key I was not sure where to put this one. But I don't wanna connect me into the business just yet since I might sell my part to my partner due to my schedule.",
       category: "Marketing",
-      tags: ["Content", "SEO", "Growth"],
+      tags: ["Analysis", "SEO", "Growth"],
+      link: "#",
+    },
+    {
+      title: "Cross platform Chatbot for Social Media",
+      description:
+        "I developed chatbot that integrates to all the social media and web chatbot for housing complex that answers common question and shows menu and details of each housing block's detail. When i was 15, I think that it teached me importance of integration and attention to detail. Also learned lot on how to talk to people.",
+      category: "Marketing & IT",
+      tags: ["Chatbot", "Integration", "Cross-Platform"],
       link: "#",
     },
   ]
 
   const designProjects = [
     {
-      title: "Modern Office Space",
-      description: "Contemporary office design with focus on collaboration and creativity",
+      title: "Retail store in Shopping centre",
+      description:
+        "I made the floor planning on AutoCAD and made drew, interior designing on Sketchup also made 3D planning on. In end I used the 3D model pictures and rendered the pictures using AI. All work has been done under shopping centre's policy and requirements and QLD guideline. Also wrote the project pitch which was approved.",
       category: "Design",
-      tags: ["Architecture", "Interior Design", "3D Modeling"],
+      tags: ["Architecture", "Interior Design", "3D Modeling", "CAD"],
       link: "#",
     },
     {
-      title: "Residential Project",
-      description: "Sustainable residential design with modern aesthetics",
+      title: "Housing complex 3D modeling",
+      description:
+        "In High school I was in charge of the 3D modeing on sketchup since I knew how to read the floor planning and at the time I was developing interest in sketchup. Since it was one of my first big projects I spent so many hours focusing on learning and learned the materials and dimensions in deep level. ",
       category: "Design",
-      tags: ["Architecture", "Sustainability", "CAD"],
+      tags: ["Interior Design", "3D Modeling", "CAD"],
+      link: "#",
+    },
+  ]
+  const personalProjects = [
+    {
+      title: "Hair dressing",
+      description:
+        "One summer I decided help my mom on her business since I have spare time. She runs a beauty salon I did not got special treatment. I started of as a cleaner, then hair washer, after assistant, then I learned how to cut hair in basic then improved. THE place that teached me human skill the MOST. 100% worth it",
+      category: "Personal",
+      tags: ["Soft skill", "Hair dressing", "Communication", "Networking"],
+      link: "#",
+    },
+    {
+      title: "How to learn research",
+      description:
+        "When I was 13 I came across to my most bindblowing idea at that time. If I learn how to learn I am unstoppable... very cute I watched one poccast that changed my life. Since then I got interest on how hbrain works how emotion works habit etc.. so many things it is endless. Since that time I am learning everyday and document them when I think it is enough I might make it into a book...",
+      category: "Personal",
+      tags: ["Idea", "In Progress"],
       link: "#",
     },
   ]
@@ -97,6 +137,15 @@ export default function Projects() {
             <h2 className="text-3xl font-bold text-pink-300">Design & Architecture</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {designProjects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+            </div>
+          </section>
+
+          <section className="space-y-8">
+            <h2 className="text-3xl font-bold text-purple-300">Personal Projects</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {personalProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
             </div>

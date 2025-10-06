@@ -72,7 +72,8 @@ export default function Hobbies() {
             <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
               Hobbies & Interests
             </h1>
-            <p className="text-xl text-gray-300">What I do when I'm not working</p>
+            <p className="text-xl text-gray-300">What I do when I'm not working?</p>
+            <p className="text-xl text-gray-300">Everything and anything DIVA✨</p>            
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
