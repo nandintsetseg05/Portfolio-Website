@@ -39,7 +39,7 @@ export default function Home() {
     {
       title: "Drawing",
       description:
-        "I won't draw you but I like it I will if I am in love with you but portraid drawing is not my thing almost every other thing is.",
+        "I won't draw you portraid drawing is not my thing almost every other thing is.",
       icon: "🎨",
       link: "#",
     },
@@ -200,33 +200,11 @@ export default function Home() {
           className="max-w-4xl mx-auto space-y-8"
         >
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-400">
-              {t.home.vlogTitle}
-            </h2>
-            <p className="text-lg text-gray-300">{t.home.vlogSubtitle}</p>
+            
+            
           </div>
-          <div className="glass-card p-4 rounded-2xl">
-            <div className="aspect-video rounded-xl overflow-hidden bg-black/50">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-          <div className="text-center">
-            <Link href="/vlog">
-              <Button
-                variant="outline"
-                className="border-orange-500/50 hover:bg-orange-500/10 hover:border-orange-400 group bg-transparent"
-              >
-                {t.home.seeMoreEpisodes}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
+          
+          
         </motion.section>
       </div>
     </div>
