@@ -14,18 +14,20 @@ export default function Home() {
 
   const featuredProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack web application built with Next.js, TypeScript, and PostgreSQL",
+      title: "Plumber Website",
+      description:
+        "Improved website for the businesses by implementing new UI added booking also added google business profile. Also got them SSl and done everython on SEO additionally gave some marketing advice which helpeed the business to gain 825% growth on site visitors.",
       category: "IT",
-      tags: ["Next.js", "TypeScript", "PostgreSQL"],
-      link: "#",
+      tags: ["Web Development", "UI/UX", "Website"],
+      link: "https://sayramplumbing.com.au/",
     },
     {
-      title: "Brand Campaign",
-      description: "Comprehensive digital marketing campaign for tech startup",
+      title: "Social media Marketing",
+      description:
+        "Cross platform monetize for new frozen ypgurt shop. I was in charge of Social media to build audience and waiting list before the store open using AI conent creation. 2497% growth on engagement 924% growth on audience.",
       category: "Marketing",
       tags: ["Strategy", "Social Media", "Analytics"],
-      link: "#",
+      link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
     },
   ]
 

@@ -11,7 +11,7 @@ export default function Projects() {
         "Improved website for the businesses by implementing new UI added booking also added google business profile. Also got them SSl and done everython on SEO additionally gave some marketing advice which helpeed the business to gain 825% growth on site visitors.",
       category: "IT",
       tags: ["Web Development", "UI/UX", "Website"],
-      link: "#",
+      link: "https://sayramplumbing.com.au/",
     },
     {
       title: "Portfolio Website",
@@ -19,7 +19,7 @@ export default function Projects() {
         "Full-stack website but I don't want to pay for domain just yet. It was built because someone asked for my work I used to document it on my Notion lowkey little embarrassed... But now I can just show them, still thinking should I make one for me to document my journey. And one for recruiters or mentors?? Let me know what you think pls... ",
       category: "IT",
       tags: ["Next.js", "TypeScript", "SupaBase"],
-      link: "#",
+      link: "https://nana-nandintsetseg.vercel.app/",
     },
     {
       title: "Web-based Mobile Application",
@@ -38,7 +38,7 @@ export default function Projects() {
         "Cross platform monetize for new frozen ypgurt shop. I was in charge of Social media to build audience and waiting list before the store open using AI conent creation. 2497% growth on engagement 924% growth on audience.",
       category: "Marketing",
       tags: ["Strategy", "Social Media", "Analytics"],
-      link: "#",
+      link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
     },
     {
       title: "Prooduct management Ecommerce",
@@ -54,7 +54,7 @@ export default function Projects() {
         "I developed chatbot that integrates to all the social media and web chatbot for housing complex that answers common question and shows menu and details of each housing block's detail. When i was 15, I think that it teached me importance of integration and attention to detail. Also learned lot on how to talk to people.",
       category: "Marketing & IT",
       tags: ["Chatbot", "Integration", "Cross-Platform"],
-      link: "#",
+      link: "https://www.facebook.com/p/K-Village-%D0%9A-%D0%92%D0%B8%D0%BB%D0%BB%D0%B0%D0%B6-100083330827686/",
     },
   ]
 
@@ -65,7 +65,7 @@ export default function Projects() {
         "I made the floor planning on AutoCAD and made drew, interior designing on Sketchup also made 3D planning on. In end I used the 3D model pictures and rendered the pictures using AI. All work has been done under shopping centre's policy and requirements and QLD guideline. Also wrote the project pitch which was approved.",
       category: "Design",
       tags: ["Architecture", "Interior Design", "3D Modeling", "CAD"],
-      link: "#",
+      link: "https://www.notion.so/Architecture-design-284615bca7f7807c9fccd89be83af84d?source=copy_link",
     },
     {
       title: "Housing complex 3D modeling",
@@ -73,7 +73,7 @@ export default function Projects() {
         "In High school I was in charge of the 3D modeing on sketchup since I knew how to read the floor planning and at the time I was developing interest in sketchup. Since it was one of my first big projects I spent so many hours focusing on learning and learned the materials and dimensions in deep level. ",
       category: "Design",
       tags: ["Interior Design", "3D Modeling", "CAD"],
-      link: "#",
+      link: "https://www.notion.so/K-Village-3D-Model-284615bca7f780168eb6ddaaa0b32f8a?source=copy_link",
     },
   ]
   const personalProjects = [
@@ -83,7 +83,7 @@ export default function Projects() {
         "One summer I decided help my mom on her business since I have spare time. She runs a beauty salon I did not got special treatment. I started of as a cleaner, then hair washer, after assistant, then I learned how to cut hair in basic then improved. THE place that teached me human skill the MOST. 100% worth it",
       category: "Personal",
       tags: ["Soft skill", "Hair dressing", "Communication", "Networking"],
-      link: "#",
+      link: "https://www.notion.so/Hair-salon-1ab615bca7f780f986c9e93fcb7e48da?source=copy_link",
     },
     {
       title: "How to learn research",
