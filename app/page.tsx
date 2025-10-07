@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ProjectCard } from "@/components/project-card"
 import { HobbyCard } from "@/components/hobby-card"
@@ -9,9 +11,12 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language-context"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function Home() {
   const { t } = useLanguage()
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const featuredProjects = [
     {
@@ -54,12 +59,22 @@ export default function Home() {
     },
   ]
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+    console.log("[v0] Form submitted:", formData)
+    alert("Thank you for your message! I'll get back to you soon.")
+    setFormData({ name: "", email: "", message: "" })
+    setIsSubmitting(false)
+  }
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       <GalaxyNavigation />
 
       {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-4">
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-4 pt-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,12 +85,12 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-12"
           >
             <div className="relative w-48 h-48 md:w-64 md:h-64">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-50 animate-pulse"></div>
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wIvnV1VmayxdXwOuj2DHwNEDTy95Yk.png"
+                src="/images/design-mode/image.png"
                 alt="Profile"
                 width={256}
                 height={256}
@@ -221,22 +236,83 @@ export default function Home() {
           className="max-w-4xl mx-auto space-y-8"
         >
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-400">
-              {t.home.vlogTitle}
-            </h2>
-            <p className="text-lg text-gray-300">{t.home.vlogSubtitle}</p>
+            
+            
           </div>
           <div className="grid md:grid-cols-2 gap-6">{/* Vlog content here */}</div>
-          <div className="text-center">
-            <Link href="/vlog">
+          
+        </motion.section>
+
+        {/* Contact Me section with form */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto space-y-8"
+        >
+          <div className="text-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+              Contact Me
+            </h2>
+            <p className="text-lg text-gray-300">Have a question or want to work together? Drop me a message!</p>
+          </div>
+
+          <div className="glass-card p-8 md:p-12 rounded-3xl">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-sm font-medium text-gray-300">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium text-gray-300">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-sm font-medium text-gray-300">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  required
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                  placeholder="Your message..."
+                />
+              </div>
+
               <Button
-                variant="outline"
-                className="border-orange-500/50 hover:bg-orange-500/10 hover:border-orange-400 group bg-transparent"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t.home.viewAllVlogs}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
-            </Link>
+            </form>
           </div>
         </motion.section>
       </div>

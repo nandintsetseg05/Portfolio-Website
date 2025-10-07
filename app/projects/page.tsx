@@ -41,7 +41,7 @@ export default function Projects() {
       link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
     },
     {
-      title: "Prooduct management Ecommerce",
+      title: "Product management Ecommerce",
       description:
         "I manage research on products and manage sourcing and shipping for brand as a co-founder. Low key I was not sure where to put this one. But I don't wanna connect me into the business just yet since I might sell my part to my partner due to my schedule.",
       category: "Marketing",

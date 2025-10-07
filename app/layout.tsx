@@ -9,7 +9,7 @@ import { Navbar } from "@/components/navbar"
 import { LanguageProvider } from "@/lib/language-context"
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
+  title: "Nana-Portfolio",
   description: "Personal portfolio showcasing projects, hobbies, and creative work",
   generator: "v0.app",
 }
