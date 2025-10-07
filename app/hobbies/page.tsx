@@ -9,7 +9,7 @@ export default function Hobbies() {
       title: "Chess",
       description: "Strategic thinking and competitive play. It is fun to play won 6 medals in my lifetime but secret is I am not that good learnt to play at young because my dad thought me.❤️",
       icon: "♟️",
-      link: "#",
+      link: "https://www.chess.com/play/online",
     },
     {
       title: "Drawing",

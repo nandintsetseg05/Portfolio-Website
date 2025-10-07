@@ -8,6 +8,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language-context"
+import Image from "next/image"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -40,8 +41,7 @@ export default function Home() {
     },
     {
       title: "Drawing",
-      description:
-        "I won't draw you portraid drawing is not my thing almost every other thing is.",
+      description: "I won't draw you portraid drawing is not my thing almost every other thing is.",
       icon: "🎨",
       link: "#",
     },
@@ -66,6 +66,25 @@ export default function Home() {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center space-y-8"
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-50 animate-pulse"></div>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wIvnV1VmayxdXwOuj2DHwNEDTy95Yk.png"
+                alt="Profile"
+                width={256}
+                height={256}
+                className="relative rounded-full border-4 border-white/20 shadow-2xl object-cover"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 text-blue-400" />
@@ -202,11 +221,23 @@ export default function Home() {
           className="max-w-4xl mx-auto space-y-8"
         >
           <div className="text-center space-y-4">
-            
-            
+            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-400">
+              {t.home.vlogTitle}
+            </h2>
+            <p className="text-lg text-gray-300">{t.home.vlogSubtitle}</p>
           </div>
-          
-          
+          <div className="grid md:grid-cols-2 gap-6">{/* Vlog content here */}</div>
+          <div className="text-center">
+            <Link href="/vlog">
+              <Button
+                variant="outline"
+                className="border-orange-500/50 hover:bg-orange-500/10 hover:border-orange-400 group bg-transparent"
+              >
+                {t.home.viewAllVlogs}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </div>
         </motion.section>
       </div>
     </div>
