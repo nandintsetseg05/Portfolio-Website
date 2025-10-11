@@ -91,46 +91,55 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center space-y-8"
+          className="max-w-7xl mx-auto w-full"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center mb-12"
-          >
-            <div className="relative w-48 h-48 md:w-64 md:h-64">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl opacity-50 animate-pulse"></div>
-              <Image
-                src="/images/design-mode/image.png"
-                alt="Profile"
-                width={256}
-                height={256}
-                className="relative rounded-full border-4 border-white/20 shadow-2xl object-cover"
-                priority
-              />
-            </div>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-12 items-center border-0 border-b-0">
+            {/* Left side - Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6 text-left"
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card text-sm font-medium mb-4 ml-80 gap-10">
+                <Sparkles className="w-4 h-4 text-blue-400" />
+                <span>{t.home.greeting}</span>
+              </div>
 
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-sm font-medium mb-4">
-              <Sparkles className="w-4 h-4 text-blue-400" />
-              <span>{t.home.greeting}</span>
-            </div>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance leading-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
+                  {t.home.title}
+                </span>
+              </h1>
 
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-balance leading-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                {t.home.title}
-              </span>
-            </h1>
+              <p className="text-xl md:text-2xl font-medium text-blue-200">{t.home.subtitle}</p>
 
-            <p className="text-2xl md:text-3xl font-medium text-blue-200">{t.home.subtitle}</p>
-          </div>
+              <p className="text-lg text-gray-300 leading-relaxed">{""}</p>
 
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto text-pretty leading-relaxed">{""}</p>
+              <div className="glass-card inline-block px-6 py-3 rounded-full text-sm">
+                <p className="text-gray-300">{t.home.tagline}</p>
+              </div>
+            </motion.div>
 
-          <div className="glass-card inline-block px-6 py-3 rounded-full text-sm">
-            <p className="text-gray-300">{t.home.tagline}</p>
+            {/* Right side - Profile Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex justify-center md:justify-end"
+            >
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-2xl opacity-50 animate-pulse"></div>
+                <Image
+                  src="/images/design-mode/557716465_4179562138954361_1391244950674679639_n(1).jpg"
+                  alt="Profile"
+                  width={384}
+                  height={384}
+                  className="relative rounded-full border-white/20 shadow-2xl object-cover mx-0 py-0 px-0 h-fit my-0 mt-0 mb-0 w-fit border-4"
+                  priority
+                />
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
@@ -145,7 +154,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="glass-card p-8 md:p-12 rounded-3xl space-y-6">
+          <div className="glass-card p-8 md:p-12 rounded-3xl space-y-6 my-auto">
             <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
               {t.home.aboutTitle}
             </h2>
