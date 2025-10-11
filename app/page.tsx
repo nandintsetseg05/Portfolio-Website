@@ -101,7 +101,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-6 text-left"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card text-sm font-medium mb-4 ml-80 gap-10">
+              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card text-sm font-medium font-serif opacity-100 border-0 tracking-normal leading-7 gap-10 text-left my-auto mx-0">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span>{t.home.greeting}</span>
               </div>
