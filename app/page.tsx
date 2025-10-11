@@ -85,86 +85,114 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden">
       <GalaxyNavigation />
 
-      {/* Hero Section */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-4 pt-32">
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 py-20 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto w-full"
         >
-          <div className="grid md:grid-cols-2 gap-12 items-center border-0 border-b-0">
-            {/* Left side - Content */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left side - Content with improved spacing */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6 text-left"
+              className="space-y-8"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full glass-card text-sm font-medium font-serif opacity-100 border-0 tracking-normal leading-7 gap-10 text-left my-auto mx-0">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-sm font-medium backdrop-blur-xl border border-white/10">
                 <Sparkles className="w-4 h-4 text-blue-400" />
-                <span>{t.home.greeting}</span>
+                <span className="text-gray-200">{t.home.greeting}</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                  {t.home.title}
-                </span>
-              </h1>
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
+                    {t.home.title}
+                  </span>
+                </h1>
 
-              <p className="text-xl md:text-2xl font-medium text-blue-200">{t.home.subtitle}</p>
+                <p className="text-2xl md:text-3xl font-semibold text-blue-200/90 leading-relaxed">{t.home.subtitle}</p>
+              </div>
 
-              <p className="text-lg text-gray-300 leading-relaxed">{""}</p>
+              <div className="glass-card px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/10 inline-block">
+                <p className="text-base text-gray-300 leading-relaxed">{t.home.tagline}</p>
+              </div>
 
-              <div className="glass-card inline-block px-6 py-3 rounded-full text-sm">
-                <p className="text-gray-300">{t.home.tagline}</p>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Link href="/projects">
+                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-6 text-base font-medium rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all">
+                    View My Work
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+                <Link href="#contact">
+                  <Button
+                    variant="outline"
+                    className="border-white/20 hover:bg-white/5 backdrop-blur-xl px-8 py-6 text-base font-medium rounded-xl bg-transparent"
+                  >
+                    Get In Touch
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 
-            {/* Right side - Profile Image */}
+            {/* Right side - Enhanced profile image */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex justify-center md:justify-end"
+              className="flex justify-center lg:justify-end"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-2xl opacity-50 animate-pulse"></div>
-                <Image
-                  src="/images/design-mode/557716465_4179562138954361_1391244950674679639_n(1).jpg"
-                  alt="Profile"
-                  width={384}
-                  height={384}
-                  className="relative rounded-full border-white/20 shadow-2xl object-cover mx-0 py-0 px-0 h-fit my-0 mt-0 mb-0 w-fit border-4"
-                  priority
-                />
+              <div className="relative">
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-3xl opacity-40 animate-pulse scale-110"></div>
+
+                {/* Outer glow ring */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-20 blur-xl scale-105"></div>
+
+                {/* Image container */}
+                <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-sm"></div>
+                  <Image
+                    src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
+                    alt="Profile"
+                    width={448}
+                    height={448}
+                    className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
+                    priority
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
         </motion.div>
       </section>
 
-      {/* Section Previews */}
-      <div className="relative z-10 pb-20 px-4 space-y-32">
+      <div className="relative z-10 pb-32 px-6 space-y-40">
         {/* About Preview */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
-          <div className="glass-card p-8 md:p-12 rounded-3xl space-y-6 my-auto">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-              {t.home.aboutTitle}
-            </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">{t.home.aboutPreview}</p>
-            <Link href="/about">
-              <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 group">
-                {t.home.learnMore}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+          <div className="glass-card p-10 md:p-14 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 leading-tight">
+                {t.home.aboutTitle}
+              </h2>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl">{t.home.aboutPreview}</p>
+              <div className="pt-4">
+                <Link href="/about">
+                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 group px-6 py-6 text-base rounded-xl shadow-lg">
+                    {t.home.learnMore}
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </motion.section>
 
@@ -174,15 +202,15 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto space-y-8"
+          className="max-w-7xl mx-auto space-y-12"
         >
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          <div className="text-center space-y-5 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 leading-tight">
               {t.home.featuredProjects}
             </h2>
-            <p className="text-lg text-gray-300">{t.home.projectsSubtitle}</p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t.home.projectsSubtitle}</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -195,14 +223,14 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          <div className="text-center">
+          <div className="text-center pt-6">
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-purple-500/50 hover:bg-purple-500/10 hover:border-purple-400 group bg-transparent"
+                className="border-purple-500/50 hover:bg-purple-500/10 hover:border-purple-400 group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 {t.home.viewAllProjects}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
@@ -214,15 +242,15 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto space-y-8"
+          className="max-w-7xl mx-auto space-y-12"
         >
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-400">
+          <div className="text-center space-y-5 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-400 leading-tight">
               {t.home.hobbiesTitle}
             </h2>
-            <p className="text-lg text-gray-300">{t.home.hobbiesSubtitle}</p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t.home.hobbiesSubtitle}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {featuredHobbies.map((hobby, index) => (
               <motion.div
                 key={index}
@@ -235,89 +263,81 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          <div className="text-center">
+          <div className="text-center pt-6">
             <Link href="/hobbies">
               <Button
                 variant="outline"
-                className="border-pink-500/50 hover:bg-pink-500/10 hover:border-pink-400 group bg-transparent"
+                className="border-pink-500/50 hover:bg-pink-500/10 hover:border-pink-400 group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 {t.home.exploreHobbies}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
         </motion.section>
 
-        {/* Vlog Preview */}
         <motion.section
+          id="contact"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto space-y-8"
+          className="max-w-5xl mx-auto space-y-12"
         >
-          <div className="text-center space-y-4"></div>
-          <div className="grid md:grid-cols-2 gap-6">{/* Vlog content here */}</div>
-        </motion.section>
-
-        {/* Contact Me section with form */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto space-y-8"
-        >
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+          <div className="text-center space-y-5">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 leading-tight">
               Contact Me
             </h2>
-            <p className="text-lg text-gray-300">Have a question or want to work together? Drop me a message!</p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
+              Have a question or want to work together? Drop me a message!
+            </p>
           </div>
 
-          <div className="glass-card p-8 md:p-12 rounded-3xl">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium text-gray-300">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="Your name"
-                />
+          <div className="glass-card p-10 md:p-14 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all">
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <label htmlFor="name" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <label htmlFor="email" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-gray-300">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-gray-300">
+              <div className="space-y-3">
+                <label htmlFor="message" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
                   Message
                 </label>
                 <textarea
                   id="message"
                   required
-                  rows={5}
+                  rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none backdrop-blur-sm hover:bg-white/10"
                   placeholder="Your message..."
                 />
               </div>
@@ -325,7 +345,7 @@ export default function Home() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-medium py-3 rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-purple-500/25 text-base"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
