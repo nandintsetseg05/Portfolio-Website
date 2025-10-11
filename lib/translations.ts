@@ -13,9 +13,9 @@ export const translations = {
     },
     // Home Page
     home: {
-      greeting: "Hey Cutie✨✨✨",
+      greeting: "Hey There I hope you having a great day today✨✨✨",
       title: "Hi! I'm Nana Nandintsetseg",
-      subtitle: "I'M JUST A GIRL✨",
+      subtitle: "WELCOME TO MY PORTFOLIO WEBSITE✨",
       tagline: "THIS WEBSITE IS SUMMARY OF LIFE ♥ MADE FOR ME MADE BY ME",
       aboutTitle: "About Me",
       aboutPreview:
