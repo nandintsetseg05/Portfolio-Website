@@ -27,7 +27,7 @@ export default function Projects() {
         "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
       category: "IT",
       tags: ["Data Query", "UI/UX design", "OOP"],
-      link: "#",
+      link: "https://www.notion.so/convenient-store-inventory-application-246615bca7f78067b370de7c47cdbe85?source=copy_link",
     },
   ]
 
@@ -93,6 +93,14 @@ export default function Projects() {
       tags: ["Idea", "In Progress"],
       link: "#",
     },
+    {
+      title: "QUT Mongolia Association",
+      description:
+        "Me and my friend who study at same university decidedd to leave our legacy to the next generation and mainly found to help other people. Who just came and alone needs a friend and wind of their home country. I am the vice president of the club sociaty for more click the link",
+      category: "Personal",
+      tags: ["University", "Project", "In Progress"],
+      link: "https://campus.hellorubric.com/?s=11154",
+    },    
   ]
 
   return (
