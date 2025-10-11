@@ -12,6 +12,7 @@ import { motion } from "framer-motion"
 import { useLanguage } from "@/lib/language-context"
 import Image from "next/image"
 import { useState } from "react"
+import { sendEmail } from "./actions/send-email"
 
 export default function Home() {
   const { t } = useLanguage()
@@ -62,11 +63,22 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    console.log("[v0] Form submitted:", formData)
-    alert("Thank you for your message! I'll get back to you soon.")
-    setFormData({ name: "", email: "", message: "" })
-    setIsSubmitting(false)
+
+    try {
+      const result = await sendEmail(formData)
+
+      if (result.success) {
+        alert("Thank you for your message! I'll get back to you soon.")
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        alert("Sorry, there was an error sending your message. Please try again or email me directly.")
+      }
+    } catch (error) {
+      console.error("[v0] Form submission error:", error)
+      alert("Sorry, there was an error sending your message. Please try again or email me directly.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -235,12 +247,8 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto space-y-8"
         >
-          <div className="text-center space-y-4">
-            
-            
-          </div>
+          <div className="text-center space-y-4"></div>
           <div className="grid md:grid-cols-2 gap-6">{/* Vlog content here */}</div>
-          
         </motion.section>
 
         {/* Contact Me section with form */}
