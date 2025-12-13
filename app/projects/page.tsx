@@ -5,13 +5,20 @@ import Link from "next/link"
 
 export default function Projects() {
   const itProjects = [
-
+    {
+      title: "Plumber Website Development",
+      description:
+        "Redesigned the website with a modern UI, added a booking system, set up Google Business Profile, implemented SSL, and optimized SEO. Provided marketing guidance to the client resulting in 825% increase in site visitors and improved overall business online presence.",
+      category: "IT & Web Development",
+      tags: ["Next.js", "UI/UX", "SEO", "SSL", "Google Business"],
+      link: "#",
+    },
     {
       title: "Portfolio Website",
       description:
-        "Full-stack website but I don't want to pay for domain just yet. It was built because someone asked for my work I used to document it on my Notion lowkey little embarrassed... But now I can just show them, still thinking should I make one for me to document my journey. And one for recruiters or mentors?? Let me know what you think pls... ",
+        "Developed a fully functional personal website using TypeScript and Supabase, integrating Resend API to send messages directly to Gmail. Enabled seamless communication with visitors, showcasing projects and skills professionally, with 100% reliable message delivery.",
       category: "IT",
-      tags: ["Next.js", "TypeScript", "SupaBase"],
+      tags: ["Next.js", "TypeScript", "Supabase", "Resend API"],
       link: "https://nana-nandintsetseg.vercel.app/",
     },
     {
@@ -26,11 +33,11 @@ export default function Projects() {
 
   const marketingProjects = [
     {
-      title: "Social media Marketing",
+      title: "Frozen Yogurt Shop Marketing Campaign",
       description:
-        "Cross platform monetize for new frozen ypgurt shop. I was in charge of Social media to build audience and waiting list before the store open using AI conent creation. 2497% growth on engagement 924% growth on audience.",
+        "Managed social media strategy and content creation. Achieved 2497% growth in engagement and 924% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
       category: "Marketing",
-      tags: ["Strategy", "Social Media", "Analytics"],
+      tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
       link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
     },
     {
@@ -63,12 +70,13 @@ export default function Projects() {
     {
       title: "Housing complex 3D modeling",
       description:
-        "In High school I was in charge of the 3D modeing on sketchup since I knew how to read the floor planning and at the time I was developing interest in sketchup. Since it was one of my first big projects I spent so many hours focusing on learning and learned the materials and dimensions in deep level. ",
+        "In High school I was in charge of the 3D modeing on sketchup since I knew how to read the floor planning and at the time I was developing interest in sketchup. Since it was one of my first big projects I spent so many hours focusing on learning and learned the materials and dimensions in deep level.",
       category: "Design",
       tags: ["Interior Design", "3D Modeling", "CAD"],
       link: "https://www.notion.so/K-Village-3D-Model-284615bca7f780168eb6ddaaa0b32f8a?source=copy_link",
     },
   ]
+
   const personalProjects = [
     {
       title: "Hair dressing",
@@ -93,7 +101,7 @@ export default function Projects() {
       category: "Personal",
       tags: ["University", "Project", "In Progress"],
       link: "https://campus.hellorubric.com/?s=11154",
-    },    
+    },
   ]
 
   return (

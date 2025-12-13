@@ -9,25 +9,25 @@ export default function About() {
       year: "2025",
       title: "Currently Full-Time Student, Full-Time Freelance, Part Time Work",
       description:
-        "Full time CS student at QUT with scholarship, freelancing on web-based application,website development, mmarketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for eccomerce brand. Grazy Era✨",
+        "Full time CS student at QUT with scholarship, freelancing on web-based application, website development, marketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for ecommerce brand. Crazy Era✨",
     },
     {
       year: "2024",
-      title: "Getting Independent / Personal development/",
+      title: "Getting Independent / Personal development",
       description:
-        "Graduated high school with 98.8% average, got driver licensse and invited into 126 University worldwide, 78 of them offered scholarship. Seperated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. started club Mongolians in QUT student association. Independence Era✨",
+        "Graduated high school with 98.8% average, got driver license and invited into 126 University worldwide, 78 of them offered scholarship. Separated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. Started club Mongolians in QUT student association. Independence Era✨",
     },
     {
       year: "2023",
-      title: "National StartUp Hackaton top 10 from 400 companies",
+      title: "National StartUp Hackathon top 10 from 400 companies",
       description:
-        "Developed AI on that calculate and predict Solar Panel movement to check if it can worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
+        "Developed AI that calculates and predicts Solar Panel movement to check if it can be worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
     },
     {
       year: "2020-2023",
       title: "Developing Technical and Soft skills",
       description:
-        "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school i was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
+        "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school I was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
     },
     {
       year: "2020-2023",
@@ -83,14 +83,22 @@ export default function About() {
             <h2 className="text-3xl font-bold text-purple-300">Education</h2>
             <div className="space-y-4">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-blue-400">
-                <h3 className="text-xl font-semibold">Bachelor of Computer Science </h3>
-                <p className="text-muted-foreground">Queensland University of Technology • 2025</p>
-                <p className="mt-2">Major in Computer Science / Minor in Finance </p>
+                <h3 className="text-xl font-semibold">BA in Computer Science & Minor in Finance</h3>
+                <p className="text-muted-foreground">Queensland University of Technology • Expected 2026</p>
+                <p className="mt-2">
+                  Gaining comprehensive knowledge in computer science, including software development, algorithms, and
+                  system design, with a minor in finance for data-driven decision-making. Collaborating with a team to
+                  design and develop a cross-platform desktop application using Java SQLite Maven.
+                </p>
               </div>
               <div className="glass-card rounded-2xl p-6 border-l-4 border-purple-400">
-                <h3 className="text-xl font-semibold">Diploma of Information Technology </h3>
-                <p className="text-muted-foreground">Queensland University of Technology • 2024</p>
-                <p className="mt-2">Specialized training in Software Engineering </p>
+                <h3 className="text-xl font-semibold">Diploma of Information Technology - Web Development</h3>
+                <p className="text-muted-foreground">Queensland University of Technology • Graduated 2025</p>
+                <p className="mt-2">
+                  Gained hands-on experience in full-stack web development using HTML, CSS, JavaScript, TypeScript,
+                  React, and Supabase. Built responsive, user-friendly websites with API integration, UI/UX focus, and
+                  SEO optimization.
+                </p>
               </div>
             </div>
           </section>
