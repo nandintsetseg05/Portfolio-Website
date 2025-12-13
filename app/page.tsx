@@ -20,14 +20,7 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const featuredProjects = [
-    {
-      title: "Plumber Website",
-      description:
-        "Improved website for the businesses by implementing new UI added booking also added google business profile. Also got them SSl and done everython on SEO additionally gave some marketing advice which helpeed the business to gain 825% growth on site visitors.",
-      category: "IT",
-      tags: ["Web Development", "UI/UX", "Website"],
-      link: "https://sayramplumbing.com.au/",
-    },
+
     {
       title: "Social media Marketing",
       description:

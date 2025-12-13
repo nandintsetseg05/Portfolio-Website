@@ -1,0 +1,172 @@
+"use client"
+
+import { GalaxyNavigation } from "@/components/galaxy-navigation"
+import { ArrowLeft, Instagram, Linkedin, Github, Twitter, Mail, Download, ExternalLink, Phone } from "lucide-react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    url: "https://linkedin.com/in/your-profile",
+    color: "from-blue-500 to-blue-600",
+    hoverColor: "hover:shadow-blue-500/50",
+  },
+  {
+    name: "GitHub",
+    icon: Github,
+    url: "https://github.com/your-username",
+    color: "from-gray-600 to-gray-800",
+    hoverColor: "hover:shadow-gray-500/50",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    url: "https://instagram.com/your-profile",
+    color: "from-pink-500 via-purple-500 to-orange-500",
+    hoverColor: "hover:shadow-pink-500/50",
+  },
+  {
+    name: "Twitter / X",
+    icon: Twitter,
+    url: "https://twitter.com/your-profile",
+    color: "from-sky-400 to-sky-600",
+    hoverColor: "hover:shadow-sky-500/50",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    url: "mailto:bnandintsetseg74@gmail.com",
+    color: "from-red-500 to-orange-500",
+    hoverColor: "hover:shadow-red-500/50",
+  },
+  {
+    name: "Phone",
+    icon: Phone,
+    url: "tel:+610449098870",
+    color: "from-green-500 to-emerald-600",
+    hoverColor: "hover:shadow-green-500/50",
+  },
+]
+
+export default function Info() {
+  return (
+    <div className="relative min-h-screen">
+      <GalaxyNavigation />
+
+      <div className="relative z-10 py-20 px-4">
+        <Link
+          href="/"
+          className="fixed top-8 left-8 glass-card p-3 rounded-full hover:scale-110 transition-transform z-20"
+        >
+          <ArrowLeft className="w-5 h-5" />
+        </Link>
+
+        <div className="max-w-4xl mx-auto space-y-12 pt-16">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-4 text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+              Connect With Me
+            </h1>
+            <p className="text-xl text-gray-300">Find me on social media or download my resume</p>
+          </motion.div>
+
+          {/* Resume Download Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass-card p-8 rounded-3xl text-center space-y-6"
+          >
+            <div className="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+              <Download className="w-10 h-10 text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-2">Download My Resume</h2>
+              <p className="text-gray-400">Get a PDF copy of my latest resume with all my skills and experience</p>
+            </div>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-purple-500/30"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume (PDF)
+            </a>
+          </motion.div>
+
+          {/* Social Links Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl font-bold text-center text-white">Follow Me</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+                  className={`glass-card p-6 rounded-2xl flex items-center gap-4 group hover:scale-105 transition-all duration-300 shadow-lg ${social.hoverColor}`}
+                >
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${social.color}`}>
+                    <social.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
+                      {social.name}
+                    </h3>
+                    <p className="text-sm text-gray-400">Connect with me</p>
+                  </div>
+                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Contact Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="glass-card p-8 rounded-3xl text-center space-y-4"
+          >
+            <h2 className="text-2xl font-bold text-white">Want to work together?</h2>
+            <p className="text-gray-300 max-w-lg mx-auto">
+              I'm always open to new opportunities and collaborations. Feel free to reach out through any of the
+              platforms above or send me an email directly!
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="mailto:bnandintsetseg74@gmail.com"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
+              >
+                <Mail className="w-5 h-5" />
+                bnandintsetseg74@gmail.com
+              </a>
+              <a
+                href="tel:+610449098870"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
+              >
+                <Phone className="w-5 h-5" />
+                +61 0449098870
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  )
+}

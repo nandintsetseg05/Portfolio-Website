@@ -295,8 +295,8 @@ export function GalaxyNavigation() {
           position={[-4, 1, -5]}
           size={0.6}
           color="#9B59B6"
-          label="Vlog"
-          route="/vlog"
+          label="Info"
+          route="/info"
           rotationSpeed={0.02}
           surfaceDetail={true}
           atmosphereColor="#B57EDC"

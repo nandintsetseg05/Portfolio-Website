@@ -5,14 +5,7 @@ import Link from "next/link"
 
 export default function Projects() {
   const itProjects = [
-    {
-      title: "Plumber Website",
-      description:
-        "Improved website for the businesses by implementing new UI added booking also added google business profile. Also got them SSl and done everython on SEO additionally gave some marketing advice which helpeed the business to gain 825% growth on site visitors.",
-      category: "IT",
-      tags: ["Web Development", "UI/UX", "Website"],
-      link: "https://sayramplumbing.com.au/",
-    },
+
     {
       title: "Portfolio Website",
       description:
