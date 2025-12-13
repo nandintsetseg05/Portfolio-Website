@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <Sparkles className="w-5 h-5 text-blue-400 group-hover:text-purple-400 transition-colors" />
+            
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
               Portfolio
             </span>

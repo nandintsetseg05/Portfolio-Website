@@ -94,8 +94,8 @@ export default function Home() {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-sm font-medium backdrop-blur-xl border border-white/10">
-                <Sparkles className="w-4 h-4 text-blue-400" />
-                <span className="text-gray-200">{t.home.greeting}</span>
+                
+                
               </div>
 
               <div className="space-y-4">
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
 
               <div className="glass-card px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/10 inline-block">
-                <p className="text-base text-gray-300 leading-relaxed">{t.home.tagline}</p>
+                
               </div>
 
               <div className="flex flex-wrap gap-4 pt-4">
