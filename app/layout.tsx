@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
+    google: "PHGX2ZcUz3uupzW14ZoXaYwAqNjmcE6sAFV1Cx5TyZk",
   },
   alternates: {
     canonical: "https://nana-nandintsetseg.com",
