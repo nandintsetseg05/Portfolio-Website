@@ -1,7 +1,7 @@
 "use client"
 
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
-import { ArrowLeft, Instagram, Linkedin, Github, Twitter, Mail, Download, ExternalLink, Phone } from "lucide-react"
+import { ArrowLeft, Instagram, Linkedin, Github, Mail, Download, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -9,30 +9,23 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/your-profile",
+    url: "https://www.linkedin.com/in/nana-nandintsetseg",
     color: "from-blue-500 to-blue-600",
     hoverColor: "hover:shadow-blue-500/50",
   },
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/your-username",
+    url: "https://github.com/nandintsetseg05",
     color: "from-gray-600 to-gray-800",
     hoverColor: "hover:shadow-gray-500/50",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://instagram.com/your-profile",
+    url: "https://www.instagram.com/n.tseegii.mn/",
     color: "from-pink-500 via-purple-500 to-orange-500",
     hoverColor: "hover:shadow-pink-500/50",
-  },
-  {
-    name: "Twitter / X",
-    icon: Twitter,
-    url: "https://twitter.com/your-profile",
-    color: "from-sky-400 to-sky-600",
-    hoverColor: "hover:shadow-sky-500/50",
   },
   {
     name: "Email",
@@ -40,13 +33,6 @@ const socialLinks = [
     url: "mailto:bnandintsetseg74@gmail.com",
     color: "from-red-500 to-orange-500",
     hoverColor: "hover:shadow-red-500/50",
-  },
-  {
-    name: "Phone",
-    icon: Phone,
-    url: "tel:+610449098870",
-    color: "from-green-500 to-emerald-600",
-    hoverColor: "hover:shadow-green-500/50",
   },
 ]
 
@@ -93,7 +79,7 @@ export default function Info() {
             </div>
             <a
               href="/resume.pdf"
-              download
+              download="Nana-Nandintsetseg-resume.pdf"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-purple-500/30"
             >
               <Download className="w-5 h-5" />
@@ -148,22 +134,13 @@ export default function Info() {
               I'm always open to new opportunities and collaborations. Feel free to reach out through any of the
               platforms above or send me an email directly!
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="mailto:bnandintsetseg74@gmail.com"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
-              >
-                <Mail className="w-5 h-5" />
-                bnandintsetseg74@gmail.com
-              </a>
-              <a
-                href="tel:+610449098870"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
-              >
-                <Phone className="w-5 h-5" />
-                +61 0449098870
-              </a>
-            </div>
+            <a
+              href="mailto:bnandintsetseg74@gmail.com"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
+            >
+              <Mail className="w-5 h-5" />
+              bnandintsetseg74@gmail.com
+            </a>
           </motion.div>
         </div>
       </div>

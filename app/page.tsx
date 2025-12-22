@@ -5,7 +5,7 @@ import type React from "react"
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ProjectCard } from "@/components/project-card"
 import { HobbyCard } from "@/components/hobby-card"
-import { Sparkles, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
@@ -20,7 +20,14 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const featuredProjects = [
-
+    {
+      title: "Plumber Website Development",
+      description:
+        "Redesigned the website with a modern UI, added a booking system, set up Google Business Profile, implemented SSL, and optimized SEO. Resulted in 825% increase in site visitors and improved overall business online presence.",
+      category: "IT & Web Development",
+      tags: ["Next.js", "UI/UX", "SEO", "SSL", "Google Business"],
+      link: "#",
+    },
     {
       title: "Social media Marketing",
       description:
@@ -93,10 +100,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-sm font-medium backdrop-blur-xl border border-white/10">
-                
-                
-              </div>
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-sm font-medium backdrop-blur-xl border border-white/10"></div>
 
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
@@ -108,9 +112,7 @@ export default function Home() {
                 <p className="text-2xl md:text-3xl font-semibold text-blue-200/90 leading-relaxed">{t.home.subtitle}</p>
               </div>
 
-              <div className="glass-card px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/10 inline-block">
-                
-              </div>
+              <div className="glass-card px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/10 inline-block"></div>
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href="/projects">
