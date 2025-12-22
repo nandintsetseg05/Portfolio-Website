@@ -19,7 +19,7 @@ export default function Projects() {
         "Developed a fully functional personal website using TypeScript and Supabase, integrating Resend API to send messages directly to Gmail. Enabled seamless communication with visitors, showcasing projects and skills professionally, with 100% reliable message delivery.",
       category: "IT",
       tags: ["Next.js", "TypeScript", "Supabase", "Resend API"],
-      link: "https://nana-nandintsetseg.vercel.app/",
+      link: "https://www.nana-nandintsetseg.com/",
     },
     {
       title: "Web-based Mobile Application",
