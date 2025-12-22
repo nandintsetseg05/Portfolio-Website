@@ -1,0 +1,21 @@
+{
+  "name": "Nana Nandintsetseg Portfolio",
+  "short_name": "Nana Portfolio",
+  "description": "Full-stack web developer and designer portfolio showcasing projects in Next.js, React, and digital marketing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

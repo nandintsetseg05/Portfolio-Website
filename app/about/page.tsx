@@ -2,6 +2,26 @@ import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { AnimatedBackground } from "@/components/animated-background"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Me - Background, Education & Timeline",
+  description:
+    "Learn about Nana Nandintsetseg - Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award-winning volunteer.",
+  keywords: [
+    "about nana",
+    "computer science student",
+    "QUT student",
+    "web developer education",
+    "physics olympiad",
+    "startup hackathon",
+  ],
+  openGraph: {
+    title: "About Nana Nandintsetseg - Developer, Designer & Student",
+    description:
+      "Full-time CS student at QUT, freelance developer, and part-time marketing manager with achievements in national olympiads and startup competitions.",
+  },
+}
 
 export default function About() {
   const timeline = [

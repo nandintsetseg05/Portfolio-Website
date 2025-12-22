@@ -2,6 +2,27 @@ import { ProjectCard } from "@/components/project-card"
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Projects - Web Development, Marketing & Design Portfolio",
+  description:
+    "View Nana Nandintsetseg's portfolio featuring web development projects (Next.js, React, TypeScript), digital marketing campaigns with 2497% engagement growth, and architectural design work.",
+  keywords: [
+    "web development projects",
+    "marketing portfolio",
+    "next.js projects",
+    "react developer portfolio",
+    "UI/UX design",
+    "SEO optimization",
+    "digital marketing campaigns",
+  ],
+  openGraph: {
+    title: "Projects Portfolio - Nana Nandintsetseg",
+    description:
+      "Full-stack development, digital marketing, and design projects with proven results including 825% traffic growth and 2497% engagement increase.",
+  },
+}
 
 export default function Projects() {
   const itProjects = [
