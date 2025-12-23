@@ -143,7 +143,7 @@ export default function ClientInfoPage() {
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
             >
               <Mail className="w-5 h-5" />
-              bnandintsetseg74@gmail.com
+              Send Email
             </a>
           </motion.div>
         </div>
