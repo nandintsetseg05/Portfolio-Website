@@ -4,6 +4,7 @@ import { BlogPostsList } from "@/components/blog-posts-list"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { PlusCircle } from "lucide-react"
+import { logout } from "@/app/actions/logout"
 
 export default async function AdminBlogPage() {
   const supabase = await createClient()
@@ -41,7 +42,7 @@ export default async function AdminBlogPage() {
                 New Post
               </Button>
             </Link>
-            <form action="/auth/logout" method="POST">
+            <form action={logout}>
               <Button variant="outline" type="submit">
                 Logout
               </Button>
