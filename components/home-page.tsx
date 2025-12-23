@@ -133,56 +133,18 @@ export function HomePage() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
-            >
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-card text-sm font-medium backdrop-blur-xl border border-white/10"></div>
-
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                    {t.home.title}
-                  </span>
-                </h1>
-
-                <p className="text-2xl md:text-3xl font-semibold text-blue-200/90 leading-relaxed">{t.home.subtitle}</p>
-              </div>
-
-              <div className="glass-card px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/10 inline-block"></div>
-
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link href="/projects">
-                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-6 text-base font-medium rounded-xl shadow-lg hover:shadow-purple-500/25 transition-all">
-                    View My Work
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-                <Link href="#contact">
-                  <Button
-                    variant="outline"
-                    className="border-white/20 hover:bg-white/5 backdrop-blur-xl px-8 py-6 text-base font-medium rounded-xl bg-transparent"
-                  >
-                    Get In Touch
-                  </Button>
-                </Link>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex justify-center lg:justify-end"
+              className="flex justify-center"
             >
               <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-3xl opacity-40 animate-pulse scale-110"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent blur-3xl opacity-40 animate-pulse scale-110"></div>
 
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-20 blur-xl scale-105"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/60 via-secondary/60 to-accent/60 opacity-20 blur-xl scale-105"></div>
 
                 <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-sm"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm"></div>
                   <Image
                     src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
-                    alt="Profile"
+                    alt="Nana Nandintsetseg - Full-Stack Developer"
                     width={448}
                     height={448}
                     className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
@@ -191,37 +153,60 @@ export function HomePage() {
                 </div>
               </div>
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="space-y-8"
+            >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
+                  Nana Nandintsetseg
+                </span>
+              </h1>
+
+              <div className="glass-card p-8 rounded-2xl backdrop-blur-xl border border-white/10 space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                  {t.home.aboutTitle}
+                </h2>
+                
+
+                <div className="space-y-6 text-base md:text-lg leading-relaxed text-foreground">
+                  
+
+                  
+
+                  
+
+                  <p>
+                    Bachelor of IT (Computer Science) student with a minor in Finance.
+                  </p>
+                  <p>
+                    I build clean, responsive websites and web apps that solve real problems for small businesses, like confusing layouts, low traffic, or no online booking. In my recent projects, I redesigned a plumber’s site with modern UI, SEO, SSL, and a booking system, and grew a frozen yogurt shop’s audience using AI‑driven social content.
+                  </p>
+                  <p>
+                    My toolkit includes HTML, CSS, JavaScript, React, basic backend, Git, and cloud, and I love turning ideas into shipped features. I’m looking for a team where I can learn from experienced developers, contribute to real products, and take ownership of small but meaningful tasks from day one.
+
+
+                  </p>
+                </div>
+
+                <div className="pt-4">
+                  <Link href="/about">
+                    <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl shadow-lg">
+                      {t.home.learnMore}
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
 
       <div className="relative z-10 pb-32 px-6 space-y-40">
-        {/* About Preview */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-5xl mx-auto"
-        >
-          <div className="glass-card p-10 md:p-14 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all">
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 leading-tight">
-                {t.home.aboutTitle}
-              </h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl">{t.home.aboutPreview}</p>
-              <div className="pt-4">
-                <Link href="/about">
-                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 group px-6 py-6 text-base rounded-xl shadow-lg">
-                    {t.home.learnMore}
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
         {/* Projects Preview */}
         <motion.section
           initial={{ opacity: 0, y: 40 }}
@@ -231,10 +216,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-secondary to-accent leading-tight text-foreground">
               {t.home.featuredProjects}
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t.home.projectsSubtitle}</p>
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.projectsSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
@@ -253,7 +238,7 @@ export function HomePage() {
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-purple-500/50 hover:bg-purple-500/10 hover:border-purple-400 group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
+                className="border-secondary/50 hover:bg-secondary/10 hover:border-secondary group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 {t.home.viewAllProjects}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -271,10 +256,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-400 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-accent to-accent/80 leading-tight text-foreground">
               {t.home.hobbiesTitle}
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t.home.hobbiesSubtitle}</p>
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.hobbiesSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {featuredHobbies.map((hobby, index) => (
@@ -293,7 +278,7 @@ export function HomePage() {
             <Link href="/hobbies">
               <Button
                 variant="outline"
-                className="border-pink-500/50 hover:bg-pink-500/10 hover:border-pink-400 group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
+                className="border-accent/50 hover:bg-accent/10 hover:border-accent group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 {t.home.exploreHobbies}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -312,10 +297,10 @@ export function HomePage() {
           className="max-w-5xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
               Contact Me
             </h2>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
               Have a question or want to work together? Drop me a message!
             </p>
           </div>
@@ -324,7 +309,7 @@ export function HomePage() {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <label htmlFor="name" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
+                  <label htmlFor="name" className="text-sm font-semibold text-foreground/90 uppercase tracking-wide">
                     Name
                   </label>
                   <input
@@ -333,13 +318,13 @@ export function HomePage() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
+                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div className="space-y-3">
-                  <label htmlFor="email" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
+                  <label htmlFor="email" className="text-sm font-semibold text-foreground/90 uppercase tracking-wide">
                     Email
                   </label>
                   <input
@@ -348,14 +333,14 @@ export function HomePage() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
+                    className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all backdrop-blur-sm hover:bg-white/10"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
 
               <div className="space-y-3">
-                <label htmlFor="message" className="text-sm font-semibold text-gray-200 uppercase tracking-wide">
+                <label htmlFor="message" className="text-sm font-semibold text-foreground/90 uppercase tracking-wide">
                   Message
                 </label>
                 <textarea
@@ -364,7 +349,7 @@ export function HomePage() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none backdrop-blur-sm hover:bg-white/10"
+                  className="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none backdrop-blur-sm hover:bg-white/10"
                   placeholder="Your message..."
                 />
               </div>
@@ -372,7 +357,7 @@ export function HomePage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-purple-500/25 text-base"
+                className="w-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-secondary/25 text-base"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

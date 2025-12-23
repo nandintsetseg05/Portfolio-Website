@@ -1,14 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
+
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { Navbar } from "@/components/navbar"
 import { LanguageProvider } from "@/lib/language-context"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
+import { Inter, JetBrains_Mono, Anton as V0_Font_Anton, EB_Garamond as V0_Font_EB_Garamond } from 'next/font/google'
+
+// Initialize fonts
+const _anton = V0_Font_Anton({ subsets: ['latin'], weight: ["400"] })
+const _ebGaramond = V0_Font_EB_Garamond({ subsets: ['latin'], weight: ["400","500","600","700","800"] })
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-serif" })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-serif" })
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nana-nandintsetseg.com"),
@@ -99,7 +105,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className={`font-serif ${inter.variable} ${jetbrainsMono.variable}`}>
         <LanguageProvider>
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>

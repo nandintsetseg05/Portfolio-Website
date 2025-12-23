@@ -139,14 +139,16 @@ export default function Projects() {
 
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
               Projects
             </h1>
-            <p className="text-xl text-gray-300 text-balance">A showcase of my work across IT, marketing, and design</p>
+            <p className="text-xl text-balance text-foreground">
+              A showcase of my work across IT, marketing, and design
+            </p>
           </div>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-blue-300">IT Projects</h2>
+            <h2 className="text-3xl font-bold text-primary">IT Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {itProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -155,7 +157,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-purple-300">Marketing Projects</h2>
+            <h2 className="text-3xl font-bold text-foreground">Marketing Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {marketingProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -164,7 +166,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-pink-300">Design & Architecture</h2>
+            <h2 className="text-3xl font-bold text-foreground">Design & Architecture</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {designProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -173,7 +175,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-purple-300">Personal Projects</h2>
+            <h2 className="text-3xl font-bold text-secondary">Personal Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {personalProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
