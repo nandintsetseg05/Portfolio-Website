@@ -144,7 +144,7 @@ export function HomePage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm"></div>
                   <Image
                     src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
-                    alt="Nana Nandintsetseg - Full-Stack Developer"
+                    alt="Nana Nandintsetseg - Junior Full-Stack Developer"
                     width={448}
                     height={448}
                     className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
@@ -161,8 +161,8 @@ export function HomePage() {
               className="space-y-8"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                  Nana Nandintsetseg
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite] border-foreground">
+                  Nana Nandintsetseg Bayarsaikhan Junior Software Developer     
                 </span>
               </h1>
 
