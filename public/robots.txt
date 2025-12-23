@@ -1,9 +1,11 @@
-# Allow all search engines to crawl all pages
 User-agent: *
 Allow: /
 
+# Explicitly allow important pages
+Allow: /about
+Allow: /projects
+Allow: /hobbies
+Allow: /info
+
 # Sitemap location
 Sitemap: https://nana-nandintsetseg.com/sitemap.xml
-
-# Crawl-delay for polite bots
-Crawl-delay: 1
