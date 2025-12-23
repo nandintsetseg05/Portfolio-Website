@@ -86,8 +86,7 @@ export default function About() {
             <h2 className="text-3xl font-bold text-primary">Background</h2>
             <div className="glass-card rounded-2xl p-8 space-y-4 text-lg leading-relaxed">
               <div>
-                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling.
-                My work spans across IT development, marketing strategy, and architectural design.
+                I&apos;m a creative and has a passion for technology, design, and storytelling. My work spans across IT development, marketing strategy, and architectural design.
               </div>
               <div>
                 With a unique blend of technical expertise and creative vision, I bring ideas to life through code,
@@ -95,14 +94,13 @@ export default function About() {
                 and solve real-world problems.
               </div>
               <div>
-                In short I tried and done too many things to write. I can learn anything with youtube and google and
-                little bit of practice. My most valued skill is that I learned how to learn at young age.💞
+                In short I tried and done too many things to write. I can learn anything with youtube and google and little bit of practice. My most valued skill is that I learned how to learn, I believe.      
               </div>
             </div>
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-secondary">Education</h2>
+            <h2 className="text-3xl font-bold text-foreground">Education</h2>
             <div className="space-y-4">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-primary">
                 <h3 className="text-xl font-semibold">BA in Computer Science & Minor in Finance</h3>

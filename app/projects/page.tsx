@@ -175,7 +175,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-secondary">Personal Projects</h2>
+            <h2 className="text-3xl font-bold text-foreground">Personal Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {personalProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
