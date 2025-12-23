@@ -131,13 +131,15 @@ export default function ClientInfoPage() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="glass-card p-8 rounded-3xl text-center space-y-4"
           >
-            <h2 className="text-2xl font-bold text-white">Want to work together? or hire me?     </h2>
+            <h2 className="text-2xl font-bold text-white">Want to work together? or hire me?</h2>
             <p className="max-w-lg mx-auto text-foreground">
               I'm always open to new opportunities and collaborations. Feel free to reach out through any of the
               platforms above or send me an email directly!
             </p>
             <a
-              href="mailto:bnandintsetseg74@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=bnandintsetseg74@gmail.com&su=Let's%20Work%20Together&body=Hi%20Nana,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss..."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 font-medium"
             >
               <Mail className="w-5 h-5" />
