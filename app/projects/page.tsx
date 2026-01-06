@@ -48,7 +48,7 @@ export default function Projects() {
         "A modern, responsive compound interest calculator built with Next.js and TypeScript, featuring real-time calculations, clean UI, and production deployment on Vercel.",
       category: "IT",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Git & GitHub",  "Vercel"],
-      link: "https://compound-interest-calculator-nv3m87jbo.vercel.app/",
+      link: "https://compound-interest-calculator-pearl.vercel.app/",
     },
     {
       title: "Web-based Mobile Application",
