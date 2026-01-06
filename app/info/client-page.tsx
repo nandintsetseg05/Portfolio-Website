@@ -57,10 +57,10 @@ export default function ClientInfoPage() {
             transition={{ duration: 0.6 }}
             className="space-y-4 text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
               Connect With Me
             </h1>
-            <p className="text-xl text-muted-foreground">Find me on social media or download my resume</p>
+            <p className="text-xl text-foreground">Find me on social media or download my resume</p>
           </motion.div>
 
           {/* Resume Download Section */}

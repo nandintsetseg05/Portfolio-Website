@@ -74,10 +74,10 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto space-y-16">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
               About Me
             </h1>
-            <p className="text-xl text-muted-foreground text-balance">
+            <p className="text-xl text-balance text-foreground">
               Get to know my background, education, and journey
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function About() {
           </section>
 
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-secondary">Education</h2>
+            <h2 className="text-3xl font-bold text-foreground">Education</h2>
             <div className="space-y-4">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-primary">
                 <h3 className="text-xl font-semibold">BA in Computer Science & Minor in Finance</h3>
@@ -126,7 +126,7 @@ export default function About() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-accent">Timeline</h2>
+            <h2 className="text-3xl font-bold text-foreground">Timeline</h2>
             <div className="relative">
               <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" />
               <div className="space-y-12">

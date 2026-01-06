@@ -162,7 +162,7 @@ export function HomePage() {
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                  Nana Nandintsetseg
+                  Nana Nandintsetseg Bayarsaikhan 
                 </span>
               </h1>
 
@@ -228,10 +228,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-secondary to-accent leading-tight text-foreground">
               {t.home.featuredProjects}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{t.home.projectsSubtitle}</p>
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.projectsSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
@@ -268,10 +268,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent/80 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-accent to-accent/80 leading-tight text-foreground">
               {t.home.hobbiesTitle}
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{t.home.hobbiesSubtitle}</p>
+            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.hobbiesSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {featuredHobbies.map((hobby, index) => (
@@ -309,10 +309,10 @@ export function HomePage() {
           className="max-w-5xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
               Contact Me
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
               Have a question or want to work together? Drop me a message!
             </p>
           </div>

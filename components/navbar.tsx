@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Sparkles } from "lucide-react"
+import { Menu, X, BiohazardIcon } from "lucide-react"
 import { useState } from "react"
 
 export function Navbar() {
@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <Sparkles className="w-6 h-6 text-primary group-hover:text-secondary transition-colors" />
+            <BiohazardIcon className="w-6 h-6 text-primary group-hover:text-secondary transition-colors" />
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               Portfolio
             </span>
