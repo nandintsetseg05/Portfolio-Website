@@ -173,35 +173,13 @@ export function HomePage() {
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t.home.aboutPreview}</p>
 
                 <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    Nana Nandintsetseg Bayarsaikhan is a full-stack developer and web designer based in Brisbane,
-                    Australia, currently pursuing a Bachelor of IT (Computer Science) with a minor in Finance at
-                    Queensland University of Technology. With a passion for creating innovative digital solutions, Nana
-                    combines technical expertise with creative design to build websites and applications that deliver
-                    real business results.
-                  </p>
+                  
 
-                  <p>
-                    Her recent work includes a complete website redesign for a plumbing business that achieved an
-                    impressive 825% increase in site visitors through modern UI implementation, booking system
-                    integration, Google Business Profile setup, SSL security, and strategic SEO optimization. This
-                    project demonstrates her ability to blend technical development with business growth strategies.
-                  </p>
+                  
 
-                  <p>
-                    Beyond web development, Nana has proven expertise in digital marketing, having orchestrated a
-                    successful cross-platform social media campaign for 88 Acai Frozen Yogurt that generated a 2497%
-                    increase in engagement and 924% growth in audience before the store's opening. Her proficiency spans
-                    Next.js, React, TypeScript, UI/UX design, SEO, and AI-powered content creation.
-                  </p>
+                  
 
-                  <p>
-                    With dual expertise in technology and finance, Nana brings a unique perspective to software
-                    development projects. She's passionate about entrepreneurship and open to new opportunities,
-                    collaborative ventures, and innovative projects. Whether you're looking to build a new website,
-                    redesign an existing platform, or need a creative problem-solver for your tech challenges, Nana is
-                    ready to bring your ideas to life.
-                  </p>
+                  
                 </div>
 
                 <div className="pt-4">
