@@ -144,7 +144,7 @@ export function HomePage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm"></div>
                   <Image
                     src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
-                    alt="Nana Nandintsetseg - Junior Full-Stack Developer"
+                    alt="Nana Nandintsetseg - Full-Stack Developer"
                     width={448}
                     height={448}
                     className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
@@ -161,8 +161,8 @@ export function HomePage() {
               className="space-y-8"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite] border-foreground">
-                  Nana Nandintsetseg Bayarsaikhan Junior Software Developer     
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
+                  Nana Nandintsetseg
                 </span>
               </h1>
 
@@ -170,25 +170,37 @@ export function HomePage() {
                 <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                   {t.home.aboutTitle}
                 </h2>
-                
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t.home.aboutPreview}</p>
 
-                <div className="space-y-6 text-base md:text-lg leading-relaxed text-foreground">
-                  
-
-                  
-
-                  
-
+                <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    Bachelor of IT (Computer Science) student with a minor in Finance.
+                    Nana Nandintsetseg Bayarsaikhan is a full-stack developer and web designer based in Brisbane,
+                    Australia, currently pursuing a Bachelor of IT (Computer Science) with a minor in Finance at
+                    Queensland University of Technology. With a passion for creating innovative digital solutions, Nana
+                    combines technical expertise with creative design to build websites and applications that deliver
+                    real business results.
                   </p>
+
                   <p>
-                    I build clean, responsive websites and web apps that solve real problems for small businesses, like confusing layouts, low traffic, or no online booking. In my recent projects, I redesigned a plumber’s site with modern UI, SEO, SSL, and a booking system, and grew a frozen yogurt shop’s audience using AI‑driven social content.
+                    Her recent work includes a complete website redesign for a plumbing business that achieved an
+                    impressive 825% increase in site visitors through modern UI implementation, booking system
+                    integration, Google Business Profile setup, SSL security, and strategic SEO optimization. This
+                    project demonstrates her ability to blend technical development with business growth strategies.
                   </p>
+
                   <p>
-                    My toolkit includes HTML, CSS, JavaScript, React, basic backend, Git, and cloud, and I love turning ideas into shipped features. I’m looking for a team where I can learn from experienced developers, contribute to real products, and take ownership of small but meaningful tasks from day one.
+                    Beyond web development, Nana has proven expertise in digital marketing, having orchestrated a
+                    successful cross-platform social media campaign for 88 Acai Frozen Yogurt that generated a 2497%
+                    increase in engagement and 924% growth in audience before the store's opening. Her proficiency spans
+                    Next.js, React, TypeScript, UI/UX design, SEO, and AI-powered content creation.
+                  </p>
 
-
+                  <p>
+                    With dual expertise in technology and finance, Nana brings a unique perspective to software
+                    development projects. She's passionate about entrepreneurship and open to new opportunities,
+                    collaborative ventures, and innovative projects. Whether you're looking to build a new website,
+                    redesign an existing platform, or need a creative problem-solver for your tech challenges, Nana is
+                    ready to bring your ideas to life.
                   </p>
                 </div>
 
@@ -216,10 +228,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-secondary to-accent leading-tight text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent leading-tight">
               {t.home.featuredProjects}
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.projectsSubtitle}</p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{t.home.projectsSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {featuredProjects.map((project, index) => (
@@ -256,10 +268,10 @@ export function HomePage() {
           className="max-w-7xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-accent to-accent/80 leading-tight text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent/80 leading-tight">
               {t.home.hobbiesTitle}
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed text-foreground">{t.home.hobbiesSubtitle}</p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{t.home.hobbiesSubtitle}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {featuredHobbies.map((hobby, index) => (
@@ -297,10 +309,10 @@ export function HomePage() {
           className="max-w-5xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent leading-tight">
               Contact Me
             </h2>
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Have a question or want to work together? Drop me a message!
             </p>
           </div>

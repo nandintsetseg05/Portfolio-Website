@@ -43,6 +43,14 @@ export default function Projects() {
       link: "https://www.nana-nandintsetseg.com/",
     },
     {
+      title: "Compound Interest Calculator (Next.js + TypeScript)",
+      description:
+        "A modern, responsive compound interest calculator built with Next.js and TypeScript, featuring real-time calculations, clean UI, and production deployment on Vercel.",
+      category: "IT",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Git & GitHub",  "Vercel"],
+      link: "https://compound-interest-calculator-nv3m87jbo.vercel.app/",
+    },
+    {
       title: "Web-based Mobile Application",
       description:
         "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
@@ -139,10 +147,10 @@ export default function Projects() {
 
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               Projects
             </h1>
-            <p className="text-xl text-balance text-foreground">
+            <p className="text-xl text-muted-foreground text-balance">
               A showcase of my work across IT, marketing, and design
             </p>
           </div>
@@ -157,7 +165,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-foreground">Marketing Projects</h2>
+            <h2 className="text-3xl font-bold text-secondary">Marketing Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {marketingProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -166,7 +174,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-foreground">Design & Architecture</h2>
+            <h2 className="text-3xl font-bold text-accent">Design & Architecture</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {designProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
@@ -175,7 +183,7 @@ export default function Projects() {
           </section>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-foreground">Personal Projects</h2>
+            <h2 className="text-3xl font-bold text-secondary">Personal Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {personalProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
