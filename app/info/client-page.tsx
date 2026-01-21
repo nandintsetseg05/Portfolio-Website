@@ -80,8 +80,8 @@ export default function ClientInfoPage() {
               </p>
             </div>
             <a
-              href="/resume.pdf"
-              download="Nana-Nandintsetseg-resume.pdf"
+              href="/Nana Nandintsetseg Bayarsaikhan resume.pdf"
+              download="Nana Nandintsetseg Bayarsaikhan resume.pdf"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-full hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-secondary/30"
             >
               <Download className="w-5 h-5" />
