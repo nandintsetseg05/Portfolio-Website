@@ -168,6 +168,14 @@ export default function Projects() {
       tags: ["University", "Project", "In Progress"],
       link: "https://campus.hellorubric.com/?s=11154",
     },
+    {
+      title: "High School Grade",
+      description:
+        "I was overachiever, I don't want to brag about it but I was a academic weapon andd if you wanna see yourself in case follow the link",
+      category: "Personal",
+      tags: ["High School", "Project", "Academic"],
+      link: "https://www.notion.so/Not-Gonna-Brag-But-308615bca7f78020bb58cb250f530915?source=copy_link",
+    },
   ]
 
   return (
