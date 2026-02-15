@@ -58,6 +58,43 @@ export default function Projects() {
       tags: ["Data Query", "UI/UX design", "OOP"],
       link: "https://www.notion.so/convenient-store-inventory-application-246615bca7f78067b370de7c47cdbe85?source=copy_link",
     },
+    {
+      title: "Book Typing game",
+      description:
+        "Ever wanted to read book while improving your typing speed? Well I made a website where you can upload books you wanna read in pdf. And website will extract the text and turn to your typing practice. Read you book and improve your typing skill at the same time.",
+     tags: [
+       "React",
+       "JavaScript",
+       "Web Development",
+       "Frontend Development",
+       "Single Page Application",
+       "IndexedDB",
+       "PDF.js",
+       "Real-time Application",
+       "Tailwind CSS",
+       "Responsive Design"
+     ]
+      link: "https://typing-master-nana.vercel.app/",
+    },
+    {
+      title: "Personal AI Cloud - Self-Hosted Multi-Agent AI Platform",
+      description:
+        "A fully autonomous, self-hosted AI infrastructure that runs unlimited AI models locally with zero token costs. My solution is Built a personal AI cloud with Docker containers accessible anywhere via Cloudflare Tunnel. But its based on my personal PC not everyone can access.",
+      category: "IT",
+      tags: [
+        "Artificial Intelligence",
+        "Docker",
+        "Multi-Agent System",
+        "Self-Hosted AI",
+        "Cloud Infrastructure",
+        "AI Automation",
+        "Open Source",
+        "DevOps",
+        "System Architecture",
+        "MLOps"
+      ]
+      link: "https://www.linkedin.com/posts/nana-nandintsetseg_i-built-my-own-cloud-ai-keeping-it-open-activity-7425084513233420288-rf3v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8cua4BCjnnZsCPN1TB-9pHoOW3bFvO81c",
+    },
   ]
 
   const marketingProjects = [
