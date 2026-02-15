@@ -73,7 +73,7 @@ export default function Projects() {
        "Real-time Application",
        "Tailwind CSS",
        "Responsive Design"
-     ]
+     ],
       link: "https://typing-master-nana.vercel.app/",
     },
     {
@@ -92,7 +92,7 @@ export default function Projects() {
         "DevOps",
         "System Architecture",
         "MLOps"
-      ]
+      ],
       link: "https://www.linkedin.com/posts/nana-nandintsetseg_i-built-my-own-cloud-ai-keeping-it-open-activity-7425084513233420288-rf3v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8cua4BCjnnZsCPN1TB-9pHoOW3bFvO81c",
     },
 
