@@ -4,6 +4,7 @@ import type React from "react"
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ProjectCard } from "@/components/project-card"
 import { HobbyCard } from "@/components/hobby-card"
+import { Lily3D } from "@/components/3d-lily"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -386,17 +387,7 @@ export function HomePage() {
           </div>
 
           <div className="glass-card p-6 md:p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all flex justify-center">
-            <div className="sketchfab-embed-wrapper w-full">
-              <iframe
-                title="Lilies"
-                frameBorder="0"
-                allowFullScreen
-                width="640"
-                height="480"
-                src="https://sketchfab.com/models/45755df496804cb7a36f6f32305b57a7/embed"
-                className="w-full max-w-2xl aspect-video rounded-xl"
-              />
-            </div>
+            <Lily3D />
           </div>
         </motion.section>
       </div>
