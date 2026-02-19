@@ -82,6 +82,19 @@ export function HomePage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: `url('${
+            "https://cdn.builder.io/api/v1/image/assets%2Ff2869fe013544cd1b97d9ab6f3298519%2F318afc92b87d408286d9f470af4bf196?format=webp&width=800&height=1200"
+          }')`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -352,6 +365,45 @@ export function HomePage() {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
+          </div>
+        </motion.section>
+
+        {/* 3D Model Embed */}
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto space-y-12"
+        >
+          <div className="text-center space-y-5">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
+              3D Art Gallery
+            </h2>
+            <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
+              Explore interactive 3D models and digital art experiences
+            </p>
+          </div>
+
+          <div className="glass-card p-6 md:p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all flex justify-center">
+            <div className="sketchfab-embed-wrapper w-full">
+              <iframe
+                title="Lilies"
+                frameBorder="0"
+                allowFullScreen
+                mozAllowFullScreen={true}
+                webkitAllowFullScreen={true}
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking
+                executionWhileOutOfViewport
+                executionWhileNotRendered
+                webShare
+                width="640"
+                height="480"
+                src="https://sketchfab.com/models/45755df496804cb7a36f6f32305b57a7/embed"
+                className="w-full max-w-2xl aspect-video rounded-xl"
+              />
+            </div>
           </div>
         </motion.section>
       </div>
