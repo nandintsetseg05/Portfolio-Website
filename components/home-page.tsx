@@ -4,7 +4,6 @@ import type React from "react"
 import { GalaxyNavigation } from "@/components/galaxy-navigation"
 import { ProjectCard } from "@/components/project-card"
 import { HobbyCard } from "@/components/hobby-card"
-import { Lily3D } from "@/components/3d-lily"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -83,19 +82,6 @@ export function HomePage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage: `url('${
-            "https://cdn.builder.io/api/v1/image/assets%2Ff2869fe013544cd1b97d9ab6f3298519%2F318afc92b87d408286d9f470af4bf196?format=webp&width=800&height=1200"
-          }')`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
-      />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -366,28 +352,6 @@ export function HomePage() {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
-          </div>
-        </motion.section>
-
-        {/* 3D Model Embed */}
-        <motion.section
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="max-w-5xl mx-auto space-y-12"
-        >
-          <div className="text-center space-y-5">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
-              3D Art Gallery
-            </h2>
-            <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
-              Explore interactive 3D models and digital art experiences
-            </p>
-          </div>
-
-          <div className="glass-card p-6 md:p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all flex justify-center">
-            <Lily3D />
           </div>
         </motion.section>
       </div>
