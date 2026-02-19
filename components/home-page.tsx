@@ -391,13 +391,6 @@ export function HomePage() {
                 title="Lilies"
                 frameBorder="0"
                 allowFullScreen
-                mozAllowFullScreen={true}
-                webkitAllowFullScreen={true}
-                allow="autoplay; fullscreen; xr-spatial-tracking"
-                xr-spatial-tracking
-                executionWhileOutOfViewport
-                executionWhileNotRendered
-                webShare
                 width="640"
                 height="480"
                 src="https://sketchfab.com/models/45755df496804cb7a36f6f32305b57a7/embed"
