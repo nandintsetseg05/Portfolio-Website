@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, BiohazardIcon } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import Image from "next/image"
 
 export function Navbar() {
   const pathname = usePathname()
@@ -24,7 +25,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <BiohazardIcon className="w-6 h-6 text-primary group-hover:text-secondary transition-colors" />
+            <Image
+              src="https://cdn.builder.io/api/v1/image/assets%2Ff2869fe013544cd1b97d9ab6f3298519%2Fccc47f42d5c24cc9a48e00c4e9a59832?format=webp&width=800&height=1200"
+              alt="Portfolio logo"
+              width={24}
+              height={24}
+              className="w-6 h-6 group-hover:scale-110 transition-transform"
+            />
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
               Portfolio
             </span>
