@@ -26,15 +26,12 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="https://cdn.builder.io/api/v1/image/assets%2Ff2869fe013544cd1b97d9ab6f3298519%2Fccc47f42d5c24cc9a48e00c4e9a59832?format=webp&width=800&height=1200"
-              alt="Portfolio logo"
-              width={24}
-              height={24}
-              className="w-6 h-6 group-hover:scale-110 transition-transform"
+              src="https://cdn.builder.io/api/v1/image/assets%2Ff2869fe013544cd1b97d9ab6f3298519%2F4701bfcd0cef49ef8e0ce0b65831645b?format=webp&width=800&height=1200"
+              alt="Nana B logo"
+              width={120}
+              height={40}
+              className="h-8 w-auto group-hover:scale-105 transition-transform"
             />
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
-              Portfolio
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
