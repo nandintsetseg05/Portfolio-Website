@@ -31,7 +31,7 @@ export default function BlogPage() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-6 max-w-3xl mx-auto"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
             Blog & Articles
           </h1>
           <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto">
