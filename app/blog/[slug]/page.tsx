@@ -1,52 +1,57 @@
-import { Metadata } from "next"
-import { notFound } from "next/navigation"
+"use client"
+
+import { useEffect, useState } from "react"
+import { notFound, useParams } from "next/navigation"
 import { motion } from "framer-motion"
-import { getBlogPost, getBlogPosts } from "@/app/actions/blog"
+import { getBlogPost } from "@/app/actions/blog"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { format } from "date-fns"
 import Image from "next/image"
+import type { BlogPost } from "@/app/actions/blog"
 
-interface BlogPostPageProps {
-  params: Promise<{ slug: string }>
-}
+export default function BlogPostPage() {
+  const params = useParams()
+  const slug = params.slug as string
+  const [post, setPost] = useState<BlogPost | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [notFound404, setNotFound404] = useState(false)
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const { slug } = await params
-  const post = await getBlogPost(slug)
-
-  if (!post) {
-    return {
-      title: "Post Not Found",
+  useEffect(() => {
+    async function loadPost() {
+      const loadedPost = await getBlogPost(slug)
+      if (!loadedPost) {
+        setNotFound404(true)
+      } else {
+        setPost(loadedPost)
+      }
+      setIsLoading(false)
     }
+    loadPost()
+  }, [slug])
+
+  if (notFound404) {
+    return (
+      <div className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl font-bold">Post Not Found</h1>
+          <p className="text-muted-foreground">The blog post you're looking for doesn't exist.</p>
+          <Link href="/blog">
+            <Button className="bg-gradient-to-r from-primary to-secondary">Back to Blog</Button>
+          </Link>
+        </div>
+      </div>
+    )
   }
 
-  return {
-    title: `${post.title} | Blog`,
-    description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: post.imageUrl ? [{ url: post.imageUrl }] : [],
-    },
-  }
-}
-
-export async function generateStaticParams() {
-  const posts = await getBlogPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
-
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = await params
-  const post = await getBlogPost(slug)
-
-  if (!post) {
-    notFound()
+  if (isLoading || !post) {
+    return (
+      <div className="relative min-h-screen overflow-hidden pt-32 pb-20 flex items-center justify-center">
+        <p className="text-lg text-muted-foreground">Loading post...</p>
+      </div>
+    )
   }
 
   return (

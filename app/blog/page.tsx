@@ -1,20 +1,26 @@
-import { Metadata } from "next"
+"use client"
+
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { getBlogPosts } from "@/app/actions/blog"
 import { BlogCard } from "@/components/blog-card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import type { BlogPost } from "@/app/actions/blog"
 
-export const metadata: Metadata = {
-  title: "Blog | Nana Nandintsetseg",
-  description: "Read my latest articles, tutorials, and insights about web development, design, and technology.",
-}
+export default function BlogPage() {
+  const [posts, setPosts] = useState<BlogPost[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
-export default async function BlogPage() {
-  const posts = await getBlogPosts()
-  const sortedPosts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-
+  useEffect(() => {
+    async function loadPosts() {
+      const allPosts = await getBlogPosts()
+      setPosts(allPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()))
+      setIsLoading(false)
+    }
+    loadPosts()
+  }, [])
   return (
     <div className="relative min-h-screen overflow-hidden pt-32 pb-20">
       <section className="max-w-7xl mx-auto px-6 space-y-16">
@@ -34,9 +40,13 @@ export default async function BlogPage() {
         </motion.div>
 
         {/* Blog Posts Grid */}
-        {sortedPosts.length > 0 ? (
+        {isLoading ? (
+          <div className="text-center py-20">
+            <p className="text-lg text-muted-foreground">Loading blog posts...</p>
+          </div>
+        ) : posts.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedPosts.map((post, index) => (
+            {posts.map((post, index) => (
               <BlogCard key={post.id} post={post} index={index} />
             ))}
           </div>
