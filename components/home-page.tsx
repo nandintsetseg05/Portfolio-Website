@@ -92,7 +92,7 @@ export function HomePage() {
             url: "https://nana-nandintsetseg.com",
             image:
               "https://nana-nandintsetseg.com/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
-            jobTitle: "Full-Stack Developer & Web Designer",
+            jobTitle: "I Build Things That Solve a Problem. For People Who Mean Business.",
             worksFor: {
               "@type": "EducationalOrganization",
               name: "Queensland University of Technology",
@@ -162,7 +162,7 @@ export function HomePage() {
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                  Nana Nandintsetseg Bayarsaikhan 
+                  Nana B, Nandintsetseg Bayarsaikhan
                 </span>
               </h1>
 

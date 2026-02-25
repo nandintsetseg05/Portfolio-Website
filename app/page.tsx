@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { HomePage } from "@/components/home-page"
 
 export const metadata: Metadata = {
-  title: "Nana Nandintsetseg | Full-Stack Developer & Web Designer Portfolio",
+  title: "Nana Nandintsetseg | I Build Things That Work. For People Who Mean Business.",
   description:
     "Full-stack developer and designer at QUT specializing in Next.js, React, TypeScript, and digital marketing. Proven track record: 825% website traffic growth, 2497% social media engagement increase. Available for freelance web development projects in Brisbane, Australia.",
   keywords: [

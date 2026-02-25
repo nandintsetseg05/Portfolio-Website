@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { Navbar } from "@/components/navbar"
-import { LanguageProvider } from "@/lib/language-context"
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mon
 export const metadata: Metadata = {
   metadataBase: new URL("https://nana-nandintsetseg.com"),
   title: {
-    default: "Nana Nandintsetseg | Full-Stack Developer, Web Designer & Marketing Specialist",
-    template: "%s | Nana Nandintsetseg Portfolio",
+    default: "Nana Nandintsetseg | Computer Science + Finance | Brisbane, AU | Technology · Strategy · Delivery",
+    template: "%s | Nana B, Nandintsetseg Bayarsaikhan Portfolio",
   },
   description:
     "Nana Nandintsetseg - Computer Science student at QUT specializing in full-stack web development, UI/UX design, and digital marketing. Expert in Next.js, React, TypeScript, SEO optimization, and creating high-impact websites with 825% traffic growth.",
@@ -38,6 +38,13 @@ export const metadata: Metadata = {
     "Frontend Developer",
     "Backend Developer",
     "Portfolio Website",
+    "Nana",
+    "Нандинцэцэг Баярсайхан",
+    "Нандинцэцэг Нана",
+    "Нандинцэцэг",
+    "Нана",
+    "Nana B",
+    "Nandintsetseg Nana",
     "Nandintsetseg Bayarsaikhan",
   ],
   authors: [{ name: "Nana Nandintsetseg Bayarsaikhan" }],
@@ -53,7 +60,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://nana-nandintsetseg.com",
     siteName: "Nana Nandintsetseg Portfolio",
-    title: "Nana Nandintsetseg | Full-Stack Developer & Web Designer",
+    title: "Nana Nandintsetseg | I Build Things Solve Real Problems. For People Who Mean Business.",
     description:
       "Full-stack web developer and designer specializing in Next.js, React, and digital marketing. Creating stunning websites with proven results - 825% traffic increase, 2497% engagement growth.",
     images: [
@@ -100,10 +107,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable}`}>
-        <LanguageProvider>
+
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
-        </LanguageProvider>
+
         <Analytics />
       </body>
     </html>
