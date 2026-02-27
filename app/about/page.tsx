@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     "Learn about Nana Nandintsetseg - Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award-winning volunteer.",
   keywords: [
     "about nana",
+    "Нандинцэцэг"
+    "Баярсайхан"
+    "Nana B"
+    "Nana"
+    "Nandintsetseg"
+    "Nana Nandintsetseg"
+    "Нана Нандинцэцэг"
+    "Nandintsetseg Bayarsaikhan"
     "computer science student",
     "QUT student",
     "web developer education",
