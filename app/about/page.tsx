@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Nana Nandintsetseg - Developer, Designer & Student",
     description:
-      "Full-time CS student at QUT, freelance developer, and part-time marketing manager with achievements in national olympiads and startup competitions.",
+      "Full-time CS student at QUT, freelance developer, and part time marketing manager with achievements in national olympiads and startup competitions.",
   },
 }
 
