@@ -37,15 +37,13 @@ export default function About() {
       year: "2025 - Current",
       title: "Bachelor of Computer Science with Minor in Finance at QUT",
       description:
-        "Focused on System Architecture, Object-Oriented Design (OOD), CI/CD pipelines, and scalable full-stack development.",
-        "Gained practical skills in Linux, secure networking, data analytics, and learning finance data knowledge from minor for AI/ML applications.",
+        "Focused on System Architecture, Object-Oriented Design (OOD), CI/CD pipelines, and scalable full-stack development.\nGained practical skills in Linux, secure networking, data analytics, and learning finance data knowledge from minor for AI/ML applications.",
     },
     {
       year: "2024",
       title: "Diploma of IT at QUT",
       description:
-        "Learned Network fundamentals, OOP principles, relational database design, SQL, REST fundamentals, Git-based workflows, and client–server architecture.",
-        "Based on this knowledge built full stack Portfolio using Next.js 16, TypeScript, Tailwind, PostgreSQL, OAuth, and deployed on Cloudflare CDN. - React Architecture",
+        "Learned Network fundamentals, OOP principles, relational database design, SQL, REST fundamentals, Git-based workflows, and client–server architecture.\nBased on this knowledge built full stack Portfolio using Next.js 16, TypeScript, Tailwind, PostgreSQL, OAuth, and deployed on Cloudflare CDN. - React Architecture",
     },
     {
       year: "2020-2024",
