@@ -156,7 +156,10 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                  I Build Things That Solve Problem. For People and For Businesses.
+                  I Build Things That Solve A PROBLEM.
+                </p>
+                <p className="text-xl md:text-2xl font-semibold text-foreground/80">
+                  For People and For Businesses.
                 </p>
               </div>
 
@@ -168,15 +171,7 @@ export default function Home() {
                   I'm a final year Computer Science student at QUT Brisbane, with a Finance minor and a track
                   record of delivering real technology solutions for real businesses not just assignments.
                 </p>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Since 2020, I've built systems that are still running in production, grown audiences by 2,497%,
-                  increased web traffic by 825%, and shipped client applications serving 300+ daily users.
-                  I don't just write code I understand the business problem first.
-                </p>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  I'm fluent in Mongolian and English, based in Brisbane, and available for graduate roles,
-                  part-time contracts, and consulting projects from late 2026.
-                </p>
+
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic border-l-2 border-primary/40 pl-4">
                   If you're looking for someone who can sit in a client meeting in the morning and deploy a
                   solution by afternoon let's talk.
