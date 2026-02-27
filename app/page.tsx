@@ -164,17 +164,14 @@ export default function Home() {
               </div>
 
               <div className="glass-card p-8 rounded-2xl backdrop-blur-xl border border-white/10 space-y-5">
-                <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                  Hi, I'm Nana B.
-                </h2>
+
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  I'm a final year Computer Science student at QUT Brisbane, with a Finance minor and a track
-                  record of delivering real technology solutions for real businesses not just assignments.
+                  Final year Computer Science student with a Finance minor, with a proven track record of
+                  implementing and improving local business's systems and software.
                 </p>
 
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic border-l-2 border-primary/40 pl-4">
-                  If you're looking for someone who can sit in a client meeting in the morning and deploy a
-                  solution by afternoon let's talk.
+                  Want proof? Who am I?
                 </p>
                 <div className="pt-2">
                   <Link href="/about">

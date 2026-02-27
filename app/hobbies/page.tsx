@@ -102,7 +102,6 @@ export default function Hobbies() {
               Hobbies & Interests
             </h1>
             <p className="text-xl text-foreground">What I do when I'm not working?</p>
-            <p className="text-xl text-foreground">Everything and anything DIVA~</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
