@@ -34,34 +34,36 @@ export const metadata: Metadata = {
 export default function About() {
   const timeline = [
     {
-      year: "2025",
-      title: "Currently Full Time Student, Full Time Freelance, Part Time Work",
+      year: "2025 - Current",
+      title: "Bachelor of Computer Science with Minor in Finance at QUT",
       description:
-        "Full time CS student at QUT with scholarship, freelancing on web-based application, website development, marketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for ecommerce brand. Crazy Era✨",
+        "Focused on System Architecture, Object-Oriented Design (OOD), CI/CD pipelines, and scalable full-stack development.",
+        "Gained practical skills in Linux, secure networking, data analytics, and learning finance data knowledge from minor for AI/ML applications.",
     },
     {
       year: "2024",
-      title: "Getting Independent / Personal development",
+      title: "Diploma of IT at QUT",
       description:
-        "Graduated high school with 98.8% average, got driver license and invited into 126 University worldwide, 78 of them offered scholarship. Separated from my twin and parents first time in 18 years. Chose university based on reputation, practical experience, country, environment. Moved to new country Australia got a part time job. Started club Mongolians in QUT student association. Independence Era✨",
+        "Learned Network fundamentals, OOP principles, relational database design, SQL, REST fundamentals, Git-based workflows, and client–server architecture.",
+        "Based on this knowledge built full stack Portfolio using Next.js 16, TypeScript, Tailwind, PostgreSQL, OAuth, and deployed on Cloudflare CDN. - React Architecture",
+    },
+    {
+      year: "2020-2024",
+      title: "SAAS Business - BEN",
+      description:
+        "Sold my first business that I created from age of 16-18. BEN social media, marketing company focused on chatbots, business analyses, marketing campaigns, B2B consulting",
     },
     {
       year: "2023",
-      title: "National StartUp Hackathon top 10 from 400 companies",
+      title: "National StartUp Hackathon from 1209 people to top 15",
       description:
-        "Developed AI that calculates and predicts Solar Panel movement to check if it can be worth more than the energy that was used to move the panel. Using research based Data and real time sensor, outcome of prediction was 83% more effective and gained support from government. Nerd Era✨",
+        "Developed AI that calculates mechanical movement energy and predicts Solar Panel's outcome advantage from the movement trained on local environment DataBase",
     },
     {
-      year: "2020-2023",
-      title: "Developing Technical and Soft skills",
+      year: "2023",
+      title: "High School",
       description:
-        "Learned basics of accounting and marketing to help my parent's businesses. Learned architecture, rendering, building robots and photography as hobby. Starting to develop interest in IT field. During high school I was vice president of student association, center player at basketball team, setter for volleyball team and award winning golden volunteer. Can Do Everything Era✨",
-    },
-    {
-      year: "2020-2023",
-      title: "Academic Achievements",
-      description:
-        "I chose Mathematic, Physics, Social study, English, IT as my elective classes took 16 general classes for 3 years. Achieved National Physics Olympiad second third places for 5 years. Kangaroo Math Olympiad second third place for 6 years. Social study second place. Graduated with high honor with new school high record. Academic Weapon Era✨",
+        "Electives on IT, Mathematics, Physics, Social study with 9 fundamental base classes. Average graduated GPA: 98.9% from 100% scale ",
     },
   ]
 
@@ -94,17 +96,13 @@ export default function About() {
             <h2 className="text-3xl font-bold text-primary">Background</h2>
             <div className="glass-card rounded-2xl p-8 space-y-4 text-lg leading-relaxed">
               <div>
-                I'm a multidisciplinary creative professional with a passion for technology, design, and storytelling.
-                My work spans across IT development, marketing strategy, and architectural design.
+                Skilled in full-stack web development, with hands on experience in projects and research.
               </div>
               <div>
-                With a unique blend of technical expertise and creative vision, I bring ideas to life through code,
-                design, and strategic thinking. I believe in the power of technology to create meaningful experiences
-                and solve real-world problems.
+                Learned Finance fundamentals to build AI/ML model on Financial data.
               </div>
               <div>
-                In short I tried and done too many things to write. I can learn anything with youtube and google and
-                little bit of practice. My most valued skill is that I learned how to learn at young age.💞
+                I focus on mastering fundamentals and connecting knowledge across disciplines to solve problems efficiently.
               </div>
             </div>
           </section>
@@ -113,21 +111,21 @@ export default function About() {
             <h2 className="text-3xl font-bold text-foreground">Education</h2>
             <div className="space-y-4">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-primary">
-                <h3 className="text-xl font-semibold">BA in Computer Science & Minor in Finance</h3>
+                <h3 className="text-xl font-semibold">Bachelor's in Computer Science & Minor in Finance</h3>
                 <p className="text-muted-foreground">Queensland University of Technology • Expected 2026</p>
                 <p className="mt-2">
-                  Gaining comprehensive knowledge in computer science, including software development, algorithms, and
-                  system design, with a minor in finance for data-driven decision-making. Collaborating with a team to
-                  design and develop a cross-platform desktop application using Java SQLite Maven.
+                  Started 2025 as second year Bachelor student, focused more on System Architecture, OOD and CI/CD to build scalable and maintainable systems.
+                  Year 2 - Discrete Structure, Networks, Cyber Security, Microprocessors, Finance 1,2,3,4
+                  Year 3 - Machine Learning, Algorithms and Complexity, Capstone project + ....
+                  Self learning - Cloud - AWS, Docker, Cloudflare, Tunnels +Personal Projects, +Freelancing Projects
                 </p>
               </div>
               <div className="glass-card rounded-2xl p-6 border-l-4 border-secondary">
                 <h3 className="text-xl font-semibold">Diploma of Information Technology - Web Development</h3>
-                <p className="text-muted-foreground">Queensland University of Technology • Graduated 2025</p>
+                <p className="text-muted-foreground">Queensland University of Technology • Graduated 2024</p>
                 <p className="mt-2">
-                  Gained hands-on experience in full-stack web development using HTML, CSS, JavaScript, TypeScript,
-                  React, and Supabase. Built responsive, user-friendly websites with API integration, UI/UX focus, and
-                  SEO optimization.
+                  I enrolled in Diploma at 18 instead of taking Bachelor's first year to gain better and broader fundamental knowledge.
+                  Leaned in web development first to show others about my experiences and projects also document my progress.
                 </p>
               </div>
             </div>
