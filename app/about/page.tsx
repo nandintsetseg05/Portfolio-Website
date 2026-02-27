@@ -113,8 +113,11 @@ export default function About() {
                 <p className="text-muted-foreground">Queensland University of Technology • Expected 2026</p>
                 <p className="mt-2">
                   Started 2025 as second year Bachelor student, focused more on System Architecture, OOD and CI/CD to build scalable and maintainable systems.
+
                   Year 2 - Discrete Structure, Networks, Cyber Security, Microprocessors, Finance 1,2,3,4
+
                   Year 3 - Machine Learning, Algorithms and Complexity, Capstone project + ....
+
                   Self learning - Cloud - AWS, Docker, Cloudflare, Tunnels +Personal Projects, +Freelancing Projects
                 </p>
               </div>
