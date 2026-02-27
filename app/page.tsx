@@ -24,7 +24,7 @@ const featuredProjects = [
   {
     title: "88 Acai — Brand Launch & Growth Campaign",
     description:
-      "A new frozen yogurt store needed to exist in people's minds before it existed in real life. I built the brand from nothing — logo, visual identity, content strategy, and a phased launch across Instagram, TikTok, and Facebook. Before the doors opened: 2,497% engagement growth and 924% audience growth in one month.",
+      "A new frozen yogurt store needed to exist in people's minds before it existed in real life. I built the brand from nothing  logo, visual identity, content strategy, and a phased launch across Instagram, TikTok, and Facebook. Before the doors opened: 2,497% engagement growth and 924% audience growth in one month.",
     category: "Strategy & Marketing",
     tags: ["Brand Strategy", "Social Media", "Analytics", "AI Content"],
     link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
