@@ -148,11 +148,11 @@ export default function Home() {
             >
               <div className="space-y-3">
                 <p className="text-sm font-medium tracking-widest text-muted-foreground uppercase">
-                  Computer Science + Finance
+                  Computer Science + Finance | Nandintsetseg Bayarsaikhan
                 </p>
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
                   <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                    Nana B Nandintsetseg Bayarsaikhan
+                    Nana B
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl font-semibold text-foreground/80">
