@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "About Me - Background, Education & Timeline",
   description:
-    "Learn about Nana Nandintsetseg - Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award-winning volunteer.",
+    "Learn about Nana Nandintsetseg Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award-winning volunteer.",
   keywords: [
     "about nana",
     "Нандинцэцэг",
