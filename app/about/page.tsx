@@ -35,7 +35,7 @@ export default function About() {
   const timeline = [
     {
       year: "2025",
-      title: "Currently Full Time Student, Full-Time Freelance, Part Time Work",
+      title: "Currently Full Time Student, Full Time Freelance, Part Time Work",
       description:
         "Full time CS student at QUT with scholarship, freelancing on web-based application, website development, marketing manager at frozen yogurt, architecture design and interior designer and managing research for winning product for ecommerce brand. Crazy Era✨",
     },
