@@ -89,7 +89,7 @@ export default function Home() {
             name: "Nana Nandintsetseg Bayarsaikhan",
             url: "https://nana-nandintsetseg.com",
             image: "https://nana-nandintsetseg.com/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
-            jobTitle: "Technology Consultant & Full-Stack Developer",
+            jobTitle: "Technology Consultant & Full Stack Developer",
             worksFor: {
               "@type": "EducationalOrganization",
               name: "Queensland University of Technology",
