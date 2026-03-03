@@ -8,9 +8,35 @@
     "author": "Nana Nandintsetseg",
     "date": "2024-01-01T10:00:00.000Z",
     "updatedAt": "2024-01-01T10:00:00.000Z",
-    "tags": ["Next.js", "React", "Web Development", "Tutorial"],
+    "tags": [
+      "Next.js",
+      "React",
+      "Web Development",
+      "Tutorial"
+    ],
     "featured": true,
     "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
     "videoUrl": ""
+  },
+  {
+    "title": "CAB201 – Programming Principles",
+    "content": "# CAB201: Programming Principles – Building Strong OOP Foundations\n\nThis was one of my first deep dives into proper software engineering at QUT.\n\n## What the unit covered\n- Core OOP concepts: classes, objects, inheritance, polymorphism, encapsulation, abstraction\n- Java fundamentals: collections, generics, exceptions, streams\n- Design principles: SOLID, DRY, KISS\n- Basic design patterns (Factory, Singleton basics)\n- Unit testing with JUnit\n\n## Key assignments & projects\nI built several medium-sized console applications, including:\n- A task management system with user authentication simulation\n- An inventory management program using inheritance hierarchies\n\nThese forced me to think about code organisation, reusability, and testability from the beginning.\n\n## What I learned & personal takeaways\nBefore this unit I wrote code that \"worked\". After CAB201 I started writing code that other developers (and future me) could understand and extend easily.  \nLearning to apply SOLID principles changed how I approach almost every programming task now.\n\nThis unit laid the groundwork for later software development and team project units.",
+    "excerpt": "CAB201 at QUT taught me the core principles of object-oriented programming in Java, focusing on clean, maintainable, and scalable code design.",
+    "slug": "cab201-programming-principles",
+    "author": "Nana Nandintsetseg",
+    "tags": [
+      "QUT",
+      "CAB201",
+      "Java",
+      "OOP",
+      "Programming",
+      "Software Engineering"
+    ],
+    "featured": false,
+    "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+    "videoUrl": "",
+    "id": "1772519238986",
+    "date": "2026-03-03T06:27:18.986Z",
+    "updatedAt": "2026-03-03T06:27:18.986Z"
   }
 ]

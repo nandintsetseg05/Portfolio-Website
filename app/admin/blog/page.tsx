@@ -11,7 +11,7 @@ import type { BlogPost } from "@/app/actions/blog"
 import { format } from "date-fns"
 import Link from "next/link"
 
-const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin123" // Change in production!
+const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "nana0926" // Change in production!
 
 export default function AdminBlogPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
