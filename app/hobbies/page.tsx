@@ -27,59 +27,59 @@ export const metadata: Metadata = {
 export default function Hobbies() {
   const hobbies = [
     {
+      title: "Learning",
+      description:
+        "Self-directed learning, curiosity, and experimentation with technology and creative projects.",
+      icon: "🔍",
+      link: "#",
+    },
+    {
+      title: "Reading",
+      description:
+        "Got into reading after I learned how brain plasticity works.",
+      icon: "📚",
+      link: "#",
+    },
+    {
       title: "Chess",
       description:
-        "Strategic thinking and competitive play. It is fun to play won 6 medals in my lifetime but secret is I am not that good learnt to play at young because my dad thought me.❤️",
+        "Helps to keep my mind sharp but little competitive but i like playing rapid",
       icon: "♟️",
       link: "https://www.chess.com/play/online",
     },
     {
-      title: "Drawing",
-      description:
-        "Developed interest when i was really young. I used to draw things and put price tag and seell it to my family TvT my parents bought my art and made collection book.❤️",
-      icon: "🎨",
-      link: "#",
-    },
-    {
       title: "Journaling",
       description:
-        "Started very young too :) mostly because my mom and grandmom was a teacher and forced to do when i was kid hated it then but love it now and super grateful, changed my life.❤️",
+        "Writing helps to organize all the thought and ideas that comes in mind, very useful when you are trying to find the problems.",
       icon: "✍️",
       link: "#",
     },
     {
       title: "Photography",
       description:
-        "Since I gained sense I was personal photographer of my mom and I just like documenting the moment. Nature pictures when we travel fell in love. Later got useful for my marketing journey.❤️",
+        "One of the skill I picked up and during running my marketing company, kept it as hobb.y",
       icon: "📷",
-      link: "#",
-    },
-    {
-      title: "Reading",
-      description:
-        "Hated reading when I was young and used to thought why read when I can listen while doing other stuff. Turned out fiction was just not my genre. Got obsessed after finding my genre time flies when I am hooked, love the smell too.❤️",
-      icon: "📚",
       link: "#",
     },
     {
       title: "Hiking",
       description:
-        "I was little goat that will climb on everything. Maybe because of my culture but love going outside or travel to countryside when weather is nice.❤️",
+        "Brings more peace to me, coffee on mountain just tastes different.",
       icon: "🏔️",
       link: "#",
     },
     {
-      title: "Anime Manga Manhwa",
+      title: "Drawing",
       description:
-        "Love it since I was kid now i think about it tought me many things and helped me develop myself. I learned new languages, cultures since i used to translate some of them to my native language and post on social media. Also kept my drawing in check and convinced me to believe I can do everything. ❤️",
-      icon: "❤️",
+        "Kept it as hobby, picked it up since I was a kid",
+      icon: "🎨",
       link: "#",
     },
     {
-      title: "Learning",
+      title: "Movies, Kdrama, Anime, Manga, Manhwa, Gaming",
       description:
-        "I was too curious kid that will ask why? then how? then why again and again from my parents. Then they decided to show me how to find the answer to my questions from google. Then I started trying what learned from google which led to youtube tons of DIY ❤️",
-      icon: "🔍",
+        "Fun facts about me",
+      icon: "❤️",
       link: "#",
     },
   ]
@@ -102,7 +102,6 @@ export default function Hobbies() {
               Hobbies & Interests
             </h1>
             <p className="text-xl text-foreground">What I do when I'm not working?</p>
-            <p className="text-xl text-foreground">Everything and anything DIVA~</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
