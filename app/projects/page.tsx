@@ -37,10 +37,10 @@ export default function Projects() {
     {
       title: "Portfolio Website",
       description:
-        "Developed a fully functional personal website using TypeScript and Supabase, integrating Resend API to send messages directly to Gmail. Enabled seamless communication with visitors, showcasing projects and skills professionally, with 100% reliable message delivery.",
+        "Developed a fully functional personal website using TypeScript and Supabase, integrating Resend API to send messages directly to Gmail. Enabled seamless communication with visitors, showcasing projects and skills professionally, with 100% reliable message delivery. Click on arrow to see documentation",
       category: "IT",
       tags: ["Next.js", "TypeScript", "Supabase", "Resend API"],
-      link: "https://www.nana-nandintsetseg.com/",
+      link: "https://nananandintsetseg.my.canva.site/about-my-website",
     },
     {
       title: "Compound Interest Calculator (Next.js + TypeScript)",
@@ -56,7 +56,7 @@ export default function Projects() {
         "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
       category: "IT",
       tags: ["Data Query", "UI/UX design", "OOP"],
-      link: "https://www.notion.so/convenient-store-inventory-application-246615bca7f78067b370de7c47cdbe85?source=copy_link",
+      link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
       title: "Book Typing game",
@@ -104,7 +104,7 @@ export default function Projects() {
         "Managed social media strategy and content creation. Achieved 2497% growth in engagement and 924% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
       category: "Marketing",
       tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
-      link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
+      link: "https://nananandintsetseg.my.canva.site/marketing-growth-strategy-project",
     },
     {
       title: "Product management Ecommerce",
