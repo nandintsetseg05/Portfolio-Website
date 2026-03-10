@@ -88,7 +88,7 @@ export default function Home() {
             "@type": "Person",
             name: "Nana Nandintsetseg Bayarsaikhan",
             url: "https://nana-nandintsetseg.com",
-            image: "https://nana-nandintsetseg.com/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
+            image: "https://nana-nandintsetseg.com/images/design-mode/my_face.jpg",
             jobTitle: "Technology Consultant & Full Stack Developer",
             worksFor: {
               "@type": "EducationalOrganization",
@@ -128,7 +128,7 @@ export default function Home() {
                 <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm" />
                   <Image
-                    src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
+                    src="/images/design-mode/my_face.jpg"
                     alt="Nana Nandintsetseg - Technology Consultant & Developer"
                     width={448}
                     height={448}
@@ -156,10 +156,10 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                  I Build Things That Solve A PROBLEM.
+                  I am a Bridge between Business and Tech Team.
                 </p>
                 <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                  For People and For Businesses.
+                  With Proven Track of Record.
                 </p>
               </div>
 
