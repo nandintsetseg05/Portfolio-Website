@@ -13,22 +13,22 @@ import { useState } from "react"
 import { sendEmail } from "@/app/actions/send-email"
 
 const featuredProjects = [
-  {
-    title: "Plumbing Business — Digital Strategy & Full Rebuild",
-    description:
-      "A plumbing business was invisible online — no traffic, no leads, no bookings. I audited their entire digital presence, identified root causes, and rebuilt their website with emergency booking workflows, SSL, and SEO strategy. Result: 825% increase in website traffic and a pipeline of inbound referral clients within weeks.",
-    category: "Technology & Strategy",
-    tags: ["Next.js", "UI/UX", "SEO", "SSL", "Google Business"],
-    link: "#",
-  },
-  {
-    title: "88 Acai — Brand Launch & Growth Campaign",
-    description:
-      "A new frozen yogurt store needed to exist in people's minds before it existed in real life. I built the brand from nothing  logo, visual identity, content strategy, and a phased launch across Instagram, TikTok, and Facebook. Before the doors opened: 2,497% engagement growth and 924% audience growth in one month.",
-    category: "Strategy & Marketing",
-    tags: ["Brand Strategy", "Social Media", "Analytics", "AI Content"],
-    link: "https://www.google.com/search?q=88+Acai+Frozen+Yogurt&ie=UTF-8",
-  },
+    {
+      title: "Web-based Mobile Application",
+      description:
+        "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
+      category: "IT",
+      tags: ["Data Query", "UI/UX design", "OOP"],
+      link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
+    },
+    {
+      title: "Frozen Yogurt Shop Marketing Campaign",
+      description:
+        "Managed social media strategy and content creation. Achieved 249% growth in engagement and 24% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
+      category: "Marketing",
+      tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
+      link: "https://nananandintsetseg.my.canva.site/marketing-growth-strategy-project",
+    },
 ]
 
 const featuredHobbies = [
