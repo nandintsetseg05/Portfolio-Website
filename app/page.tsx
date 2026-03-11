@@ -13,14 +13,14 @@ import { useState } from "react"
 import { sendEmail } from "@/app/actions/send-email"
 
 const featuredProjects = [
-  {
-    title: "Web-based Mobile Application",
-    description:
-      "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
-    category: "IT",
-    tags: ["Data Query", "UI/UX design", "OOP"],
-    link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
-  },
+    {
+      title: "Retail POS & Inventory Web Application",
+      description:
+        "A mobile-first web application built for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. Commercially validated built on client request and sold to 5 independent stores.",
+      category: "IT",
+      tags: ["RBAC", "CRUD", "Real-Time Data", "Systems Analysis", "UAT", "Multi-User Architecture", "Access Control", "Data Query"],
+      link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
+    },
   {
     title: "Frozen Yogurt Shop Marketing Campaign",
     description:
