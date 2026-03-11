@@ -89,7 +89,7 @@ export default function Home() {
             name: "Nana Nandintsetseg Bayarsaikhan",
             url: "https://nana-nandintsetseg.com",
             image: "https://nana-nandintsetseg.com/images/design-mode/my_face.jpg",
-            jobTitle: "Technology Consultant & Full Stack Developer",
+            jobTitle: "ICT Analyst",
             worksFor: {
               "@type": "EducationalOrganization",
               name: "Queensland University of Technology",
@@ -107,7 +107,7 @@ export default function Home() {
       <GalaxyNavigation />
 
       {/* ── HERO ── */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 py-20 md:py-32">
+      <section className="relative z-10 min-h-[110vh] flex items-center justify-center px-6 py-28 md:py-40">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <div className="relative z-10 pb-32 px-6 space-y-40">
+      <div className="relative z-10 pb-40 px-6 space-y-52">
 
         {/* ── FEATURED WORK ── */}
         <motion.section

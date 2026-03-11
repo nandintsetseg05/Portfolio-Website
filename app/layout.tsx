@@ -1,14 +1,39 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
+import { Bebas_Neue, Cormorant_Garamond, DM_Sans, IBM_Plex_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import { Suspense } from "react"
 import { Navbar } from "@/components/navbar"
 
+/* ── Font declarations ── */
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas",
+  display: "swap",
+})
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
+const cormorant = Cormorant_Garamond({
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+})
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+})
+
+const ibmMono = IBM_Plex_Mono({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  variable: "--font-ibm-mono",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nana-nandintsetseg.com"),
@@ -106,7 +131,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body
+        className={`font-sans ${bebasNeue.variable} ${cormorant.variable} ${dmSans.variable} ${ibmMono.variable}`}
+      >
 
           <Navbar />
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>

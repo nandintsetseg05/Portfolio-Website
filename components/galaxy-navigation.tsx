@@ -1,119 +1,184 @@
 "use client"
 
-import { Canvas, useFrame } from "@react-three/fiber"
-import { Stars } from "@react-three/drei"
-import { useRef, useMemo } from "react"
-import * as THREE from "three"
-
-function AnimatedGalaxy() {
-  const particlesRef = useRef<THREE.Points>(null)
-  const particles2Ref = useRef<THREE.Points>(null)
-
-  const starTexture = useMemo(() => {
-    const canvas = document.createElement("canvas")
-    canvas.width = 64
-    canvas.height = 64
-    const ctx = canvas.getContext("2d")!
-
-    const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32)
-    gradient.addColorStop(0, "rgba(255, 255, 255, 1)")
-    gradient.addColorStop(0.2, "rgba(255, 255, 255, 0.8)")
-    gradient.addColorStop(0.4, "rgba(255, 255, 255, 0.4)")
-    gradient.addColorStop(1, "rgba(255, 255, 255, 0)")
-
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, 64, 64)
-
-    return new THREE.CanvasTexture(canvas)
-  }, [])
-
-  // Create galaxy particles
-  const particleCount = 3000
-  const positions = new Float32Array(particleCount * 3)
-  const colors = new Float32Array(particleCount * 3)
-
-  for (let i = 0; i < particleCount; i++) {
-    const i3 = i * 3
-    // Create spiral galaxy shape
-    const radius = Math.random() * 50 + 10
-    const angle = Math.random() * Math.PI * 2
-    const arm = Math.floor(Math.random() * 3) // 3 spiral arms
-
-    positions[i3] = Math.cos(angle + arm * Math.PI * 0.66) * radius + (Math.random() - 0.5) * 10
-    positions[i3 + 1] = (Math.random() - 0.5) * 5
-    positions[i3 + 2] = Math.sin(angle + arm * Math.PI * 0.66) * radius + (Math.random() - 0.5) * 10
-
-    // Purple/blue gradient colors
-    const color = new THREE.Color()
-    color.setHSL(0.6 + Math.random() * 0.2, 0.8, 0.5 + Math.random() * 0.3)
-    colors[i3] = color.r
-    colors[i3 + 1] = color.g
-    colors[i3 + 2] = color.b
-  }
-
-  useFrame((state) => {
-    if (particlesRef.current) {
-      particlesRef.current.rotation.y = state.clock.elapsedTime * 0.05
-      particlesRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.1) * 0.1
-    }
-    if (particles2Ref.current) {
-      particles2Ref.current.rotation.y = -state.clock.elapsedTime * 0.03
-      particles2Ref.current.rotation.z = state.clock.elapsedTime * 0.02
-    }
-  })
-
-  return (
-    <>
-      {/* Main galaxy */}
-      <points ref={particlesRef}>
-        <bufferGeometry>
-          <bufferAttribute attach="attributes-position" count={particleCount} array={positions} itemSize={3} />
-          <bufferAttribute attach="attributes-color" count={particleCount} array={colors} itemSize={3} />
-        </bufferGeometry>
-        <pointsMaterial
-          size={0.5}
-          vertexColors
-          transparent
-          opacity={0.9}
-          sizeAttenuation
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-          map={starTexture}
-        />
-      </points>
-
-      {/* Secondary rotating galaxy for depth */}
-      <points ref={particles2Ref} position={[0, 0, -20]}>
-        <bufferGeometry>
-          <bufferAttribute attach="attributes-position" count={particleCount} array={positions} itemSize={3} />
-          <bufferAttribute attach="attributes-color" count={particleCount} array={colors} itemSize={3} />
-        </bufferGeometry>
-        <pointsMaterial
-          size={0.3}
-          vertexColors
-          transparent
-          opacity={0.6}
-          sizeAttenuation
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-          map={starTexture}
-        />
-      </points>
-    </>
-  )
-}
+import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export function GalaxyNavigation() {
+  const lilyRef = useRef<HTMLDivElement>(null)
+  const glowRef = useRef<HTMLDivElement>(null)
+  const outerGlow = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    let rafId: number | null = null
+    let lastScrollY = -1
+
+    const onScroll = () => {
+      if (rafId !== null) return
+      rafId = requestAnimationFrame(() => {
+        rafId = null
+        const scrollY = window.scrollY
+        if (scrollY === lastScrollY) return
+        lastScrollY = scrollY
+
+        const maxScroll = document.body.scrollHeight - window.innerHeight
+        const progress = Math.min(scrollY / Math.max(maxScroll, 1), 1)
+
+        /* ── Bloom: starts tiny, grows to full size, then slightly larger ──
+           0%   scroll -> scale 0.18  (closed bud feel)
+           40%  scroll -> scale 1.0   (fully open)
+           100% scroll -> scale 1.15  (slightly larger at bottom)
+        */
+        const scale =
+          progress < 0.40
+            ? 0.18 + progress * (1.0 - 0.18) / 0.40
+            : 1.0 + (progress - 0.40) * (0.15 / 0.60)
+
+        /* ── Slow rotation: 0 -> 45deg over full scroll ── */
+        const rotate = progress * 45
+
+        /* ── Left/right sinusoidal drift based on scroll progress ──
+           Creates a gentle swaying motion as you scroll through sections
+           Amplitude of ~120px, completing ~2 full waves over the page
+        */
+        const horizontalOffset = Math.sin(progress * Math.PI * 4) * 120 * Math.min(progress / 0.15, 1)
+
+        /* ── Vertical drift: lily slowly moves up as you scroll ── */
+        const verticalOffset = progress * -80
+
+        /* ── Brightness: dim at start, brightens as it blooms ── */
+        const brightness = 0.4 + progress * 0.8 // 0.4 -> 1.2
+
+        /* ── Opacity: fades in quickly, stays fully visible ── */
+        const opacity = Math.min(progress / 0.25, 1)
+
+        if (lilyRef.current) {
+          lilyRef.current.style.transform =
+            `translate(calc(-50% + ${horizontalOffset}px), calc(-50% + ${verticalOffset}px)) scale(${scale}) rotate(${rotate}deg)`
+          lilyRef.current.style.opacity = String(opacity)
+          lilyRef.current.style.filter =
+            `brightness(${brightness}) drop-shadow(0 0 ${Math.round(progress * 60)}px rgba(74,127,167,${(progress * 0.7).toFixed(2)}))`
+        }
+
+        /* Glow follows the lily and grows with it */
+        if (glowRef.current) {
+          glowRef.current.style.opacity = String(opacity * 0.9)
+          glowRef.current.style.transform =
+            `translate(calc(-50% + ${horizontalOffset}px), calc(-50% + ${verticalOffset}px)) scale(${0.3 + scale * 0.7})`
+        }
+
+        if (outerGlow.current) {
+          outerGlow.current.style.opacity =
+            String(Math.min(progress / 0.4, 1) * 0.5)
+          outerGlow.current.style.transform =
+            `translate(calc(-50% + ${horizontalOffset * 0.5}px), calc(-50% + ${verticalOffset * 0.5}px))`
+        }
+      })
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true })
+    onScroll() // set initial state
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      if (rafId !== null) cancelAnimationFrame(rafId)
+    }
+  }, [])
+
   return (
-    <div className="fixed inset-0 z-0">
-      <Canvas camera={{ position: [0, 0, 50], fov: 75 }}>
-        <color attach="background" args={["#000000"]} />
+    <div className="fixed inset-0 z-0 overflow-hidden">
 
-        {/* Background stars that drift slowly */}
-        <Stars radius={300} depth={200} count={8000} factor={6} saturation={0.1} fade speed={1} />
+      {/* ── Base navy gradient ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: `
+            radial-gradient(ellipse at 60% 0%,   oklch(0.30 0.09 235) 0%, transparent 55%),
+            radial-gradient(ellipse at 0%   80%,  oklch(0.24 0.07 248) 0%, transparent 50%),
+            radial-gradient(ellipse at 100% 100%, oklch(0.22 0.06 230) 0%, transparent 45%),
+            oklch(0.20 0.05 240)
+          `,
+        }}
+      />
 
-        <AnimatedGalaxy />
-      </Canvas>
+      {/* ── Wide outer atmospheric glow ── */}
+      <div
+        ref={outerGlow}
+        className="absolute"
+        style={{
+          top: "44%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "900px",
+          height: "900px",
+          borderRadius: "50%",
+          background: `radial-gradient(ellipse at center,
+            rgba(74,127,167,0.20) 0%,
+            rgba(26,61,99,0.12)   40%,
+            transparent           70%
+          )`,
+          filter: "blur(60px)",
+          opacity: 0,
+          pointerEvents: "none",
+          transition: "opacity 0.3s ease, transform 0.15s ease-out",
+        }}
+      />
+
+      {/* ── Close-up glow ring ── */}
+      <div
+        ref={glowRef}
+        className="absolute"
+        style={{
+          top: "44%",
+          left: "50%",
+          transform: "translate(-50%, -50%) scale(0.3)",
+          width: "640px",
+          height: "640px",
+          borderRadius: "50%",
+          background: `radial-gradient(ellipse at center,
+            rgba(179,207,229,0.18) 0%,
+            rgba(74,127,167,0.14)  35%,
+            transparent            65%
+          )`,
+          filter: "blur(30px)",
+          opacity: 0,
+          pointerEvents: "none",
+          animation: "lilyGlow 5s ease-in-out infinite",
+        }}
+      />
+
+      {/* ── Lily image ── */}
+      {/* mix-blend-mode: screen makes the black bg invisible */}
+      <div
+        ref={lilyRef}
+        style={{
+          position: "absolute",
+          top: "44%",
+          left: "50%",
+          transform: "translate(-50%, -50%) scale(0.18) rotate(0deg)",
+          transformOrigin: "center center",
+          width: "700px",
+          height: "700px",
+          opacity: 0,
+          mixBlendMode: "screen",
+          pointerEvents: "none",
+          willChange: "transform, opacity, filter",
+          transition: "transform 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.12s ease, filter 0.12s ease",
+        }}
+      >
+        <Image
+          src="/images/lily.png"
+          alt=""
+          fill
+          style={{ objectFit: "contain" }}
+          priority
+        />
+      </div>
+
+      <style>{`
+        @keyframes lilyGlow {
+          0%, 100% { transform: translate(-50%, -50%) scale(var(--gs, 1));    filter: blur(30px); }
+          50%       { transform: translate(-50%, -50%) scale(calc(var(--gs, 1) * 1.1)); filter: blur(36px); }
+        }
+      `}</style>
     </div>
   )
 }
