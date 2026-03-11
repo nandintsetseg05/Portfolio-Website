@@ -106,7 +106,7 @@ export function GalaxyNavigation() {
 
           if (glow) {
             glow.style.opacity   = String(opacity * 0.7)
-            glow.style.transform = `scale(${0.4 + easedP * 0.6})`
+            glow.style.transform = `translate(-50%, -50%) scale(${0.4 + easedP * 0.6})`
           }
         })
       })
