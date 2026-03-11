@@ -13,22 +13,22 @@ import { useState } from "react"
 import { sendEmail } from "@/app/actions/send-email"
 
 const featuredProjects = [
-    {
-      title: "Web-based Mobile Application",
-      description:
-        "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
-      category: "IT",
-      tags: ["Data Query", "UI/UX design", "OOP"],
-      link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
-    },
-    {
-      title: "Frozen Yogurt Shop Marketing Campaign",
-      description:
-        "Managed social media strategy and content creation. Achieved 249% growth in engagement and 24% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
-      category: "Marketing",
-      tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
-      link: "https://nananandintsetseg.my.canva.site/marketing-growth-strategy-project",
-    },
+  {
+    title: "Web-based Mobile Application",
+    description:
+      "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
+    category: "IT",
+    tags: ["Data Query", "UI/UX design", "OOP"],
+    link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
+  },
+  {
+    title: "Frozen Yogurt Shop Marketing Campaign",
+    description:
+      "Managed social media strategy and content creation. Achieved 249% growth in engagement and 24% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
+    category: "Marketing",
+    tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
+    link: "https://nananandintsetseg.my.canva.site/marketing-growth-strategy-project",
+  },
 ]
 
 const featuredHobbies = [
@@ -80,41 +80,20 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Nana Nandintsetseg Bayarsaikhan",
-            url: "https://nana-nandintsetseg.com",
-            image: "https://nana-nandintsetseg.com/images/design-mode/my_face.jpg",
-            jobTitle: "Technology Consultant & Full Stack Developer",
-            worksFor: {
-              "@type": "EducationalOrganization",
-              name: "Queensland University of Technology",
-            },
-            knowsAbout: ["Web Development", "Next.js", "React", "TypeScript", "Business Analysis", "Digital Strategy", "Cybersecurity"],
-            sameAs: [
-              "https://www.linkedin.com/in/nana-nandintsetseg",
-              "https://github.com/nandintsetseg05",
-              "https://www.instagram.com/n.tseegii.mn/",
-            ],
-          }),
-        }}
-      />
 
+      {/* Background */}
       <GalaxyNavigation />
 
       {/* ── HERO ── */}
-      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 py-20 md:py-32">
+      <section className="relative z-10 min-h-screen flex items-center justify-center px-6 py-40 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto w-full"
         >
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+
             {/* Photo */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -122,20 +101,16 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent blur-3xl opacity-40 animate-pulse scale-110" />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/60 via-secondary/60 to-accent/60 opacity-20 blur-xl scale-105" />
-                <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm" />
-                  <Image
-                    src="/images/design-mode/my_face.jpg"
-                    alt="Nana Nandintsetseg - Technology Consultant & Developer"
-                    width={448}
-                    height={448}
-                    className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
-                    priority
-                  />
-                </div>
+              <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm" />
+                <Image
+                  src="/images/design-mode/my_face.jpg"
+                  alt="Nana Nandintsetseg - Technology Consultant & Developer"
+                  width={448}
+                  height={448}
+                  className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
+                  priority
+                />
               </div>
             </motion.div>
 
@@ -144,50 +119,44 @@ export default function Home() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-8"
+              className="space-y-4"
             >
-              <div className="space-y-3">
-                <p className="text-sm font-medium tracking-widest text-muted-foreground uppercase">
-                  Computer Science + Finance | Nandintsetseg Bayarsaikhan
-                </p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
-                    Nana B
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                  I am a Bridge Between Business and Tech.
-                </p>
-                <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                  With Proven Track of Record.
-                </p>
-              </div>
+              <p className="text-sm font-medium tracking-widest text-foreground uppercase">
+                Computer Science + Finance | Nandintsetseg Bayarsaikhan
+              </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-[gradient-shift_3s_ease_infinite]">
+                  Nana B
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl font-semibold text-foreground/80">
+                Bridging Business & Technology.
+              </p>
+              <p className="text-xl md:text-2xl font-semibold text-foreground/80">
+                With Proven Track Record.
+              </p>
 
               <div className="glass-card p-8 rounded-2xl backdrop-blur-xl border border-white/10 space-y-5">
-
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Final year Computer Science student with a Finance minor, with a proven track record of
-                  implementing and improving local business's systems and software.
+                <p className="text-base md:text-lg text-foreground leading-relaxed">
+                  Final year Computer Science student with a Finance minor, implementing and improving local business systems and software.
                 </p>
-
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed italic border-l-2 border-primary/40 pl-4">
+                <p className="text-sm md:text-base text-foreground leading-relaxed italic border-l-2 border-primary/40 pl-4">
                   Want proof? Who am I?
                 </p>
-                <div className="pt-2">
-                  <Link href="/about">
-                    <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl shadow-lg">
-                      More About Me
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
+                <Link href="/about">
+                  <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl shadow-lg mt-2">
+                    More About Me
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
+
           </div>
         </motion.div>
       </section>
 
-      <div className="relative z-10 pb-32 px-6 space-y-40">
+      <div className="relative z-10 space-y-40 px-6 pb-40">
 
         {/* ── FEATURED WORK ── */}
         <motion.section
@@ -195,9 +164,9 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto space-y-12"
+          className="max-w-7xl mx-auto space-y-16 py-12"
         >
-          <div className="text-center space-y-5 max-w-3xl mx-auto">
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-secondary to-accent leading-tight text-foreground">
               Selected Work
             </h2>
@@ -205,7 +174,8 @@ export default function Home() {
               Real clients. Real outcomes. Real numbers.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="grid md:grid-cols-2 gap-12">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -218,6 +188,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
           <div className="text-center pt-6">
             <Link href="/projects">
               <Button
@@ -237,9 +208,9 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto space-y-12"
+          className="max-w-7xl mx-auto space-y-16 py-12"
         >
-          <div className="text-center space-y-5 max-w-3xl mx-auto">
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-accent to-accent/80 leading-tight text-foreground">
               Beyond the Screen
             </h2>
@@ -247,7 +218,8 @@ export default function Home() {
               The things that keep me sharp, curious, and human.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-3 gap-12">
             {featuredHobbies.map((hobby, index) => (
               <motion.div
                 key={index}
@@ -260,6 +232,7 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
           <div className="text-center pt-6">
             <Link href="/hobbies">
               <Button
@@ -280,15 +253,14 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-5xl mx-auto space-y-12"
+          className="max-w-7xl mx-auto space-y-16 py-12"
         >
-          <div className="text-center space-y-5">
+          <div className="text-center space-y-6">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
               Let's Work Together
             </h2>
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
-              Got a business problem you think technology can solve? I respond within 24 hours and offer a
-              free 30-minute discovery call to every new enquiry.
+              Got a business problem you think technology can solve? I respond within 24 hours and offer a free 30-minute discovery call to every new enquiry.
             </p>
           </div>
 
@@ -324,6 +296,7 @@ export default function Home() {
                   />
                 </div>
               </div>
+
               <div className="space-y-3">
                 <label htmlFor="message" className="text-sm font-semibold text-foreground/90 uppercase tracking-wide">
                   Message
@@ -338,6 +311,7 @@ export default function Home() {
                   placeholder="Tell me about your project or role..."
                 />
               </div>
+
               <Button
                 type="submit"
                 disabled={isSubmitting}
