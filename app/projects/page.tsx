@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 export default function Projects() {
   const itProjects = [
     {
-      title: "Web-based Mobile Application",
+      title: "Retail POS & Inventory Web Application",
       description:
-        "Very simple made on request they loved it made 4 more sold all of them. It was easy only thing was I had to write the Data manually. Made for a store and is private I can show in person but not public.",
+        "A mobile-first web application built for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. Commercially validated built on client request and sold to 5 independent stores.",
       category: "IT",
-      tags: ["Data Query", "UI/UX design", "OOP"],
+      tags: ["RBAC", "CRUD", "Real-Time Data", "Systems Analysis", "UAT", "Multi-User Architecture", "Access Control", "Data Query"],
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
@@ -96,6 +96,18 @@ export default function Projects() {
       link: "#",
     },
   ]
+  const financeProjects = [
+    {
+      title: "ASX Portfolio Risk & Analytics Dashboard",
+      description:
+        "An interactive Bloomberg-style analytics terminal that lets users build a custom ASX portfolio and instantly generates Sharpe ratio, Value at Risk, sector allocation and stress-test scenarios using live Yahoo Finance data.",
+      category: "Finance",
+      tags: ["Financial Modelling", "Data Visualisation", "REST APIs", "JavaScript", "React"],
+      link: "https://asx-dashboard-ic1t-kyr0vm1ip-nandintsetseg05s-projects.vercel.app/",
+    },
+
+  ]
+
 
   const marketingProjects = [
     {
@@ -123,7 +135,7 @@ export default function Projects() {
         "I made the floor planning on AutoCAD and made drew, interior designing on Sketchup also made 3D planning on. In end I used the 3D model pictures and rendered the pictures using AI. All work has been done under shopping centre's policy and requirements and QLD guideline. Also wrote the project pitch which was approved.",
       category: "Design",
       tags: ["Architecture", "Interior Design", "3D Modeling", "CAD"],
-      link: "https://www.notion.so/Architecture-design-284615bca7f7807c9fccd89be83af84d?source=copy_link",
+      link: "https://www.canva.com/design/DAHDnIHj1gk/UEkw3QxVg_4KHx_6Na_J_g/view?utlId=h67824537ff",
     },
     {
       title: "Housing complex 3D modeling",
@@ -200,6 +212,17 @@ export default function Projects() {
               ))}
             </div>
           </section>
+
+
+          <section className="space-y-8">
+            <h2 className="text-3xl font-bold text-foreground">Finance Projects</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {financeProjects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+            </div>
+          </section>
+
 
           <section className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground">Marketing Projects</h2>

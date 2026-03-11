@@ -215,7 +215,7 @@ export default function Home() {
               Beyond the Screen
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-foreground">
-              The things that keep me sharp, curious, and human.
+              The things that keep me sharp and curious.
             </p>
           </div>
 
