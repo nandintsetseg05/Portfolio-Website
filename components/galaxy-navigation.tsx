@@ -104,19 +104,24 @@ function NeuralGalaxy() {
   const currentRotation = useRef({ x: 0, y: 0 })
 
   useFrame(() => {
-    // Mouse-follow rotation
+    // Mouse-follow rotation target
     targetRotation.current.x = -(mousePos.y - 0.5) * Math.PI
     targetRotation.current.y = (mousePos.x - 0.5) * Math.PI
 
+    // Smoothly follow mouse vertically only
     currentRotation.current.x += (targetRotation.current.x - currentRotation.current.x) * 0.15
-    currentRotation.current.y += (targetRotation.current.y - currentRotation.current.y) * 0.15
+
+    // Continuous rotation horizontally in **one direction**
+    const autoRotationY = 0.0015 // adjust speed
+    currentRotation.current.y += autoRotationY
 
     if (pointsRef.current) {
       pointsRef.current.rotation.x = currentRotation.current.x
       pointsRef.current.rotation.y = currentRotation.current.y
 
-      // Scroll zoom
-      camera.position.z = 60 - scrollY * 0.05
+      // Smooth scroll zoom
+      const targetZ = 30 - scrollY * 0.02
+      camera.position.z += (targetZ - camera.position.z) * 0.08
     }
 
     if (linesRef.current && pointsRef.current) {
