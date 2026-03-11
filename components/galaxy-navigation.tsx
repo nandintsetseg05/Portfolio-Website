@@ -3,10 +3,55 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 
+/*
+ * Each flower has a fixed position on screen, a scroll threshold at which
+ * it starts blooming, a max size, and a rotation direction.
+ * Flowers bloom sequentially as the user scrolls down the page.
+ */
+interface FlowerConfig {
+  id: number
+  /** CSS position (%) */
+  x: number
+  y: number
+  /** Scroll progress [0-1] at which the bloom begins */
+  bloomStart: number
+  /** How much scroll range the bloom takes to complete */
+  bloomRange: number
+  /** Maximum scale when fully open */
+  maxScale: number
+  /** Size of the flower container in px */
+  size: number
+  /** Rotation in degrees at full bloom */
+  rotation: number
+  /** Slight horizontal sway amplitude in px */
+  swayAmp: number
+  /** Sway frequency multiplier */
+  swayFreq: number
+  /** Glow size in px */
+  glowSize: number
+}
+
+const FLOWERS: FlowerConfig[] = [
+  // ── Centre hero flower (largest, blooms first) ──
+  { id: 0, x: 50, y: 42, bloomStart: 0.0,  bloomRange: 0.35, maxScale: 1.0,  size: 600, rotation: 15,  swayAmp: 0,   swayFreq: 0,   glowSize: 500 },
+  // ── Left cluster ──
+  { id: 1, x: 15, y: 30, bloomStart: 0.10, bloomRange: 0.30, maxScale: 0.55, size: 400, rotation: -20, swayAmp: 30,  swayFreq: 3,   glowSize: 280 },
+  { id: 2, x: 8,  y: 65, bloomStart: 0.25, bloomRange: 0.30, maxScale: 0.45, size: 340, rotation: 25,  swayAmp: 20,  swayFreq: 2.5, glowSize: 220 },
+  // ── Right cluster ──
+  { id: 3, x: 85, y: 35, bloomStart: 0.15, bloomRange: 0.30, maxScale: 0.50, size: 380, rotation: 30,  swayAmp: 25,  swayFreq: 2.8, glowSize: 260 },
+  { id: 4, x: 90, y: 70, bloomStart: 0.30, bloomRange: 0.30, maxScale: 0.40, size: 320, rotation: -15, swayAmp: 20,  swayFreq: 3.2, glowSize: 200 },
+  // ── Scattered accent flowers (smaller, bloom later) ──
+  { id: 5, x: 30, y: 75, bloomStart: 0.35, bloomRange: 0.30, maxScale: 0.35, size: 280, rotation: 40,  swayAmp: 15,  swayFreq: 2,   glowSize: 180 },
+  { id: 6, x: 70, y: 20, bloomStart: 0.20, bloomRange: 0.30, maxScale: 0.38, size: 300, rotation: -35, swayAmp: 18,  swayFreq: 2.6, glowSize: 200 },
+  { id: 7, x: 55, y: 80, bloomStart: 0.40, bloomRange: 0.30, maxScale: 0.30, size: 260, rotation: 20,  swayAmp: 12,  swayFreq: 3.5, glowSize: 160 },
+]
+
 export function GalaxyNavigation() {
-  const lilyRef = useRef<HTMLDivElement>(null)
-  const glowRef = useRef<HTMLDivElement>(null)
-  const outerGlow = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  /* Build refs array for each flower + its glow */
+  const flowerRefs = useRef<(HTMLDivElement | null)[]>([])
+  const glowRefs   = useRef<(HTMLDivElement | null)[]>([])
 
   useEffect(() => {
     let rafId: number | null = null
@@ -23,60 +68,52 @@ export function GalaxyNavigation() {
         const maxScroll = document.body.scrollHeight - window.innerHeight
         const progress = Math.min(scrollY / Math.max(maxScroll, 1), 1)
 
-        /* ── Bloom: starts tiny, grows to full size, then slightly larger ──
-           0%   scroll -> scale 0.18  (closed bud feel)
-           40%  scroll -> scale 1.0   (fully open)
-           100% scroll -> scale 1.15  (slightly larger at bottom)
-        */
-        const scale =
-          progress < 0.40
-            ? 0.18 + progress * (1.0 - 0.18) / 0.40
-            : 1.0 + (progress - 0.40) * (0.15 / 0.60)
+        FLOWERS.forEach((f, i) => {
+          const el   = flowerRefs.current[i]
+          const glow = glowRefs.current[i]
+          if (!el) return
 
-        /* ── Slow rotation: 0 -> 45deg over full scroll ── */
-        const rotate = progress * 45
+          /* How far into THIS flower's bloom are we? 0 = hasn't started, 1 = fully open */
+          const localP = Math.max(0, Math.min((progress - f.bloomStart) / f.bloomRange, 1))
 
-        /* ── Left/right sinusoidal drift based on scroll progress ──
-           Creates a gentle swaying motion as you scroll through sections
-           Amplitude of ~120px, completing ~2 full waves over the page
-        */
-        const horizontalOffset = Math.sin(progress * Math.PI * 4) * 120 * Math.min(progress / 0.15, 1)
+          /* ── Scale: tiny bud -> full bloom with ease-out curve ── */
+          const easedP = 1 - Math.pow(1 - localP, 3) // cubic ease-out
+          const scale  = 0.08 + easedP * (f.maxScale - 0.08)
 
-        /* ── Vertical drift: lily slowly moves up as you scroll ── */
-        const verticalOffset = progress * -80
+          /* ── Rotation: gradual twist as it blooms ── */
+          const rotate = easedP * f.rotation
 
-        /* ── Brightness: dim at start, brightens as it blooms ── */
-        const brightness = 0.4 + progress * 0.8 // 0.4 -> 1.2
+          /* ── Horizontal sway (sinusoidal) ── */
+          const sway = f.swayAmp > 0
+            ? Math.sin(progress * Math.PI * f.swayFreq) * f.swayAmp * easedP
+            : 0
 
-        /* ── Opacity: fades in quickly, stays fully visible ── */
-        const opacity = Math.min(progress / 0.25, 1)
+          /* ── Opacity: quick fade-in at bloom start ── */
+          const opacity = Math.min(localP / 0.15, 1)
 
-        if (lilyRef.current) {
-          lilyRef.current.style.transform =
-            `translate(calc(-50% + ${horizontalOffset}px), calc(-50% + ${verticalOffset}px)) scale(${scale}) rotate(${rotate}deg)`
-          lilyRef.current.style.opacity = String(opacity)
-          lilyRef.current.style.filter =
-            `brightness(${brightness}) drop-shadow(0 0 ${Math.round(progress * 60)}px rgba(74,127,167,${(progress * 0.7).toFixed(2)}))`
-        }
+          /* ── Brightness: dim when closed, bright when open ── */
+          const brightness = 0.3 + easedP * 0.9
 
-        /* Glow follows the lily and grows with it */
-        if (glowRef.current) {
-          glowRef.current.style.opacity = String(opacity * 0.9)
-          glowRef.current.style.transform =
-            `translate(calc(-50% + ${horizontalOffset}px), calc(-50% + ${verticalOffset}px)) scale(${0.3 + scale * 0.7})`
-        }
+          /* ── Drop shadow intensity grows with bloom ── */
+          const shadowSize  = Math.round(easedP * 50)
+          const shadowAlpha = (easedP * 0.6).toFixed(2)
 
-        if (outerGlow.current) {
-          outerGlow.current.style.opacity =
-            String(Math.min(progress / 0.4, 1) * 0.5)
-          outerGlow.current.style.transform =
-            `translate(calc(-50% + ${horizontalOffset * 0.5}px), calc(-50% + ${verticalOffset * 0.5}px))`
-        }
+          el.style.transform =
+            `translate(${sway}px, 0) scale(${scale}) rotate(${rotate}deg)`
+          el.style.opacity = String(opacity)
+          el.style.filter  =
+            `brightness(${brightness}) drop-shadow(0 0 ${shadowSize}px rgba(74,127,220,${shadowAlpha}))`
+
+          if (glow) {
+            glow.style.opacity   = String(opacity * 0.7)
+            glow.style.transform = `scale(${0.4 + easedP * 0.6})`
+          }
+        })
       })
     }
 
     window.addEventListener("scroll", onScroll, { passive: true })
-    onScroll() // set initial state
+    onScroll()
     return () => {
       window.removeEventListener("scroll", onScroll)
       if (rafId !== null) cancelAnimationFrame(rafId)
@@ -84,7 +121,7 @@ export function GalaxyNavigation() {
   }, [])
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden">
+    <div ref={containerRef} className="fixed inset-0 z-0 overflow-hidden">
 
       {/* ── Base navy gradient ── */}
       <div
@@ -99,86 +136,66 @@ export function GalaxyNavigation() {
         }}
       />
 
-      {/* ── Wide outer atmospheric glow ── */}
-      <div
-        ref={outerGlow}
-        className="absolute"
-        style={{
-          top: "44%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "900px",
-          height: "900px",
-          borderRadius: "50%",
-          background: `radial-gradient(ellipse at center,
-            rgba(74,127,167,0.20) 0%,
-            rgba(26,61,99,0.12)   40%,
-            transparent           70%
-          )`,
-          filter: "blur(60px)",
-          opacity: 0,
-          pointerEvents: "none",
-          transition: "opacity 0.3s ease, transform 0.15s ease-out",
-        }}
-      />
+      {/* ── Render each flower with its glow ── */}
+      {FLOWERS.map((f, i) => (
+        <div
+          key={f.id}
+          className="absolute"
+          style={{
+            left: `${f.x}%`,
+            top:  `${f.y}%`,
+            transform: "translate(-50%, -50%)",
+            pointerEvents: "none",
+          }}
+        >
+          {/* Glow behind flower */}
+          <div
+            ref={(el) => { glowRefs.current[i] = el }}
+            style={{
+              position: "absolute",
+              top:  "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%) scale(0.4)",
+              width:  `${f.glowSize}px`,
+              height: `${f.glowSize}px`,
+              borderRadius: "50%",
+              background: `radial-gradient(ellipse at center,
+                rgba(74,127,220,0.18) 0%,
+                rgba(40,80,160,0.10) 40%,
+                transparent 70%
+              )`,
+              filter: "blur(25px)",
+              opacity: 0,
+              pointerEvents: "none",
+            }}
+          />
 
-      {/* ── Close-up glow ring ── */}
-      <div
-        ref={glowRef}
-        className="absolute"
-        style={{
-          top: "44%",
-          left: "50%",
-          transform: "translate(-50%, -50%) scale(0.3)",
-          width: "640px",
-          height: "640px",
-          borderRadius: "50%",
-          background: `radial-gradient(ellipse at center,
-            rgba(179,207,229,0.18) 0%,
-            rgba(74,127,167,0.14)  35%,
-            transparent            65%
-          )`,
-          filter: "blur(30px)",
-          opacity: 0,
-          pointerEvents: "none",
-          animation: "lilyGlowPulse 5s ease-in-out infinite",
-        }}
-      />
-
-      {/* ── Lily image ── */}
-      {/* mix-blend-mode: screen makes the black bg invisible */}
-      <div
-        ref={lilyRef}
-        style={{
-          position: "absolute",
-          top: "44%",
-          left: "50%",
-          transform: "translate(-50%, -50%) scale(0.18) rotate(0deg)",
-          transformOrigin: "center center",
-          width: "700px",
-          height: "700px",
-          opacity: 0,
-          mixBlendMode: "screen",
-          pointerEvents: "none",
-          willChange: "transform, opacity, filter",
-          transition: "transform 0.12s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.12s ease, filter 0.12s ease",
-        }}
-      >
-        <Image
-          src="/images/lily.png"
-          alt=""
-          fill
-          style={{ objectFit: "contain" }}
-          priority
-        />
-      </div>
-
-      <style>{`
-        @keyframes lilyGlowPulse {
-          0%, 100% { opacity: var(--glow-opacity, 0); filter: blur(30px); }
-          50%       { opacity: calc(var(--glow-opacity, 0) * 1.15); filter: blur(36px); }
-        }
-      `}</style>
+          {/* Flower image */}
+          <div
+            ref={(el) => { flowerRefs.current[i] = el }}
+            style={{
+              width:  `${f.size}px`,
+              height: `${f.size}px`,
+              transform: "scale(0.08) rotate(0deg)",
+              transformOrigin: "center center",
+              opacity: 0,
+              mixBlendMode: "screen",
+              pointerEvents: "none",
+              willChange: "transform, opacity, filter",
+              transition: "transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.15s ease, filter 0.15s ease",
+            }}
+          >
+            <Image
+              src="/images/lily.png"
+              alt=""
+              fill
+              sizes={`${f.size}px`}
+              style={{ objectFit: "contain" }}
+              priority={i === 0}
+            />
+          </div>
+        </div>
+      ))}
     </div>
   )
 }
