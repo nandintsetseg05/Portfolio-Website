@@ -141,7 +141,7 @@ export function GalaxyNavigation() {
           filter: "blur(30px)",
           opacity: 0,
           pointerEvents: "none",
-          animation: "lilyGlow 5s ease-in-out infinite",
+          animation: "lilyGlowPulse 5s ease-in-out infinite",
         }}
       />
 
@@ -174,9 +174,9 @@ export function GalaxyNavigation() {
       </div>
 
       <style>{`
-        @keyframes lilyGlow {
-          0%, 100% { transform: translate(-50%, -50%) scale(var(--gs, 1));    filter: blur(30px); }
-          50%       { transform: translate(-50%, -50%) scale(calc(var(--gs, 1) * 1.1)); filter: blur(36px); }
+        @keyframes lilyGlowPulse {
+          0%, 100% { opacity: var(--glow-opacity, 0); filter: blur(30px); }
+          50%       { opacity: calc(var(--glow-opacity, 0) * 1.15); filter: blur(36px); }
         }
       `}</style>
     </div>

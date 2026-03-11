@@ -24,7 +24,7 @@ const cormorant = Cormorant_Garamond({
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-sans",
   display: "swap",
 })
 
