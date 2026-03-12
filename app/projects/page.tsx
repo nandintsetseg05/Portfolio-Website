@@ -38,7 +38,8 @@ export default function Projects() {
       title: "Book Typing game",
       description:
         "Ever wanted to read book while improving your typing speed? Well I made a website where you can upload books you wanna read in pdf. And website will extract the text and turn to your typing practice. Read you book and improve your typing skill at the same time.",
-     tags: [
+      category: "IT",
+      tags: [
        "React",
        "JavaScript",
        "Web Development",
@@ -48,8 +49,7 @@ export default function Projects() {
        "PDF.js",
        "Real-time Application",
        "Tailwind CSS",
-       "Responsive Design"
-     ],
+       "Responsive Design"],
       link: "https://typing-master-nana.vercel.app/",
     },
     {
