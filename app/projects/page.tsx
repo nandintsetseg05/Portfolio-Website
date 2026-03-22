@@ -53,7 +53,7 @@ export default function Projects() {
       link: "https://typing-master-nana.vercel.app/",
     },
     {
-      title: "Personal AI Cloud - Self-Hosted Multi-Agent AI Platform",
+      title: "Self-Hosted Multi Agent AI Platform",
       description:
         "A fully autonomous, self-hosted AI infrastructure that runs unlimited AI models locally with zero token costs. My solution is Built a personal AI cloud with Docker containers accessible anywhere via Cloudflare Tunnel. But its based on my personal PC not everyone can access.",
       category: "IT",
@@ -93,7 +93,7 @@ export default function Projects() {
         "Redesigned the website with a modern UI, added a booking system, set up Google Business Profile, implemented SSL, and optimized SEO. Provided marketing guidance to the client resulting in 825% increase in site visitors and improved overall business online presence.",
       category: "IT & Web Development",
       tags: ["Next.js", "UI/UX", "SEO", "SSL", "Google Business"],
-      link: "#",
+      link: "https://sayramplumbing.com.au/",
     },
   ]
   const financeProjects = [
@@ -148,38 +148,38 @@ export default function Projects() {
   ]
 
   const personalProjects = [
-    {
-      title: "Hair dressing",
-      description:
-        "One summer I decided help my mom on her business since I have spare time. She runs a beauty salon I did not got special treatment. I started of as a cleaner, then hair washer, after assistant, then I learned how to cut hair in basic then improved. THE place that teached me human skill the MOST. 100% worth it",
-      category: "Personal",
-      tags: ["Soft skill", "Hair dressing", "Communication", "Networking"],
-      link: "https://www.notion.so/Hair-salon-1ab615bca7f780f986c9e93fcb7e48da?source=copy_link",
-    },
-    {
-      title: "How to learn research",
-      description:
-        "When I was 13 I came across to my most bindblowing idea at that time. If I learn how to learn I am unstoppable... very cute I watched one poccast that changed my life. Since then I got interest on how hbrain works how emotion works habit etc.. so many things it is endless. Since that time I am learning everyday and document them when I think it is enough I might make it into a book...",
-      category: "Personal",
-      tags: ["Idea", "In Progress"],
-      link: "#",
-    },
+//     {
+//       title: "Hair dressing",
+//       description:
+//         "One summer I decided help my mom on her business since I have spare time. She runs a beauty salon I did not got special treatment. I started of as a cleaner, then hair washer, after assistant, then I learned how to cut hair in basic then improved. THE place that teached me human skill the MOST. 100% worth it",
+//       category: "Personal",
+//       tags: ["Soft skill", "Hair dressing", "Communication", "Networking"],
+//       link: "https://www.notion.so/Hair-salon-1ab615bca7f780f986c9e93fcb7e48da?source=copy_link",
+//     },
+//     {
+//       title: "How to learn research",
+//       description:
+//         "When I was 13 I came across to my most mind blowing idea at that time. If I learn how to learn I am unstoppable... very cute I watched one poccast that changed my life. Since then I got interest on how brain works how emotion works habit etc.. so many things it is endless. Since that time I am learning everyday and document them when I think it is enough I might make it into a book...",
+//       category: "Personal",
+//       tags: ["Idea", "In Progress"],
+//       link: "#",
+//     },
     {
       title: "QUT Mongolia Association",
       description:
-        "Me and my friend who study at same university decidedd to leave our legacy to the next generation and mainly found to help other people. Who just came and alone needs a friend and wind of their home country. I am the vice president of the club sociaty for more click the link",
+        "Me and my friend who study at same university decided to leave our legacy to the next generation and mainly found to help other people. Who just came and alone needs a friend and wind of their home country. I am the vice president of the club society for more click the link",
       category: "Personal",
       tags: ["University", "Project", "In Progress"],
       link: "https://campus.hellorubric.com/?s=11154",
     },
-    {
-      title: "High School Grade",
-      description:
-        "I was overachiever, I don't want to brag about it but I was a academic weapon andd if you wanna see yourself in case follow the link",
-      category: "Personal",
-      tags: ["High School", "Project", "Academic"],
-      link: "https://www.notion.so/Not-Gonna-Brag-But-308615bca7f78020bb58cb250f530915?source=copy_link",
-    },
+//     {
+//       title: "High School Grade",
+//       description:
+//         "I was overachiever, I don't want to brag about it but I was a academic weapon and if you wanna see yourself in case follow the link",
+//       category: "Personal",
+//       tags: ["High School", "Project", "Academic"],
+//       link: "https://www.notion.so/Not-Gonna-Brag-But-308615bca7f78020bb58cb250f530915?source=copy_link",
+//     },
   ]
 
   return (

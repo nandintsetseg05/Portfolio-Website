@@ -20,13 +20,13 @@ const socialLinks = [
     color: "from-muted to-muted-foreground",
     hoverColor: "hover:shadow-muted/50",
   },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    url: "https://www.instagram.com/n.tseegii.mn/",
-    color: "from-accent via-secondary to-accent",
-    hoverColor: "hover:shadow-accent/50",
-  },
+//   {
+//     name: "Instagram",
+//     icon: Instagram,
+//     url: "https://www.instagram.com/n.tseegii.mn/",
+//     color: "from-accent via-secondary to-accent",
+//     hoverColor: "hover:shadow-accent/50",
+//   },
   {
     name: "Email",
     icon: Mail,
