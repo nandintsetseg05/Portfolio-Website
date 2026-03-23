@@ -16,19 +16,19 @@ const featuredProjects = [
     {
       title: "Retail POS & Inventory Web Application",
       description:
-        "A mobile-first web application built for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. Commercially validated built on client request and sold to 5 independent stores.",
+        "Used to keep inventory and cash record on pen and paper; so I built a mobile-first web application for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. No manual work, no human errors. Commercially validated built on client request and sold to 5 independent stores.",
       category: "IT",
       tags: ["RBAC", "CRUD", "Real-Time Data", "Systems Analysis", "UAT", "Multi-User Architecture", "Access Control", "Data Query"],
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
-  {
-    title: "Frozen Yogurt Shop Marketing Campaign",
-    description:
-      "Managed social media strategy and content creation. Achieved 249% growth in engagement and 24% audience growth within 1 month for 88 Acai Frozen Yogurt shop.",
-    category: "Marketing",
-    tags: ["Social Media", "Content Strategy", "Analytics", "AI Content"],
-    link: "https://nananandintsetseg.my.canva.site/marketing-growth-strategy-project",
-  },
+    {
+      title: "PropSight - AI Property Valuation Tool",
+      description:
+        "A property price estimator built to combine real estate data with machine learning. Trained on NSW Valuer General data using ML.NET, PropSight estimates market value based on property features, compares suburbs, analyses condition and runs market simulations. Deployed on Google Cloud Run. Learning more to scale and improve. In progress",
+      category: "IT & Finance",
+      tags: ["ML.NET", "Data Analytics", "Next.js", "Financial Modelling", "AI", "Machine Learning", "Data Query", "In Progress"],
+      link: "https://propsight.nana-nandintsetseg.com/",
+    },
 ]
 
 const featuredHobbies = [
@@ -125,15 +125,15 @@ export default function Home() {
                 Computer Science + Finance | Nandintsetseg Bayarsaikhan
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-[gradient-shift_3s_ease_infinite]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary  to-accent animate-[gradient-shift_3s_ease_infinite]">
                   Nana B
                 </span>
               </h1>
               <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                Bridging Business & Technology.
+                I speak both languages
               </p>
               <p className="text-xl md:text-2xl font-semibold text-foreground/80">
-                With Proven Track Record.
+                Code and Business
               </p>
 
               <div className="glass-card p-8 rounded-2xl backdrop-blur-xl border border-white/10 space-y-5">

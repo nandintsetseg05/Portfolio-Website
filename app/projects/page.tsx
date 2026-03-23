@@ -35,6 +35,14 @@ export default function Projects() {
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
+      title: "PropSight - AI Property Valuation Tool",
+      description:
+        "A property price estimator built to combine real estate data with machine learning. Trained on NSW Valuer General data using ML.NET, PropSight estimates market value based on property features, compares suburbs, analyses condition and runs market simulations. Deployed on Google Cloud Run.",
+      category: "IT & Finance",
+      tags: ["ML.NET", "Data Analytics", "Next.js", "Financial Modelling", "AI", "Machine Learning", "Data Query", "In Progress"],
+      link: "https://propsight.nana-nandintsetseg.com/",
+    },
+    {
       title: "Book Typing game",
       description:
         "Ever wanted to read book while improving your typing speed? Well I made a website where you can upload books you wanna read in pdf. And website will extract the text and turn to your typing practice. Read you book and improve your typing skill at the same time.",
