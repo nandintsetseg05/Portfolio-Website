@@ -10,7 +10,7 @@ function NeuralGalaxy() {
   const linesRef = useRef<THREE.LineSegments>(null)
   const { camera } = useThree()
 
-  const particleCount = 800
+  const particleCount = 400
 
   // Mouse tracking
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })

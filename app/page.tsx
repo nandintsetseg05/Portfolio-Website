@@ -239,7 +239,7 @@ export default function Home() {
                 variant="outline"
                 className="border-accent/50 hover:bg-accent/10 hover:border-accent group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
-                See All Hobbies
+                View My Skills
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

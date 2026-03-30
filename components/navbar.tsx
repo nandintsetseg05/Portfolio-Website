@@ -13,11 +13,11 @@ export function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "/about", label: "About Me" },
     { href: "/projects", label: "Projects" },
+    { href: "/skills", label: "My Skills" },
     { href: "/blog", label: "Blog" },
-    { href: "/hobbies", label: "Hobbies" },
-    { href: "/info", label: "Contact" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
