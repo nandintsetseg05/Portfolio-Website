@@ -125,7 +125,7 @@ export default function Home() {
                 Computer Science + Finance | Nandintsetseg Bayarsaikhan
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary  to-accent animate-[gradient-shift_3s_ease_infinite]">
+                <span className="bg-clip-text text bg-gradient-to-r from-primary  to-accent animate-[gradient-shift_3s_ease_infinite]">
                   Nana B
                 </span>
               </h1>
@@ -144,7 +144,7 @@ export default function Home() {
                   Want proof? Who am I?
                 </p>
                 <Link href="/about">
-                  <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl shadow-lg mt-2">
+                  <Button className="bg-primary/100 from-primary hover:from-primary/0 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl ">
                     More About Me
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
