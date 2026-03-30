@@ -57,7 +57,7 @@ export default function Hobbies() {
     {
       title: "Photography",
       description:
-        "One of the skill I picked up and during running my marketing company, kept it as hobb.y",
+        "One of the skill I picked up and during running my marketing company, kept it as hobby",
       icon: "📷",
       link: "#",
     },

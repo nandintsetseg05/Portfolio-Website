@@ -35,22 +35,22 @@ const featuredHobbies = [
   {
     title: "Chess",
     description:
-      "6 medals over my lifetime. I think in systems and second-order consequences — chess keeps that sharp.",
-    icon: "♟️",
+      "Helps to keep my mind sharp but little competitive but i like playing rapid",
+    icon: "",
     link: "https://www.chess.com/play/online",
   },
   {
-    title: "Drawing",
+    title: "Learning",
     description:
-      "Visual thinking before visual output. Started selling drawings to my family at age 7 — first taste of commerce.",
-    icon: "🎨",
+      "Self-directed learning, curiosity, and experimentation with technology and creative projects.",
+    icon: "",
     link: "#",
   },
   {
     title: "Continuous Learning",
     description:
-      "Currently: AI infrastructure, cybersecurity, IELTS prep. Always something on the go. The curiosity never stops.",
-    icon: "🔍",
+      "Currently: AI infrastructure, Analyst Programmer. The curiosity never stops.",
+    icon: "",
     link: "#",
   },
 ]

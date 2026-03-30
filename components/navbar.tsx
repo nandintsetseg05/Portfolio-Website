@@ -17,7 +17,7 @@ export function Navbar() {
     { href: "/projects", label: "Projects" },
     { href: "/blog", label: "Blog" },
     { href: "/hobbies", label: "Hobbies" },
-    { href: "/info", label: "Info" },
+    { href: "/info", label: "Contact" },
   ]
 
   return (
@@ -41,7 +41,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-all hover:text-primary relative group ${
-                  pathname === link.href ? "text-primary" : "text-muted-foreground"
+                  pathname === link.href ? "text-primary" : "text-foreground"
                 }`}
               >
                 {link.label}
@@ -57,10 +57,10 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden hover:bg-primary/10"
+            className="md:hidden text-white hover:bg-primary/10"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
 
@@ -75,7 +75,7 @@ export function Navbar() {
                 className={`block px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                   pathname === link.href
                     ? "bg-gradient-to-r from-primary/20 to-secondary/20 text-primary border border-primary/30"
-                    : "text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                    : "text-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >
                 {link.label}

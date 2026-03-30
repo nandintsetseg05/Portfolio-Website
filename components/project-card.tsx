@@ -21,10 +21,10 @@ export function ProjectCard({ title, description, category, tags, link }: Projec
           </Badge>
           <Link
             href={link}
-            className="text-muted-foreground hover:text-primary transition-colors"
+            className="text-foreground hover:text-primary transition-colors"
             aria-label={`View ${title}`}
           >
-            <ExternalLink className="h-4 w-4 group-hover:scale-110 transition-transform" />
+            <ExternalLink className="h-6 w-6 group-hover:scale-110 transition-transform" />
           </Link>
         </div>
         <CardTitle className="group-hover:text-primary transition-colors text-xl">{title}</CardTitle>
