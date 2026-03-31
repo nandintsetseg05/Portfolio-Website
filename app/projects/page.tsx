@@ -43,6 +43,14 @@ export default function Projects() {
       link: "https://propsight.nana-nandintsetseg.com/",
     },
     {
+      title: "RepoMap developer tool",
+      description:
+        "RepoMap is an interactive GitHub repository visualizer I built in 1 day taking advantage of AI and deployed on my subdomain. Paste any public GitHub URL and it instantly maps out the codebase as an explorable mind map, showing file architecture, import/export relationships, and dependency graphs. You can drag, zoom, search, and expand folders to understand how any project is structured at a glance.",
+      category: "IT",
+      tags: ["Next.js", "React Flow", "GitHub REST API"],
+      link: "https://repomap.nana-nandintsetseg.com/",
+    },
+    {
       title: "Book Typing game",
       description:
         "Ever wanted to read book while improving your typing speed? Well I made a website where you can upload books you wanna read in pdf. And website will extract the text and turn to your typing practice. Read you book and improve your typing skill at the same time.",
