@@ -44,7 +44,7 @@ export default function Hobbies() {
       description:
         "I turn raw data into decisions. I've built ASX portfolio dashboards with Python, yfinance, Sharpe ratio and VaR calculations, automated reporting pipelines, and CFA-style PDF exports. Tools: Power BI, pandas, Excel, Google Analytics.",
       icon: "",
-      link: "https://www.chess.com/play/online",
+      link: "#",
     },
     {
       title: "Business Analysis & Digital Strategy",
