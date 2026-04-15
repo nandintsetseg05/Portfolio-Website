@@ -81,7 +81,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto space-y-16">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white text-foreground">
               About Me
             </h1>
             <p className="text-xl text-balance text-foreground">
@@ -107,7 +107,7 @@ export default function About() {
           <section className="space-y-6">
             <h2 className="text-3xl font-bold text-foreground">Education</h2>
             <div className="space-y-4">
-              <div className="glass-card rounded-2xl p-6 border-l-4 border-primary">
+              <div className="glass-card rounded-2xl p-6 border-l-4 text-white">
                 <h3 className="text-xl font-semibold">Bachelor's in Computer Science & Minor in Finance</h3>
                 <p className="text-muted-foreground">Queensland University of Technology • Expected 2026</p>
                 <p className="mt-2">
@@ -117,7 +117,7 @@ export default function About() {
                   Self learning - Cloud - AWS, Docker, Cloudflare, Tunnels +Personal Projects, +Freelancing Projects
                 </p>
               </div>
-              <div className="glass-card rounded-2xl p-6 border-l-4 border-secondary">
+              <div className="glass-card rounded-2xl p-6 border-l-4 border-accent/60">
                 <h3 className="text-xl font-semibold">Diploma of Information Technology - Web Development</h3>
                 <p className="text-muted-foreground">Queensland University of Technology • Graduated 2024</p>
                 <p className="mt-2">
@@ -131,7 +131,7 @@ export default function About() {
           <section className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground">Timeline</h2>
             <div className="relative">
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent" />
+              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b text-white" />
               <div className="space-y-12">
                 {timeline.map((item, index) => (
                   <div
@@ -145,7 +145,7 @@ export default function About() {
                         <p className="text-muted-foreground">{item.description}</p>
                       </div>
                     </div>
-                    <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full -translate-x-[7px] md:-translate-x-1/2 border-4 border-black shadow-lg" />
+                    <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-accent rounded-full -translate-x-[7px] md:-translate-x-1/2 border-4 border-black shadow-lg" />
                   </div>
                 ))}
               </div>

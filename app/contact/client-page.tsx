@@ -57,7 +57,7 @@ export default function ClientInfoPage() {
             transition={{ duration: 0.6 }}
             className="space-y-4 text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white text-foreground">
               Connect With Me
             </h1>
             <p className="text-xl text-foreground">Find me on social media or download my resume</p>
@@ -70,7 +70,7 @@ export default function ClientInfoPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="glass-card p-8 rounded-3xl text-center space-y-6"
           >
-            <div className="w-20 h-20 mx-auto bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto bg-gradient-to-r text-white rounded-2xl flex items-center justify-center">
               <Download className="w-10 h-10 text-white" />
             </div>
             <div>
@@ -82,7 +82,7 @@ export default function ClientInfoPage() {
             <a
               href="/Nana Nandintsetseg Bayarsaikhan resume.pdf"
               download="Nana Nandintsetseg Bayarsaikhan resume.pdf"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-full hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-secondary/30"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r text-white rounded-full hover:scale-105 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-secondary/30"
             >
               <Download className="w-5 h-5" />
               Download Resume (PDF)

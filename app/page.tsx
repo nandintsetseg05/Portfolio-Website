@@ -140,7 +140,7 @@ export default function Home() {
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
                   Final year Computer Science student with a Finance minor, implementing and improving local business systems and software.
                 </p>
-                <p className="text-sm md:text-base text-foreground leading-relaxed italic border-l-2 border-primary/40 pl-4">
+                <p className="text-sm md:text-base text-foreground leading-relaxed italic border-l-2 text-white/40 pl-4">
                   Want proof? Who am I?
                 </p>
                 <Link href="/about">
@@ -193,7 +193,7 @@ export default function Home() {
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-secondary/50 hover:bg-secondary/10 hover:border-secondary group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
+                className="border-accent/60/50 hover:bg-white/10 hover:border-accent/60 group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 View All Work
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -237,7 +237,7 @@ export default function Home() {
             <Link href="/hobbies">
               <Button
                 variant="outline"
-                className="border-accent/50 hover:bg-accent/10 hover:border-accent group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
+                className="border-accent/50 hover:bg-accent/20 hover:border-accent group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 View My Skills
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -256,7 +256,7 @@ export default function Home() {
           className="max-w-7xl mx-auto space-y-16 py-12"
         >
           <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white leading-tight text-foreground">
               Let's Work Together
             </h2>
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">

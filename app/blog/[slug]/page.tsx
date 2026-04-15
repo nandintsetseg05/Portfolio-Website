@@ -78,13 +78,13 @@ export default function BlogPostPage() {
             <div className="flex items-center gap-3 flex-wrap">
               {post.featured && <Badge className="bg-gradient-to-r from-primary to-secondary">Featured</Badge>}
               {post.tags.map((tag) => (
-                <Badge key={tag} variant="outline" className="border-primary/30">
+                <Badge key={tag} variant="outline" className="text-white/30">
                   {tag}
                 </Badge>
               ))}
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r text-white leading-tight">
               {post.title}
             </h1>
 

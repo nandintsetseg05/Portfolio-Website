@@ -74,7 +74,7 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                   pathname === link.href
-                    ? "bg-gradient-to-r from-primary/20 to-secondary/20 text-primary border border-primary/30"
+                    ? "bg-gradient-to-r from-primary/20 to-secondary/20 text-primary border text-white/30"
                     : "text-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
               >

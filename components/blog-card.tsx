@@ -22,7 +22,7 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
       viewport={{ once: true }}
     >
       <Link href={`/blog/${post.slug}`}>
-        <Card className="h-full hover:shadow-lg transition-all hover:border-secondary/50 cursor-pointer group glass-card backdrop-blur-xl border-white/10">
+        <Card className="h-full hover:shadow-lg transition-all hover:border-accent/60/50 cursor-pointer group glass-card backdrop-blur-xl border-white/10">
           {post.imageUrl && (
             <div className="relative h-48 overflow-hidden rounded-t-lg">
               <Image
@@ -56,7 +56,7 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
             {post.tags.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <Badge key={tag} variant="outline" className="border-primary/30 text-xs">
+                  <Badge key={tag} variant="outline" className="text-white/30 text-xs">
                     {tag}
                   </Badge>
                 ))}

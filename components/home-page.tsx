@@ -136,7 +136,7 @@ export function HomePage() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-accent blur-3xl opacity-40 animate-pulse scale-110"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r text-white blur-3xl opacity-40 animate-pulse scale-110"></div>
 
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/60 via-secondary/60 to-accent/60 opacity-20 blur-xl scale-105"></div>
 
@@ -161,7 +161,7 @@ export function HomePage() {
               className="space-y-8"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r text-white bg-[length:200%_auto] animate-[gradient-shift_3s_ease_infinite]">
                   Nana B, Nandintsetseg Bayarsaikhan
                 </span>
               </h1>
@@ -228,7 +228,7 @@ export function HomePage() {
             <Link href="/projects">
               <Button
                 variant="outline"
-                className="border-secondary/50 hover:bg-secondary/10 hover:border-secondary group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
+                className="text-white/50 hover:bg-secondary/10 hover:text-white group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"
               >
                 {t.home.viewAllProjects}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -287,7 +287,7 @@ export function HomePage() {
           className="max-w-5xl mx-auto space-y-12"
         >
           <div className="text-center space-y-5">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent leading-tight text-foreground">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white leading-tight text-foreground">
               Contact Me
             </h2>
             <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto text-foreground">
@@ -347,7 +347,7 @@ export function HomePage() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-secondary/25 text-base"
+                className="w-full bg-gradient-to-r text-white hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-secondary/25 text-base"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

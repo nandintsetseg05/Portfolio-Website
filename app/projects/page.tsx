@@ -212,7 +212,7 @@ export default function Projects() {
 
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white text-foreground">
               Projects
             </h1>
             <p className="text-xl text-balance text-foreground">

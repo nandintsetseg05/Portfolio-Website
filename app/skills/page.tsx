@@ -93,7 +93,7 @@ export default function Hobbies() {
 
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="space-y-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent text-foreground">
+            <h1 className="text-5xl md:text-6xl font-bold bg-clip-text bg-gradient-to-r text-white text-foreground">
               Skills & Interests
             </h1>
             <p className="text-xl text-foreground">What do I know? How can I contribute.</p>
