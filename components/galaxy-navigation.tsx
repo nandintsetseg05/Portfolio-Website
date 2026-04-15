@@ -1,203 +1,163 @@
 "use client"
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
-import { Stars } from "@react-three/drei"
-import { useRef, useMemo, useState, useEffect } from "react"
+import { useRef, useMemo, useEffect } from "react"
 import * as THREE from "three"
 
-function NeuralGalaxy() {
-  const pointsRef = useRef<THREE.Points>(null)
-  const linesRef = useRef<THREE.LineSegments>(null)
-  const { camera } = useThree()
+const COLS    = 80
+const ROWS    = 100
+const SX      = 1.3   // horizontal spacing
+const SZ      = 1.1   // depth spacing — tighter so far rows pack tighter in perspective
 
-  const particleCount = 400
+function WaveFabric() {
+  const { camera, size } = useThree()
+  const mouse = useRef({ x: 0, y: 0 })
+  const time  = useRef(0)
 
-  // Mouse tracking
-  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
   useEffect(() => {
+    // Low grazing angle — like the reference image
+    // grid extends far forward so it fills horizon to edge
+    camera.position.set(0, 14, 22)
+    camera.lookAt(0, 0, -18)
+
     const handleMouse = (e: PointerEvent) => {
-      setMousePos({ x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight })
+      mouse.current.x = (e.clientX / window.innerWidth  - 0.5) * 2
+      mouse.current.y = -(e.clientY / window.innerHeight - 0.5) * 2
     }
     window.addEventListener("pointermove", handleMouse)
     return () => window.removeEventListener("pointermove", handleMouse)
-  }, [])
+  }, [camera])
 
-  // Scroll tracking
-  const [scrollY, setScrollY] = useState(0)
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  const totalVerts = COLS * ROWS
 
-  // Create a round gradient texture for particles
-  const particleTexture = useMemo(() => {
-    const size = 64
-    const canvas = document.createElement("canvas")
-    canvas.width = size
-    canvas.height = size
-    const ctx = canvas.getContext("2d")!
-    const gradient = ctx.createRadialGradient(
-      size / 2,
-      size / 2,
-      0,
-      size / 2,
-      size / 2,
-      size / 2
-    )
-    gradient.addColorStop(0, "rgba(255,255,255,1)")
-    gradient.addColorStop(0.2, "rgba(173,216,230,0.8)") // light blue
-    gradient.addColorStop(0.4, "rgba(100,170,255,0.5)")
-    gradient.addColorStop(1, "rgba(0,0,0,0)")
-    ctx.fillStyle = gradient
-    ctx.fillRect(0, 0, size, size)
-    const texture = new THREE.CanvasTexture(canvas)
-    return texture
-  }, [])
-
-  // Generate particles and lines
-  const { positions, colors, linePositions } = useMemo(() => {
-    const positions = new Float32Array(particleCount * 3)
-    const colors = new Float32Array(particleCount * 3)
-    const points: THREE.Vector3[] = []
-
-    for (let i = 0; i < particleCount; i++) {
-      const i3 = i * 3
-      const radius = Math.random() * 40
-      const angle = Math.random() * Math.PI * 2
-      const x = Math.cos(angle) * radius
-      const y = (Math.random() - 0.5) * 10
-      const z = Math.sin(angle) * radius
-
-      positions[i3] = x
-      positions[i3 + 1] = y
-      positions[i3 + 2] = z
-
-      points.push(new THREE.Vector3(x, y, z))
-
-      const color = new THREE.Color()
-      color.setHSL(0.6 + Math.random() * 0.2, 0.8, 0.6)
-
-      colors[i3] = color.r
-      colors[i3 + 1] = color.g
-      colors[i3 + 2] = color.b
+  const lineIndices = useMemo(() => {
+    const idx: number[] = []
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const i = r * COLS + c
+        if (c < COLS - 1) idx.push(i, i + 1)
+        if (r < ROWS - 1) idx.push(i, i + COLS)
+      }
     }
+    return idx
+  }, [])
 
-    const lineArray: number[] = []
-    for (let i = 0; i < points.length; i++) {
-      for (let j = i + 1; j < points.length; j++) {
-        const dist = points[i].distanceTo(points[j])
-        if (dist < 6) {
-          lineArray.push(
-            points[i].x, points[i].y, points[i].z,
-            points[j].x, points[j].y, points[j].z
-          )
-        }
+  const linePositions = useMemo(() => new Float32Array(lineIndices.length * 3), [lineIndices])
+  const dotPositions  = useMemo(() => new Float32Array(totalVerts * 3), [])
+
+  const lineGeo = useMemo(() => {
+    const geo = new THREE.BufferGeometry()
+    geo.setAttribute("position", new THREE.BufferAttribute(linePositions, 3))
+    return geo
+  }, [linePositions])
+
+  const dotGeo = useMemo(() => {
+    const geo = new THREE.BufferGeometry()
+    geo.setAttribute("position", new THREE.BufferAttribute(dotPositions, 3))
+    return geo
+  }, [dotPositions])
+
+  const dotTexture = useMemo(() => {
+    const s   = 64
+    const cvs = document.createElement("canvas")
+    cvs.width = cvs.height = s
+    const ctx = cvs.getContext("2d")!
+    const g   = ctx.createRadialGradient(s/2, s/2, 0, s/2, s/2, s/2)
+    g.addColorStop(0,   "rgba(255,255,255,1)")
+    g.addColorStop(0.35,"rgba(255,255,255,0.85)")
+    g.addColorStop(0.7, "rgba(220,230,255,0.3)")
+    g.addColorStop(1,   "rgba(0,0,0,0)")
+    ctx.fillStyle = g
+    ctx.fillRect(0, 0, s, s)
+    return new THREE.CanvasTexture(cvs)
+  }, [])
+
+  useFrame((_, delta) => {
+    time.current += delta * 0.32
+
+    const t  = time.current
+    const mx = mouse.current.x * 38
+    const my = mouse.current.y * -22
+
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        const idx = r * COLS + c
+        const i3  = idx * 3
+
+        // Offset grid so it starts near camera and extends far back
+        const x = (c - COLS / 2) * SX
+        const z = (r - ROWS * 0.15) * SZ   // shift forward — near rows close to cam, far rows to horizon
+
+        const wave1 = Math.sin(x * 0.2  + t * 1.0) * Math.cos(z * 0.15 + t * 0.7) * 2.0
+        const wave2 = Math.sin(x * 0.11 - t * 0.55 + z * 0.09) * 1.4
+        const wave3 = Math.cos(x * 0.18 + z * 0.22 - t * 0.4)  * 0.9
+
+        // Mouse gravity well
+        const dx   = x - mx
+        const dz   = z - my
+        const dist = Math.sqrt(dx * dx + dz * dz)
+        const pull = Math.exp(-dist * 0.1) * -9.0
+
+        dotPositions[i3]     = x
+        dotPositions[i3 + 1] = wave1 + wave2 + wave3 + pull
+        dotPositions[i3 + 2] = z
       }
     }
 
-    return { positions, colors, linePositions: new Float32Array(lineArray) }
-  }, [])
-
-  // Smooth rotation target
-  const targetRotation = useRef({ x: 0, y: 0 })
-  const currentRotation = useRef({ x: 0, y: 0 })
-
-  useFrame(() => {
-    // Mouse-follow rotation target
-    targetRotation.current.x = -(mousePos.y - 0.5) * Math.PI
-    targetRotation.current.y = (mousePos.x - 0.5) * Math.PI
-
-    // Smoothly follow mouse vertically only
-    currentRotation.current.x += (targetRotation.current.x - currentRotation.current.x) * 0.15
-
-    // Continuous rotation horizontally in **one direction**
-    const autoRotationY = 0.0015 // adjust speed
-    currentRotation.current.y += autoRotationY
-
-    if (pointsRef.current) {
-      pointsRef.current.rotation.x = currentRotation.current.x
-      pointsRef.current.rotation.y = currentRotation.current.y
-
-      // Smooth scroll zoom
-      const targetZ = 30 - scrollY * 0.02
-      camera.position.z += (targetZ - camera.position.z) * 0.08
+    for (let s = 0; s < lineIndices.length; s += 2) {
+      const a  = lineIndices[s]
+      const b  = lineIndices[s + 1]
+      const si = s * 3
+      linePositions[si]     = dotPositions[a * 3]
+      linePositions[si + 1] = dotPositions[a * 3 + 1]
+      linePositions[si + 2] = dotPositions[a * 3 + 2]
+      linePositions[si + 3] = dotPositions[b * 3]
+      linePositions[si + 4] = dotPositions[b * 3 + 1]
+      linePositions[si + 5] = dotPositions[b * 3 + 2]
     }
 
-    if (linesRef.current && pointsRef.current) {
-      linesRef.current.rotation.copy(pointsRef.current.rotation)
-    }
+    lineGeo.attributes.position.needsUpdate = true
+    dotGeo.attributes.position.needsUpdate  = true
   })
 
   return (
     <>
-      {/* Round flowing particles */}
-      <points ref={pointsRef}>
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            array={positions}
-            count={particleCount}
-            itemSize={3}
-          />
-          <bufferAttribute
-            attach="attributes-color"
-            array={colors}
-            count={particleCount}
-            itemSize={3}
-          />
-        </bufferGeometry>
-
-        <pointsMaterial
-          size={0.4} // slightly bigger for glow
-          vertexColors
-          transparent
-          opacity={0.8}
-          sizeAttenuation
-          depthWrite={false}
-          blending={THREE.AdditiveBlending}
-          map={particleTexture} // round gradient texture
-        />
-      </points>
-
-      {/* Lines */}
-      <lineSegments ref={linesRef}>
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            array={linePositions}
-            count={linePositions.length / 3}
-            itemSize={3}
-          />
-        </bufferGeometry>
-
+      <lineSegments geometry={lineGeo}>
         <lineBasicMaterial
-          color="#6aa6ff"
+          color="#ffffff"
           transparent
-          opacity={0.15}
+          opacity={0.5}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
         />
       </lineSegments>
+
+      <points geometry={dotGeo}>
+        <pointsMaterial
+          size={0.14}
+          map={dotTexture}
+          transparent
+          opacity={0.95}
+          color="#ffffff"
+          sizeAttenuation
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </points>
     </>
   )
 }
 
 export function GalaxyNavigation() {
   return (
-    <div className="fixed inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 60], fov: 70 }}>
+    <div className="fixed inset-0 -z-10" style={{ background: "#000000" }}>
+      <Canvas
+        camera={{ fov: 90 }}
+        gl={{ antialias: true, alpha: false }}
+        style={{ width: "100%", height: "100%", background: "#000000" }}
+      >
         <color attach="background" args={["#000000"]} />
-
-        <Stars
-          radius={300}
-          depth={100}
-          count={5000}
-          factor={4}
-          saturation={0}
-          fade
-          speed={1}
-        />
-
-        <NeuralGalaxy />
+        <WaveFabric />
       </Canvas>
     </div>
   )
