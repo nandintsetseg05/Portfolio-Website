@@ -144,7 +144,7 @@ export default function Home() {
                   Want proof? Who am I?
                 </p>
                 <Link href="/about">
-                  <Button className="bg-primary/100 from-primary hover:from-primary/0 hover:to-secondary/90 group px-6 py-4 text-base rounded-xl ">
+                  <Button className="bg-white/5 hover:bg-white/15 border border-white/20 hover:border-white/40 text-white backdrop-blur-sm group px-6 py-4 text-base rounded-xl transition-all">
                     More About Me
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -315,7 +315,7 @@ export default function Home() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-primary/90 hover:via-secondary/90 hover:to-accent/90 text-white font-semibold py-5 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-secondary/25 text-base"
+                className="w-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/50 text-white font-semibold py-5 rounded-xl backdrop-blur-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed text-base"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

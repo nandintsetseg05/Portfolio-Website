@@ -69,8 +69,7 @@ export default function About() {
     <div className="relative min-h-screen">
       <GalaxyNavigation />
 
-      <div className="absolute inset-0 gradient-bg" />
-      <AnimatedBackground />
+
 
       <div className="relative z-10 py-20 px-4">
         <Link
@@ -91,7 +90,7 @@ export default function About() {
           </div>
 
           <section className="space-y-6">
-            <h2 className="text-3xl font-bold text-primary">Background</h2>
+            <h2 className="text-3xl font-bold text-white">Background</h2>
             <div className="glass-card rounded-2xl p-8 space-y-4 text-lg leading-relaxed">
               <div>
                 Skilled in full-stack web development, with hands on experience in projects and research.
@@ -141,7 +140,7 @@ export default function About() {
                   >
                     <div className={`flex-1 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
                       <div className="glass-card rounded-2xl p-6 hover:scale-[1.02] transition-transform">
-                        <div className="text-sm font-semibold text-primary mb-2">{item.year}</div>
+                        <div className="text-sm font-semibold text-white mb-2">{item.year}</div>
                         <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                         <p className="text-muted-foreground">{item.description}</p>
                       </div>

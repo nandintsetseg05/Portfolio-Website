@@ -58,7 +58,7 @@ export default function BlogPage() {
           >
             <p className="text-xl text-muted-foreground">No blog posts yet. Check back soon!</p>
             <Link href="/admin/blog">
-              <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+              <Button className="bg-gradient-to-r from-primary to-secondary hover:from-white/90 hover:to-secondary/90">
                 Create First Post
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

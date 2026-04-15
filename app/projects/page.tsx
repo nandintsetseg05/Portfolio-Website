@@ -221,7 +221,7 @@ export default function Projects() {
           </div>
 
           <section className="space-y-8">
-            <h2 className="text-3xl font-bold text-primary">IT Projects</h2>
+            <h2 className="text-3xl font-bold text-white">IT Projects</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {itProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
