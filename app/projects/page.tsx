@@ -43,6 +43,14 @@ export default function Projects() {
       link: "https://propsight.nana-nandintsetseg.com/",
     },
     {
+      title: "Ecommerce website - Full Stack",
+      description:
+        "I have made a full stack ecommerce website upon client request. I have build 2 main models, firstly admin interface where you can control your products and control your full inventory, orders, data everything without touching any code. Full control over the main frontend interface. Secondly the interface I have build seemless design where customer can shop online pay, create account and track their orders",
+      category: "IT",
+      tags: ["Next.js", "Full-Stack", "Railway"],
+      link: "https://www.watch-house.net/au",
+    },
+    {
       title: "RepoMap developer tool",
       description:
         "RepoMap is an interactive GitHub repository visualizer I built in 1 day taking advantage of AI and deployed on my subdomain. Paste any public GitHub URL and it instantly maps out the codebase as an explorable mind map, showing file architecture, import/export relationships, and dependency graphs. You can drag, zoom, search, and expand folders to understand how any project is structured at a glance.",
