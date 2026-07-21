@@ -204,6 +204,14 @@ export default function Projects() {
       tags: ["High School", "Project", "Academic"],
       link: "https://www.notion.so/Not-Gonna-Brag-But-308615bca7f78020bb58cb250f530915?source=copy_link",
     },
+    {
+      title: "No Brand Web Studio",
+      description:
+        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
+      category: "Personal",
+      tags: ["Business", "Friends", "Help others"],
+      link: "https://www.nobrandwebstudio.com/",
+    },
   ]
 
   return (
