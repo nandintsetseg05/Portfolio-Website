@@ -35,6 +35,22 @@ export default function Projects() {
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
+      title: "HireReady — AI Resume & ATS Optimization Platform",
+      description:
+        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per-change user approval and a live Harvard-format preview, and a corporate resume strategy library.",
+      category: "IT",
+      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client-Side State"],
+      link: "https://hireready.nana-nandintsetseg.com/",
+    },
+    {
+      title: "Watch House — Luxury Watch E-Commerce Platform",
+      description:
+        "A mobile-first e-commerce storefront for luxury timepieces, built with Next.js. Category-based browsing, region-aware routing, newsletter capture, and a full policy/checkout framework. Designed and deployed end-to-end as a live commercial store.",
+      category: "IT",
+      tags: ["E-Commerce", "Next.js", "Product Catalog", "Responsive Design", "Category Filtering", "SSR", "Payment Flow", "SEO"],
+      link: "https://www.watch-house.net/au",
+    },
+    {
       title: "PropSight - AI Property Valuation Tool",
       description:
         "A property price estimator built to combine real estate data with machine learning. Trained on NSW Valuer General data using ML.NET, PropSight estimates market value based on property features, compares suburbs, analyses condition and runs market simulations. Deployed on Google Cloud Run.",
