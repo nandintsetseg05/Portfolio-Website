@@ -35,7 +35,7 @@ export default function Projects() {
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
-      title: "HireReady — AI Resume & ATS Optimization Platform",
+      title: "HireReady AI Resume & ATS Optimization Platform",
       description:
         "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per-change user approval and a live Harvard-format preview, and a corporate resume strategy library.",
       category: "IT",
@@ -43,7 +43,7 @@ export default function Projects() {
       link: "https://hireready.nana-nandintsetseg.com/",
     },
     {
-      title: "Watch House — Luxury Watch E-Commerce Platform",
+      title: "Watch House Luxury Watch E-Commerce Platform",
       description:
         "A mobile-first e-commerce storefront for luxury timepieces, built with Next.js. Category-based browsing, region-aware routing, newsletter capture, and a full policy/checkout framework. Designed and deployed end-to-end as a live commercial store.",
       category: "IT",
