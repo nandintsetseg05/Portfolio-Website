@@ -43,15 +43,15 @@ const featuredProjects = [
 
 const featuredHobbies = [
   {
-    title: "Chess",
+    title: "Chess and Puzzles",
     description:
-      "Rapid chess keeps my mind sharp, and I'm a little competitive.",
+      "Rapid chess and Rubik's cubes in every shape I can find, from 2x2 to hexagon. Strategy and pattern solving are how I switch off.",
     link: "https://www.chess.com/play/online",
   },
   {
-    title: "Always Learning",
+    title: "Reading",
     description:
-      "Self directed and curious, currently diving into AI infrastructure and analyst programming, with technology and creative projects on the side.",
+      "One book tends to reshape how I think each decade. I like books that change my perspective after reading it.",
   },
 ]
 

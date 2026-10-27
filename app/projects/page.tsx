@@ -59,6 +59,14 @@ export default function Projects() {
       link: "https://www.watch-house.net/au",
     },
     {
+      title: "Cyber Boba - Moodle SQL Access Management Tool",
+      description:
+        "QUT final year capstone built for industry partner Catalyst IT (Team T178). A SQL access management tool for Moodle, with a Laravel approver app and a Python executor that lets approvers review and run controlled database access requests. I built and merged three core features: the executor HTTP call layer, multi statement atomic transactions, and file based client config syncing.",
+      category: "IT",
+      tags: ["Laravel", "Python", "SQL", "Capstone", "Team Project", "Industry Partner"],
+      link: "",
+    },
+    {
       title: "RepoMap developer tool",
       description:
         "RepoMap is an interactive GitHub repository visualizer I built in 1 day taking advantage of AI and deployed on my subdomain. Paste any public GitHub URL and it instantly maps out the codebase as an explorable mind map, showing file architecture, import/export relationships, and dependency graphs. You can drag, zoom, search, and expand folders to understand how any project is structured at a glance.",
