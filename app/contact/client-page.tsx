@@ -1,6 +1,6 @@
 "use client"
 
-import { GalaxyNavigation } from "@/components/galaxy-navigation"
+import { GalaxyNavigation } from "@/components/galaxy-navigation-lazy"
 import { ArrowLeft, Instagram, Linkedin, Github, Mail, Download, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"

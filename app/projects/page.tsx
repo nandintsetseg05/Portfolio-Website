@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/components/project-card"
-import { GalaxyNavigation } from "@/components/galaxy-navigation"
+import { GalaxyNavigation } from "@/components/galaxy-navigation-lazy"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"

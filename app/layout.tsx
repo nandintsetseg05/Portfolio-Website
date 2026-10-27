@@ -66,8 +66,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
-        width: 1200,
-        height: 630,
+        width: 480,
+        height: 480,
         alt: "Nana Nandintsetseg, Full Stack Developer",
       },
     ],

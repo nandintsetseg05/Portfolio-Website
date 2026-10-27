@@ -7,7 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.builder.io" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "image2url.com" },
+    ],
   },
 }
 
