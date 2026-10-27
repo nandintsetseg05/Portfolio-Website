@@ -144,19 +144,17 @@ export default function Projects() {
       link: "https://mabasa.nobrandwebstudio.com/",
     },
     {
-      // 🔧 refine later — placeholder description
       title: "Jalli Hair",
       description:
-        "Marketing website for Jalli Hair, a hair salon — a clean, mobile-first site showcasing services and encouraging bookings.",
+        "Marketing website for Jalli Hair, built as a clean, mobile-first single-page site. Services overview and a clear call-to-action guide visitors straight to booking.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
       link: "https://jalli-hair.nobrandwebstudio.com/",
     },
     {
-      // 🔧 refine later — placeholder description
       title: "Stylishous Hair Design",
       description:
-        "Marketing website for Stylishous Hair Design, a hair styling studio — a modern, responsive site presenting services and contact details.",
+        "Marketing website for Stylishous Hair Design, a hair styling studio. Modern, responsive single-page layout presenting services and contact details with a direct path to booking.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
       link: "https://stylishous-hair-design.nobrandwebstudio.com/",
