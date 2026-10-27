@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { GalaxyNavigation } from "@/components/galaxy-navigation"
+import dynamic from "next/dynamic"
 import { ProjectCard } from "@/components/project-card"
 import { HobbyCard } from "@/components/hobby-card"
 import { ArrowRight } from "lucide-react"
@@ -11,6 +11,16 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useState } from "react"
 import { sendEmail } from "@/app/actions/send-email"
+
+const GalaxyNavigation = dynamic(
+  () => import("@/components/galaxy-navigation").then((mod) => mod.GalaxyNavigation),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-black via-neutral-950 to-black" />
+    ),
+  }
+)
 
 const featuredProjects = [
     {
@@ -22,12 +32,12 @@ const featuredProjects = [
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
-      title: "No Brand Web Studio",
+      title: "HireReady AI Resume & ATS Optimization Platform",
       description:
-        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
-      category: "Personal",
-      tags: ["Business", "Friends", "Help others"],
-      link: "https://www.nobrandwebstudio.com/",
+        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per-change user approval and a live Harvard-format preview, and a corporate resume strategy library.",
+      category: "IT",
+      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client-Side State"],
+      link: "https://hireready.nana-nandintsetseg.com/",
     },
 ]
 
@@ -35,23 +45,13 @@ const featuredHobbies = [
   {
     title: "Chess",
     description:
-      "Helps to keep my mind sharp but little competitive but i like playing rapid",
-    icon: "",
+      "Rapid chess — keeps my mind sharp, and I'm a little competitive.",
     link: "https://www.chess.com/play/online",
   },
   {
-    title: "Learning",
+    title: "Always Learning",
     description:
-      "Self-directed learning, curiosity, and experimentation with technology and creative projects.",
-    icon: "",
-    link: "#",
-  },
-  {
-    title: "Continuous Learning",
-    description:
-      "Currently: AI infrastructure, Analyst Programmer. The curiosity never stops.",
-    icon: "",
-    link: "#",
+      "Self-directed and curious — currently diving into AI infrastructure and analyst programming, with technology and creative projects on the side.",
   },
 ]
 
@@ -140,9 +140,12 @@ export default function Home() {
                 <p className="text-base md:text-lg text-foreground leading-relaxed">
                   Final year Computer Science student with a Finance minor, implementing and improving local business systems and software.
                 </p>
-                <p className="text-sm md:text-base text-foreground leading-relaxed italic border-l-2 text-white/40 pl-4">
-                  Want proof? Who am I?
-                </p>
+                <Link
+                  href="/about"
+                  className="block text-sm md:text-base text-foreground leading-relaxed italic border-l-2 border-white/40 pl-4 hover:text-white/80 transition-colors"
+                >
+                  Want proof? See who I am →
+                </Link>
                 <Link href="/about">
                   <Button className="bg-white/5 hover:bg-white/15 border border-white/20 hover:border-white/40 text-white backdrop-blur-sm group px-6 py-4 text-base rounded-xl transition-all">
                     More About Me
@@ -171,7 +174,7 @@ export default function Home() {
               Selected Work
             </h2>
             <p className="text-lg md:text-xl leading-relaxed text-foreground">
-              Real clients. Real outcomes. Real numbers.
+              Real clients. Real outcomes.
             </p>
           </div>
 
@@ -219,7 +222,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 max-w-2xl mx-auto">
             {featuredHobbies.map((hobby, index) => (
               <motion.div
                 key={index}
@@ -234,7 +237,7 @@ export default function Home() {
           </div>
 
           <div className="text-center pt-6">
-            <Link href="/hobbies">
+            <Link href="/skills">
               <Button
                 variant="outline"
                 className="border-accent/50 hover:bg-accent/20 hover:border-accent group bg-transparent backdrop-blur-xl px-8 py-6 text-base rounded-xl"

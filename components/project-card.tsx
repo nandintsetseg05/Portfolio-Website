@@ -12,15 +12,19 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, description, category, tags, link }: ProjectCardProps) {
+  const isExternal = link.startsWith("http")
+
   return (
     <Card className="glass-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] border-border/50">
       <CardHeader>
         <div className="flex items-start justify-between">
-          <Badge variant="secondary" className="mb-2 bg-primary/10 text-primary text-white/20">
+          <Badge variant="secondary" className="mb-2 bg-primary/10 text-primary">
             {category}
           </Badge>
           <Link
             href={link}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
             className="text-foreground hover:text-primary transition-colors"
             aria-label={`View ${title}`}
           >

@@ -109,7 +109,7 @@ export default function RootLayout({
       <body className={`font-sans ${inter.variable} ${jetbrainsMono.variable}`}>
 
           <Navbar />
-          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+          <Suspense fallback={null}>{children}</Suspense>
 
         <Analytics />
       </body>
