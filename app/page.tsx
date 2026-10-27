@@ -24,12 +24,12 @@ const GalaxyNavigation = dynamic(
 
 const featuredProjects = [
     {
-      title: "Retail POS & Inventory Web Application",
+      title: "No Brand Web Studio",
       description:
-        "Used to keep inventory and cash record on pen and paper; so I built a mobile first web application for retail tobacconist stores, featuring a role based access control and a fully integrated point of sale, inventory and product management system. No manual work, no human errors. Commercially validated built on client request and sold to 5 independent stores.",
-      category: "IT",
-      tags: ["RBAC", "CRUD", "Real Time Data", "Systems Analysis", "UAT", "Multi User Architecture", "Access Control", "Data Query"],
-      link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
+        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
+      category: "Personal",
+      tags: ["Business", "Friends", "Help others"],
+      link: "https://www.nobrandwebstudio.com/",
     },
     {
       title: "HireReady AI Resume & ATS Optimization Platform",
