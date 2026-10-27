@@ -10,15 +10,17 @@ const socialLinks = [
     name: "LinkedIn",
     icon: Linkedin,
     url: "https://www.linkedin.com/in/nana-nandintsetseg",
-    color: "from-primary to-primary/80",
     hoverColor: "hover:shadow-primary/50",
+    hoverBg: "group-hover:bg-accent",
+    subtitle: "Let's connect",
   },
   {
     name: "GitHub",
     icon: Github,
     url: "https://github.com/nandintsetseg05",
-    color: "from-muted to-muted-foreground",
     hoverColor: "hover:shadow-muted/50",
+    hoverBg: "group-hover:bg-neutral-700",
+    subtitle: "See my code",
   },
 //   {
 //     name: "Instagram",
@@ -31,8 +33,9 @@ const socialLinks = [
     name: "Email",
     icon: Mail,
     url: "mailto:bnandintsetseg74@gmail.com",
-    color: "from-destructive to-destructive/80",
     hoverColor: "hover:shadow-destructive/50",
+    hoverBg: "group-hover:bg-destructive",
+    subtitle: "bnandintsetseg74@gmail.com",
   },
 ]
 
@@ -109,14 +112,14 @@ export default function ClientInfoPage() {
                   transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
                   className={`glass-card p-6 rounded-2xl flex items-center gap-4 group hover:scale-105 transition-all duration-300 shadow-lg ${social.hoverColor}`}
                 >
-                  <div className={`p-4 rounded-xl bg-gradient-to-r ${social.color}`}>
+                  <div className={`p-4 rounded-2xl bg-neutral-900 ${social.hoverBg} transition-colors duration-300`}>
                     <social.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-primary transition-colors">
                       {social.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground">Connect with me</p>
+                    <p className="text-sm text-muted-foreground">{social.subtitle}</p>
                   </div>
                   <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors" />
                 </motion.a>

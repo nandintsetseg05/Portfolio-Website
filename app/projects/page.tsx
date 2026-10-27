@@ -64,7 +64,7 @@ export default function Projects() {
         "QUT final year capstone built for industry partner Catalyst IT (Team T178). A SQL access management tool for Moodle, with a Laravel approver app and a Python executor that lets approvers review and run controlled database access requests. I built and merged three core features: the executor HTTP call layer, multi statement atomic transactions, and file based client config syncing.",
       category: "IT",
       tags: ["Laravel", "Python", "SQL", "Capstone", "Team Project", "Industry Partner"],
-      link: "",
+      link: "https://www.loom.com/share/c8cee3a922ff487bb62077cc3f23a0cb",
     },
     {
       title: "RepoMap developer tool",
