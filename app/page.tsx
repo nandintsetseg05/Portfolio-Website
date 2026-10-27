@@ -26,17 +26,17 @@ const featuredProjects = [
     {
       title: "Retail POS & Inventory Web Application",
       description:
-        "Used to keep inventory and cash record on pen and paper; so I built a mobile-first web application for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. No manual work, no human errors. Commercially validated built on client request and sold to 5 independent stores.",
+        "Used to keep inventory and cash record on pen and paper; so I built a mobile first web application for retail tobacconist stores, featuring a role based access control and a fully integrated point of sale, inventory and product management system. No manual work, no human errors. Commercially validated built on client request and sold to 5 independent stores.",
       category: "IT",
-      tags: ["RBAC", "CRUD", "Real-Time Data", "Systems Analysis", "UAT", "Multi-User Architecture", "Access Control", "Data Query"],
+      tags: ["RBAC", "CRUD", "Real Time Data", "Systems Analysis", "UAT", "Multi User Architecture", "Access Control", "Data Query"],
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
       title: "HireReady AI Resume & ATS Optimization Platform",
       description:
-        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per-change user approval and a live Harvard-format preview, and a corporate resume strategy library.",
+        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per change user approval and a live Harvard style preview, and a corporate resume strategy library.",
       category: "IT",
-      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client-Side State"],
+      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client Side State"],
       link: "https://hireready.nana-nandintsetseg.com/",
     },
 ]
@@ -45,13 +45,13 @@ const featuredHobbies = [
   {
     title: "Chess",
     description:
-      "Rapid chess — keeps my mind sharp, and I'm a little competitive.",
+      "Rapid chess keeps my mind sharp, and I'm a little competitive.",
     link: "https://www.chess.com/play/online",
   },
   {
     title: "Always Learning",
     description:
-      "Self-directed and curious — currently diving into AI infrastructure and analyst programming, with technology and creative projects on the side.",
+      "Self directed and curious, currently diving into AI infrastructure and analyst programming, with technology and creative projects on the side.",
   },
 ]
 
@@ -105,7 +105,7 @@ export default function Home() {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm" />
                 <Image
                   src="/images/design-mode/my_face.jpg"
-                  alt="Nana Nandintsetseg - Technology Consultant & Developer"
+                  alt="Nana Nandintsetseg, Technology Consultant & Developer"
                   width={448}
                   height={448}
                   className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"

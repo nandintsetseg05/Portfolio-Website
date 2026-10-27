@@ -5,9 +5,9 @@ import { AnimatedBackground } from "@/components/animated-background"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "About Me - Background, Education & Timeline",
+  title: "About Me: Background, Education & Timeline",
   description:
-    "Learn about Nana Nandintsetseg  Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award-winning volunteer.",
+    "Learn about Nana Nandintsetseg  Computer Science student at QUT with a Diploma in Web Development. National Physics & Math Olympiad medalist, startup hackathon finalist, and award winning volunteer.",
   keywords: [
     "about nana",
     "Нандинцэцэг",
@@ -25,31 +25,31 @@ export const metadata: Metadata = {
     "startup hackathon",
   ],
   openGraph: {
-    title: "About Nana Nandintsetseg - Developer, Designer & Student",
+    title: "About Nana Nandintsetseg: Developer, Designer & Student",
     description:
-      "Full-time CS student at QUT, freelance developer, and part time marketing manager with achievements in national olympiads and startup competitions.",
+      "Full time CS student at QUT, freelance developer, and part time marketing manager with achievements in national olympiads and startup competitions.",
   },
 }
 
 export default function About() {
   const timeline = [
     {
-      year: "2025 - Current",
+      year: "2025 to Current",
       title: "Bachelor of Computer Science with Minor in Finance at QUT",
       description:
-        "Focused on System Architecture, Object-Oriented Design (OOD), CI/CD pipelines, and scalable full-stack development.\nGained practical skills in Linux, secure networking, data analytics, and learning finance data knowledge from minor for AI/ML applications.",
+        "Focused on System Architecture, Object Oriented Design (OOD), CI/CD pipelines, and scalable full stack development.\nGained practical skills in Linux, secure networking, data analytics, and learning finance data knowledge from minor for AI/ML applications.",
     },
     {
       year: "2024",
       title: "Diploma of IT at QUT",
       description:
-        "Learned Network fundamentals, OOP principles, relational database design, SQL, REST fundamentals, Git-based workflows, and client–server architecture.\nBased on this knowledge built full stack Portfolio using Next.js 16, TypeScript, Tailwind, PostgreSQL, OAuth, and deployed on Cloudflare CDN. - React Architecture",
+        "Learned Network fundamentals, OOP principles, relational database design, SQL, REST fundamentals, Git based workflows, and client and server architecture.\nBased on this knowledge built full stack Portfolio using Next.js 16, TypeScript, Tailwind, PostgreSQL, OAuth, and deployed on Cloudflare CDN, using React Architecture.",
     },
     {
-      year: "2020-2024",
-      title: "SAAS Business - BEN",
+      year: "2020 to 2024",
+      title: "SAAS Business, BEN",
       description:
-        "Sold my first business that I created from age of 16-18. BEN social media, marketing company focused on chatbots, business analyses, marketing campaigns, B2B consulting",
+        "Sold my first business that I created from age of 16 to 18. BEN social media, marketing company focused on chatbots, business analyses, marketing campaigns, B2B consulting",
     },
     {
       year: "2023",
@@ -112,13 +112,13 @@ export default function About() {
                 <p className="text-muted-foreground">Queensland University of Technology • Expected 2026</p>
                 <p className="mt-2">
                   Started 2025 as second year Bachelor student, focused more on System Architecture, OOD and CI/CD to build scalable and maintainable systems.<br />
-                  Year 2 - Discrete Structure, Networks, Cyber Security, Microprocessors, Finance 1,2,3,4<br />
-                  Year 3 - Machine Learning, Algorithms and Complexity, Capstone project + ....<br />
-                  Self learning - Cloud - AWS, Docker, Cloudflare, Tunnels +Personal Projects, +Freelancing Projects
+                  Year 2: Discrete Structure, Networks, Cyber Security, Microprocessors, Finance 1,2,3,4<br />
+                  Year 3: Machine Learning, Algorithms and Complexity, Capstone project + ....<br />
+                  Self learning, Cloud: AWS, Docker, Cloudflare, Tunnels +Personal Projects, +Freelancing Projects
                 </p>
               </div>
               <div className="glass-card rounded-2xl p-6 border-l-4 border-accent/60">
-                <h3 className="text-xl font-semibold">Diploma of Information Technology - Web Development</h3>
+                <h3 className="text-xl font-semibold">Diploma of Information Technology: Web Development</h3>
                 <p className="text-muted-foreground">Queensland University of Technology • Graduated 2024</p>
                 <p className="mt-2">
                   I enrolled in Diploma at 18 instead of taking Bachelor's first year to gain better and broader fundamental knowledge.

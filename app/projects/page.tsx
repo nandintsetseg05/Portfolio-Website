@@ -5,7 +5,7 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Projects - Web Development, Marketing & Design Portfolio",
+  title: "Projects: Web Development, Marketing & Design Portfolio",
   description:
     "View Nana Nandintsetseg's portfolio featuring web development projects (Next.js, React, TypeScript), digital marketing campaigns with 2497% engagement growth, and architectural design work.",
   keywords: [
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     "digital marketing campaigns",
   ],
   openGraph: {
-    title: "Projects Portfolio - Nana Nandintsetseg",
+    title: "Projects Portfolio: Nana Nandintsetseg",
     description:
-      "Full-stack development, digital marketing, and design projects with proven results including 825% traffic growth and 2497% engagement increase.",
+      "Full stack development, digital marketing, and design projects with proven results including 825% traffic growth and 2497% engagement increase.",
   },
 }
 
@@ -29,17 +29,17 @@ export default function Projects() {
     {
       title: "Retail POS & Inventory Web Application",
       description:
-        "A mobile-first web application built for retail tobacconist stores, featuring a role-based access control and a fully integrated point-of-sale, inventory and product management system. Commercially validated built on client request and sold to 5 independent stores.",
+        "A mobile first web application built for retail tobacconist stores, featuring a role based access control and a fully integrated point of sale, inventory and product management system. Commercially validated built on client request and sold to 5 independent stores.",
       category: "IT",
-      tags: ["RBAC", "CRUD", "Real-Time Data", "Systems Analysis", "UAT", "Multi-User Architecture", "Access Control", "Data Query"],
+      tags: ["RBAC", "CRUD", "Real Time Data", "Systems Analysis", "UAT", "Multi User Architecture", "Access Control", "Data Query"],
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
       title: "HireReady AI Resume & ATS Optimization Platform",
       description:
-        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per-change user approval and a live Harvard-format preview, and a corporate resume strategy library.",
+        "A web application that helps job seekers beat automated ATS filters. Combines an ATS scanner that scores a resume against a target role and surfaces missing keywords, a job description driven resume tailor that runs AI buzzword and bullet transformations with per change user approval and a live Harvard style preview, and a corporate resume strategy library.",
       category: "IT",
-      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client-Side State"],
+      tags: ["AI Integration", "LLM API", "Keyword Analysis", "File Parsing", "PDF Generation", "Internationalization", "Responsive Design", "Client Side State"],
       link: "https://hireready.nana-nandintsetseg.com/",
     },
     {
@@ -51,11 +51,11 @@ export default function Projects() {
       link: "https://www.nobrandwebstudio.com/",
     },
     {
-      title: "Ecommerce website - Full Stack",
+      title: "Full Stack Ecommerce Website",
       description:
         "I have made a full stack ecommerce website upon client request. I have build 2 main models, firstly admin interface where you can control your products and control your full inventory, orders, data everything without touching any code. Full control over the main frontend interface. Secondly the interface I have build seemless design where customer can shop online pay, create account and track their orders",
       category: "IT",
-      tags: ["Next.js", "Full-Stack", "Railway"],
+      tags: ["Next.js", "Full Stack", "Railway"],
       link: "https://www.watch-house.net/au",
     },
     {
@@ -79,21 +79,21 @@ export default function Projects() {
        "Single Page Application",
        "IndexedDB",
        "PDF.js",
-       "Real-time Application",
+       "Real Time Application",
        "Tailwind CSS",
        "Responsive Design"],
       link: "https://typing-master-nana.vercel.app/",
     },
     {
-      title: "Self-Hosted Multi Agent AI Platform",
+      title: "Self Hosted Multi Agent AI Platform",
       description:
-        "A fully autonomous, self-hosted AI infrastructure that runs unlimited AI models locally with zero token costs. My solution is Built a personal AI cloud with Docker containers accessible anywhere via Cloudflare Tunnel. But its based on my personal PC not everyone can access.",
+        "A fully autonomous, self hosted AI infrastructure that runs unlimited AI models locally with zero token costs. My solution is Built a personal AI cloud with Docker containers accessible anywhere via Cloudflare Tunnel. But its based on my personal PC not everyone can access.",
       category: "IT",
       tags: [
         "Artificial Intelligence",
         "Docker",
-        "Multi-Agent System",
-        "Self-Hosted AI",
+        "Multi Agent System",
+        "Self Hosted AI",
         "Cloud Infrastructure",
         "AI Automation",
         "Open Source",
@@ -106,7 +106,7 @@ export default function Projects() {
     {
       title: "Compound Interest Calculator (Next.js + TypeScript)",
       description:
-        "A modern, responsive compound interest calculator built with Next.js and TypeScript, featuring real-time calculations, clean UI, and production deployment on Vercel.",
+        "A modern, responsive compound interest calculator built with Next.js and TypeScript, featuring real time calculations, clean UI, and production deployment on Vercel.",
       category: "IT",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Git & GitHub",  "Vercel"],
       link: "https://compound-interest-calculator-pearl.vercel.app/",
@@ -130,7 +130,7 @@ export default function Projects() {
     {
       title: "Integrity Hair",
       description:
-        "Boutique hair salon website for Integrity Hair in Norman Park, Brisbane. Services (colour, cuts, treatments), about, client reviews, and visit details with click-to-call booking. Photography-led, minimal layout.",
+        "Boutique hair salon website for Integrity Hair in Norman Park, Brisbane. Services (colour, cuts, treatments), about, client reviews, and visit details with click to call booking. Photography led, minimal layout.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive", "SEO"],
       link: "https://integrity-hair.nobrandwebstudio.com/",
@@ -138,7 +138,7 @@ export default function Projects() {
     {
       title: "MABASA Hair Salon",
       description:
-        "Marketing website for a Korean hair salon in Southbank, Brisbane. Services, studio story, and booking call-to-action in a minimal Japandi style.",
+        "Marketing website for a Korean hair salon in Southbank, Brisbane. Services, studio story, and booking call to action in a minimal Japandi style.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
       link: "https://mabasa.nobrandwebstudio.com/",
@@ -146,7 +146,7 @@ export default function Projects() {
     {
       title: "Jalli Hair",
       description:
-        "Marketing website for Jalli Hair, built as a clean, mobile-first single-page site. Services overview and a clear call-to-action guide visitors straight to booking.",
+        "Marketing website for Jalli Hair, built as a clean, mobile first single page site. Services overview and a clear call to action guide visitors straight to booking.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
       link: "https://jalli-hair.nobrandwebstudio.com/",
@@ -154,7 +154,7 @@ export default function Projects() {
     {
       title: "Stylishous Hair Design",
       description:
-        "Marketing website for Stylishous Hair Design, a hair styling studio. Modern, responsive single-page layout presenting services and contact details with a direct path to booking.",
+        "Marketing website for Stylishous Hair Design, a hair styling studio. Modern, responsive single page layout presenting services and contact details with a direct path to booking.",
       category: "Web Design",
       tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
       link: "https://stylishous-hair-design.nobrandwebstudio.com/",
@@ -164,7 +164,7 @@ export default function Projects() {
     {
       title: "ASX Portfolio Risk & Analytics Dashboard",
       description:
-        "An interactive Bloomberg-style analytics terminal that lets users build a custom ASX portfolio and instantly generates Sharpe ratio, Value at Risk, sector allocation and stress-test scenarios using live Yahoo Finance data.",
+        "An interactive Bloomberg style analytics terminal that lets users build a custom ASX portfolio and instantly generates Sharpe ratio, Value at Risk, sector allocation and stress test scenarios using live Yahoo Finance data.",
       category: "Finance",
       tags: ["Financial Modelling", "Data Visualisation", "REST APIs", "JavaScript", "React"],
       link: "https://asx-dashboard-ic1t-kyr0vm1ip-nandintsetseg05s-projects.vercel.app/",
@@ -187,7 +187,7 @@ export default function Projects() {
       description:
         "I developed chatbot that integrates to all the social media and web chatbot for housing complex that answers common question and shows menu and details of each housing block's detail. When i was 15, I think that it teached me importance of integration and attention to detail. Also learned lot on how to talk to people.",
       category: "Marketing & IT",
-      tags: ["Chatbot", "Integration", "Cross-Platform"],
+      tags: ["Chatbot", "Integration", "Cross Platform"],
       link: "https://www.facebook.com/p/K-Village-%D0%9A-%D0%92%D0%B8%D0%BB%D0%BB%D0%B0%D0%B6-100083330827686/",
     },
   ]

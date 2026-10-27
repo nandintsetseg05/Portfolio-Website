@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function Hobbies() {
   const hobbies = [
     {
-      title: "Full-Stack Development",
+      title: "Full Stack Development",
       description:
         "I build complete web applications from database to UI. I've shipped production systems with React, Next.js, Node.js, PostgreSQL, and Supabase including a live inventory POS app now used across 5 independent Brisbane stores. I write clean, maintainable TypeScript and JavaScript, and handle deployments via Docker and CI/CD pipelines.",
       link: "#",
@@ -35,27 +35,27 @@ export default function Hobbies() {
     {
       title: " AI & Systems Integration",
       description:
-        "I work with AI at an infrastructure level not just prompts. I've built a self-hosted AI assistant using Docker and MCP-trained agents integrated with REST APIs. I also use ML.NET for machine learning (see PropSight) and implement AI-assisted workflows for real client outcomes.",
+        "I work with AI at an infrastructure level not just prompts. I've built a self hosted AI assistant using Docker and MCP trained agents integrated with REST APIs. I also use ML.NET for machine learning (see PropSight) and implement AI assisted workflows for real client outcomes.",
 
       link: "#",
     },
     {
       title: "Data Analytics & Financial Modelling",
       description:
-        "I turn raw data into decisions. I've built ASX portfolio dashboards with Python, yfinance, Sharpe ratio and VaR calculations, automated reporting pipelines, and CFA-style PDF exports. Tools: Power BI, pandas, Excel, Google Analytics.",
+        "I turn raw data into decisions. I've built ASX portfolio dashboards with Python, yfinance, Sharpe ratio and VaR calculations, automated reporting pipelines, and CFA style PDF exports. Tools: Power BI, pandas, Excel, Google Analytics.",
       icon: "",
       link: "#",
     },
     {
       title: "Business Analysis & Digital Strategy",
       description:
-        "I don't just code I define the problem first. I conduct stakeholder discovery, SEO audits, competitor benchmarking, and deliver MoSCoW-prioritised roadmaps with acceptance criteria. Past results: 825% traffic growth, 55% lead conversion uplift.",
+        "I don't just code I define the problem first. I conduct stakeholder discovery, SEO audits, competitor benchmarking, and deliver MoSCoW prioritised roadmaps with acceptance criteria. Past results: 825% traffic growth, 55% lead conversion uplift.",
       link: "#",
     },
     {
       title: "Social & Digital Marketing",
       description:
-        "I've run AI-assisted content strategies across Instagram, TikTok and Facebook that delivered 249% engagement growth and 24% audience growth within 30 days for a brand-new business launch.",
+        "I've run AI assisted content strategies across Instagram, TikTok and Facebook that delivered 249% engagement growth and 24% audience growth within 30 days for a brand new business launch.",
       link: "#",
     },
     {
@@ -67,7 +67,7 @@ export default function Hobbies() {
     {
       title: "Infrastructure & Home Lab",
       description:
-        "I run a home lab with Active Directory, Windows Server, and a 4TB Cloudflare-tunnelled Docker environment extending to AWS for cloud access. I test and break things on purpose so production systems don't.",
+        "I run a home lab with Active Directory, Windows Server, and a 4TB Cloudflare tunnelled Docker environment extending to AWS for cloud access. I test and break things on purpose so production systems don't.",
       link: "#",
     },
     {

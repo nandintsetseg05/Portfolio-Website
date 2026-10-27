@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     template: "%s | Nana B, Nandintsetseg Bayarsaikhan Portfolio",
   },
   description:
-    "Nana Nandintsetseg - Computer Science student at QUT specializing in full-stack web development, UI/UX design, and digital marketing. Expert in Next.js, React, TypeScript, SEO optimization, and creating high-impact websites with 825% traffic growth.",
+    "Nana Nandintsetseg, Computer Science student at QUT specializing in full stack web development, UI/UX design, and digital marketing. Expert in Next.js, React, TypeScript, SEO optimization, and creating high impact websites with 825% traffic growth.",
   keywords: [
     "Nana Nandintsetseg",
-    "Full-Stack Developer",
+    "Full Stack Developer",
     "Web Developer Brisbane",
     "Web Developer Australia",
     "React Developer",
@@ -62,21 +62,21 @@ export const metadata: Metadata = {
     siteName: "Nana Nandintsetseg Portfolio",
     title: "Nana Nandintsetseg | I Build Things Solve Real Problems. For People Who Mean Business.",
     description:
-      "Full-stack web developer and designer specializing in Next.js, React, and digital marketing. Creating stunning websites with proven results - 825% traffic increase, 2497% engagement growth.",
+      "Full stack web developer and designer specializing in Next.js, React, and digital marketing. Creating stunning websites with proven results: 825% traffic increase, 2497% engagement growth.",
     images: [
       {
         url: "/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg",
         width: 1200,
         height: 630,
-        alt: "Nana Nandintsetseg - Full-Stack Developer",
+        alt: "Nana Nandintsetseg, Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nana Nandintsetseg | Full-Stack Developer & Web Designer",
+    title: "Nana Nandintsetseg | Full Stack Developer & Web Designer",
     description:
-      "Full-stack web developer specializing in Next.js, React, TypeScript, and digital marketing with proven results.",
+      "Full stack web developer specializing in Next.js, React, TypeScript, and digital marketing with proven results.",
     images: ["/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"],
   },
   robots: {

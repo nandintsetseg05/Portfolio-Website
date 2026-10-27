@@ -144,7 +144,7 @@ export function HomePage() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 backdrop-blur-sm"></div>
                   <Image
                     src="/images/design-mode/552783218_811285438263437_1863407255956114468_n.jpg"
-                    alt="Nana Nandintsetseg - Full-Stack Developer"
+                    alt="Nana Nandintsetseg, Full Stack Developer"
                     width={448}
                     height={448}
                     className="relative rounded-full border-4 border-white/30 shadow-2xl object-contain w-full h-full hover:scale-105 transition-transform duration-500"
