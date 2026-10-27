@@ -43,20 +43,12 @@ export default function Projects() {
       link: "https://hireready.nana-nandintsetseg.com/",
     },
     {
-      title: "Watch House Luxury Watch E-Commerce Platform",
+      title: "No Brand Web Studio",
       description:
-        "A mobile-first e-commerce storefront for luxury timepieces, built with Next.js. Category-based browsing, region-aware routing, newsletter capture, and a full policy/checkout framework. Designed and deployed end-to-end as a live commercial store.",
-      category: "IT",
-      tags: ["E-Commerce", "Next.js", "Product Catalog", "Responsive Design", "Category Filtering", "SSR", "Payment Flow", "SEO"],
-      link: "https://www.watch-house.net/au",
-    },
-    {
-      title: "PropSight - AI Property Valuation Tool",
-      description:
-        "A property price estimator built to combine real estate data with machine learning. Trained on NSW Valuer General data using ML.NET, PropSight estimates market value based on property features, compares suburbs, analyses condition and runs market simulations. Deployed on Google Cloud Run.",
-      category: "IT & Finance",
-      tags: ["ML.NET", "Data Analytics", "Next.js", "Financial Modelling", "AI", "Machine Learning", "Data Query", "In Progress"],
-      link: "https://propsight.nana-nandintsetseg.com/",
+        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
+      category: "Personal",
+      tags: ["Business", "Friends", "Help others"],
+      link: "https://www.nobrandwebstudio.com/",
     },
     {
       title: "Ecommerce website - Full Stack",
@@ -134,6 +126,40 @@ export default function Projects() {
       category: "IT & Web Development",
       tags: ["Next.js", "UI/UX", "SEO", "SSL", "Google Business"],
       link: "https://sayramplumbing.com.au/",
+    },
+    {
+      title: "Integrity Hair",
+      description:
+        "Boutique hair salon website for Integrity Hair in Norman Park, Brisbane. Services (colour, cuts, treatments), about, client reviews, and visit details with click-to-call booking. Photography-led, minimal layout.",
+      category: "Web Design",
+      tags: ["Web Design", "Client Project", "Small Business", "Responsive", "SEO"],
+      link: "https://integrity-hair.nobrandwebstudio.com/",
+    },
+    {
+      title: "MABASA Hair Salon",
+      description:
+        "Marketing website for a Korean hair salon in Southbank, Brisbane. Services, studio story, and booking call-to-action in a minimal Japandi style.",
+      category: "Web Design",
+      tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
+      link: "https://mabasa.nobrandwebstudio.com/",
+    },
+    {
+      // 🔧 refine later — placeholder description
+      title: "Jalli Hair",
+      description:
+        "Marketing website for Jalli Hair, a hair salon — a clean, mobile-first site showcasing services and encouraging bookings.",
+      category: "Web Design",
+      tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
+      link: "https://jalli-hair.nobrandwebstudio.com/",
+    },
+    {
+      // 🔧 refine later — placeholder description
+      title: "Stylishous Hair Design",
+      description:
+        "Marketing website for Stylishous Hair Design, a hair styling studio — a modern, responsive site presenting services and contact details.",
+      category: "Web Design",
+      tags: ["Web Design", "Client Project", "Small Business", "Responsive"],
+      link: "https://stylishous-hair-design.nobrandwebstudio.com/",
     },
   ]
   const financeProjects = [
@@ -220,14 +246,7 @@ export default function Projects() {
       tags: ["High School", "Project", "Academic"],
       link: "https://www.notion.so/Not-Gonna-Brag-But-308615bca7f78020bb58cb250f530915?source=copy_link",
     },
-    {
-      title: "No Brand Web Studio",
-      description:
-        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
-      category: "Personal",
-      tags: ["Business", "Friends", "Help others"],
-      link: "https://www.nobrandwebstudio.com/",
-    },
+
   ]
 
   return (

@@ -22,12 +22,12 @@ const featuredProjects = [
       link: "https://nananandintsetseg.my.canva.site/web-app-by-nana",
     },
     {
-      title: "PropSight - AI Property Valuation Tool",
+      title: "No Brand Web Studio",
       description:
-        "A property price estimator built to combine real estate data with machine learning. Trained on NSW Valuer General data using ML.NET, PropSight estimates market value based on property features, compares suburbs, analyses condition and runs market simulations. Deployed on Google Cloud Run. Learning more to scale and improve. In progress",
-      category: "IT & Finance",
-      tags: ["ML.NET", "Data Analytics", "Next.js", "Financial Modelling", "AI", "Machine Learning", "Data Query", "In Progress"],
-      link: "https://propsight.nana-nandintsetseg.com/",
+        "My friends and I am opening a business that helps small and local business to improve their online social presence. It is not hard to make one for use but not everyone has the time to learn and they do not want to pay domain fee for simple lading page. We are fixing that problem for offering a online presence without the recurring fee",
+      category: "Personal",
+      tags: ["Business", "Friends", "Help others"],
+      link: "https://www.nobrandwebstudio.com/",
     },
 ]
 
